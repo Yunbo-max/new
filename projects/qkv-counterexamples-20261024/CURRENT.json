@@ -1,6 +1,6 @@
 {
   "schema": "qkv-preliminary-checkpoint-v1",
-  "revision": 1,
+  "revision": 2,
   "project_id": "qkv-counterexamples-20261024",
   "date": "2026-10-24",
   "repo": "Yunbo-max/new",
@@ -29,17 +29,18 @@
       "node_id": "QKV-A",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "routing-concentration-vs-value-risk",
-      "question": "When does sharper QK routing worsen V estimation?",
-      "prediction": "R=p^2+2(1-p)^2 has optimum p=2/3, not 1.",
+      "question": "Can task-visible reliability cues distinguish independent corroboration from correlated duplication beyond matched QK and AV?",
+      "prediction": "Identical QKV with different target laws can require opposite sharpening; identical AV limits output-only corrections.",
       "falsifier": "Native effect absent or matched simple temperature/value controls suffice.",
-      "next_action": "Full-text audit Integral, DEX, Selective Self-Attention; derive non-oracle diagnostic.",
+      "next_action": "Specify matched interfaces and inspect moment/covariance attention; compare upstream representations and SSA.",
       "status": "active",
-      "stage": "literature_math_boundary",
+      "stage": "equivalence_and_identifiability_audit",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 1,
+      "served_count": 2,
       "evidence": [
-        "R001.md"
+        "R001.md",
+        "R002.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -51,7 +52,7 @@
         "worker_source_read_cap": 3
       },
       "spent": {
-        "worker_tasks": 1,
+        "worker_tasks": 2,
         "tokens": null,
         "cost": null
       }
@@ -60,17 +61,18 @@
       "node_id": "QKV-B",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "key-radius-erasure",
-      "question": "When does normalized QK erase per-key information?",
-      "prediction": "Collinear positive keys collapse under ideal normalization regardless of query-only temperature.",
+      "question": "Does QK normalization lose task-relevant pairwise logit structure after matched stable optimization?",
+      "prediction": "Restoring both norms exactly equals raw QK; raw key norm need not survive legal coordinate changes.",
       "falsifier": "Radius carries no conditional information or matched retraining removes loss.",
-      "next_action": "Separate key-radius claim from existing query-norm methods; audit stable raw-QK baselines.",
+      "next_action": "Audit pairwise logit diagnostic vs QuacK, temperature and query-weighted prior art.",
       "status": "active",
-      "stage": "literature_math_boundary",
+      "stage": "equivalence_and_identifiability_audit",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 1,
+      "served_count": 2,
       "evidence": [
-        "R001.md"
+        "R001.md",
+        "R002.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -82,7 +84,7 @@
         "worker_source_read_cap": 3
       },
       "spent": {
-        "worker_tasks": 1,
+        "worker_tasks": 2,
         "tokens": null,
         "cost": null
       }
@@ -91,17 +93,18 @@
       "node_id": "QKV-C",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "coordinate-dependent-kv-sharing",
-      "question": "Can function-preserving sign flips change KV pooling loss?",
-      "prediction": "Opposite signs cancel pooled keys; alignment yields zero error in toy case.",
+      "question": "Does post-alignment cache reconstruction error predict output error under unseen query distributions?",
+      "prediction": "Delta logits = Q E^T; reconstruction error alone omits query and value sensitivity.",
       "falsifier": "Practical converters invariant or simple existing alignment/uptraining removes effect.",
-      "next_action": "Audit gauge symmetry and GQA alignment prior art; specify paired equivalent-checkpoint test.",
+      "next_action": "Read CAGA full text/code and score-aware compression before proposing a shift-sensitive criterion.",
       "status": "active",
-      "stage": "literature_math_boundary",
+      "stage": "equivalence_and_identifiability_audit",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 1,
+      "served_count": 2,
       "evidence": [
-        "R001.md"
+        "R001.md",
+        "R002.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -113,7 +116,73 @@
         "worker_source_read_cap": 3
       },
       "spent": {
-        "worker_tasks": 1,
+        "worker_tasks": 2,
+        "tokens": null,
+        "cost": null
+      }
+    },
+    {
+      "node_id": "QKV-A-naive-claim",
+      "parent_id": "QKV-A",
+      "mechanism_id": "routing-concentration-vs-value-risk-generic-method",
+      "question": "Generic denoising / adaptive temperature / V-gating novelty",
+      "status": "parked",
+      "stage": "novelty_collision",
+      "reason": "Direct Integral/SSA prior art and conditional DEX linear folding",
+      "evidence": [
+        "R001.md",
+        "R002.md"
+      ],
+      "next_action": "Reopen only with genuinely distinguishing evidence",
+      "next_actor": "supervisor",
+      "budget": {
+        "work_units_reserved": 0
+      },
+      "spent": {
+        "tokens": null,
+        "cost": null
+      }
+    },
+    {
+      "node_id": "QKV-B-naive-claim",
+      "parent_id": "QKV-B",
+      "mechanism_id": "key-radius-erasure-generic-method",
+      "question": "Restore QK radii as a new architecture",
+      "status": "parked",
+      "stage": "novelty_collision",
+      "reason": "Exact algebraic equivalence plus existing norm-direction work",
+      "evidence": [
+        "R001.md",
+        "R002.md"
+      ],
+      "next_action": "Reopen only with genuinely distinguishing evidence",
+      "next_actor": "supervisor",
+      "budget": {
+        "work_units_reserved": 0
+      },
+      "spent": {
+        "tokens": null,
+        "cost": null
+      }
+    },
+    {
+      "node_id": "QKV-C-naive-claim",
+      "parent_id": "QKV-C",
+      "mechanism_id": "coordinate-dependent-kv-sharing-generic-method",
+      "question": "RoPE-compatible align-before-GQA novelty",
+      "status": "parked",
+      "stage": "novelty_collision",
+      "reason": "Jin 2025 Eqs14-17 directly cover alignment and RoPE; CAGA adds recent collision",
+      "evidence": [
+        "R001.md",
+        "R002.md"
+      ],
+      "next_action": "Reopen only with genuinely distinguishing evidence",
+      "next_actor": "supervisor",
+      "budget": {
+        "work_units_reserved": 0
+      },
+      "spent": {
         "tokens": null,
         "cost": null
       }
@@ -179,6 +248,69 @@
         "no native model evidence",
         "formal design review not performed"
       ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual preliminary record; native checker not run",
+      "id": "R002-QKV-A",
+      "parent_question_id": "QKV-A",
+      "action": "deepen",
+      "local_park": "QKV-A-naive-claim",
+      "evidence": [
+        "R002.md"
+      ],
+      "causal_reason": "Direct Integral/SSA prior art and conditional DEX linear folding",
+      "mathematical_prediction": "Identical QKV with different target laws can require opposite sharpening; identical AV limits output-only corrections.",
+      "falsifier": "Native effect absent or matched simple temperature/value controls suffice.",
+      "next_question_id": "QKV-A",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual preliminary record; native checker not run",
+      "id": "R002-QKV-B",
+      "parent_question_id": "QKV-B",
+      "action": "deepen",
+      "local_park": "QKV-B-naive-claim",
+      "evidence": [
+        "R002.md"
+      ],
+      "causal_reason": "Exact algebraic equivalence plus existing norm-direction work",
+      "mathematical_prediction": "Restoring both norms exactly equals raw QK; raw key norm need not survive legal coordinate changes.",
+      "falsifier": "Radius carries no conditional information or matched retraining removes loss.",
+      "next_question_id": "QKV-B",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual preliminary record; native checker not run",
+      "id": "R002-QKV-C",
+      "parent_question_id": "QKV-C",
+      "action": "deepen",
+      "local_park": "QKV-C-naive-claim",
+      "evidence": [
+        "R002.md"
+      ],
+      "causal_reason": "Jin 2025 Eqs14-17 directly cover alignment and RoPE; CAGA adds recent collision",
+      "mathematical_prediction": "Delta logits = Q E^T; reconstruction error alone omits query and value sensitivity.",
+      "falsifier": "Practical converters invariant or simple existing alignment/uptraining removes effect.",
+      "next_question_id": "QKV-C",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
     }
   ],
   "review": {
@@ -187,14 +319,17 @@
   },
   "run": {
     "status": "completed",
-    "wake_source": "human",
-    "next_wake": "Read this file and R001.md; pursue all peer next actions",
+    "wake_source": "human continue",
+    "next_wake": "Restore R001/R002 and all three active diagnostic leaves plus parked claim history; follow per-node next actions",
     "background_running": false
   },
   "budget": {
-    "worker_tasks_completed": 3,
+    "worker_tasks_completed": 6,
     "token_usage": null,
     "cost": null,
-    "model_jobs": []
-  }
+    "model_jobs": [],
+    "cumulative_usage_note": "Two bounded human wakes; total tokens/cost unknown, not reset."
+  },
+  "previous_checkpoint_sha": "4a1d826ac0ecefbedd705ba40d70b7a4a5096e1e",
+  "latest_report": "R002.md"
 }
