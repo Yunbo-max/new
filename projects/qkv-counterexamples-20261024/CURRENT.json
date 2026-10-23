@@ -1,0 +1,200 @@
+{
+  "schema": "qkv-preliminary-checkpoint-v1",
+  "revision": 1,
+  "project_id": "qkv-counterexamples-20261024",
+  "date": "2026-10-24",
+  "repo": "Yunbo-max/new",
+  "branch": "research/qkv-counterexamples-20261024",
+  "scope": "创新的QKV架构设计反直觉机制",
+  "mode": "branching",
+  "primary_direction": null,
+  "imported_prior_projects": [],
+  "framework": {
+    "loaded_skill_version": "0.11.3-manual.intake.1",
+    "neutral_policy": "v11.4",
+    "native_v2_controller_adopted": false
+  },
+  "authority": {
+    "user_selected_scope_and_storage": true,
+    "paid_jobs_authorized": false,
+    "gpu_launched": false
+  },
+  "root": {
+    "node_id": "QKV-ROOT",
+    "parent_id": null,
+    "status": "branched"
+  },
+  "nodes": [
+    {
+      "node_id": "QKV-A",
+      "parent_id": "QKV-ROOT",
+      "mechanism_id": "routing-concentration-vs-value-risk",
+      "question": "When does sharper QK routing worsen V estimation?",
+      "prediction": "R=p^2+2(1-p)^2 has optimum p=2/3, not 1.",
+      "falsifier": "Native effect absent or matched simple temperature/value controls suffice.",
+      "next_action": "Full-text audit Integral, DEX, Selective Self-Attention; derive non-oracle diagnostic.",
+      "status": "active",
+      "stage": "literature_math_boundary",
+      "priority": "peer",
+      "next_actor": "supervisor",
+      "served_count": 1,
+      "evidence": [
+        "R001.md"
+      ],
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ],
+      "budget": {
+        "worker_query_cap": 3,
+        "worker_source_read_cap": 3
+      },
+      "spent": {
+        "worker_tasks": 1,
+        "tokens": null,
+        "cost": null
+      }
+    },
+    {
+      "node_id": "QKV-B",
+      "parent_id": "QKV-ROOT",
+      "mechanism_id": "key-radius-erasure",
+      "question": "When does normalized QK erase per-key information?",
+      "prediction": "Collinear positive keys collapse under ideal normalization regardless of query-only temperature.",
+      "falsifier": "Radius carries no conditional information or matched retraining removes loss.",
+      "next_action": "Separate key-radius claim from existing query-norm methods; audit stable raw-QK baselines.",
+      "status": "active",
+      "stage": "literature_math_boundary",
+      "priority": "peer",
+      "next_actor": "supervisor",
+      "served_count": 1,
+      "evidence": [
+        "R001.md"
+      ],
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ],
+      "budget": {
+        "worker_query_cap": 3,
+        "worker_source_read_cap": 3
+      },
+      "spent": {
+        "worker_tasks": 1,
+        "tokens": null,
+        "cost": null
+      }
+    },
+    {
+      "node_id": "QKV-C",
+      "parent_id": "QKV-ROOT",
+      "mechanism_id": "coordinate-dependent-kv-sharing",
+      "question": "Can function-preserving sign flips change KV pooling loss?",
+      "prediction": "Opposite signs cancel pooled keys; alignment yields zero error in toy case.",
+      "falsifier": "Practical converters invariant or simple existing alignment/uptraining removes effect.",
+      "next_action": "Audit gauge symmetry and GQA alignment prior art; specify paired equivalent-checkpoint test.",
+      "status": "active",
+      "stage": "literature_math_boundary",
+      "priority": "peer",
+      "next_actor": "supervisor",
+      "served_count": 1,
+      "evidence": [
+        "R001.md"
+      ],
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ],
+      "budget": {
+        "worker_query_cap": 3,
+        "worker_source_read_cap": 3
+      },
+      "spent": {
+        "worker_tasks": 1,
+        "tokens": null,
+        "cost": null
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual record; framework checker not run",
+      "id": "R001-QKV-A",
+      "parent_question_id": "QKV-ROOT",
+      "action": "deepen",
+      "evidence": [
+        "R001.md"
+      ],
+      "causal_reason": "Analytic counterexample with substantial existing-work collisions",
+      "mathematical_prediction": "R=p^2+2(1-p)^2 has optimum p=2/3, not 1.",
+      "falsifier": "Native effect absent or matched simple temperature/value controls suffice.",
+      "next_question_id": "QKV-A",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual record; framework checker not run",
+      "id": "R001-QKV-B",
+      "parent_question_id": "QKV-ROOT",
+      "action": "deepen",
+      "evidence": [
+        "R001.md"
+      ],
+      "causal_reason": "Analytic counterexample with substantial existing-work collisions",
+      "mathematical_prediction": "Collinear positive keys collapse under ideal normalization regardless of query-only temperature.",
+      "falsifier": "Radius carries no conditional information or matched retraining removes loss.",
+      "next_question_id": "QKV-B",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual record; framework checker not run",
+      "id": "R001-QKV-C",
+      "parent_question_id": "QKV-ROOT",
+      "action": "deepen",
+      "evidence": [
+        "R001.md"
+      ],
+      "causal_reason": "Analytic counterexample with substantial existing-work collisions",
+      "mathematical_prediction": "Opposite signs cancel pooled keys; alignment yields zero error in toy case.",
+      "falsifier": "Practical converters invariant or simple existing alignment/uptraining removes effect.",
+      "next_question_id": "QKV-C",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
+    }
+  ],
+  "review": {
+    "formal_independent_review": "not performed",
+    "designer_subagents_are_not_formal_reviewers": true
+  },
+  "run": {
+    "status": "completed",
+    "wake_source": "human",
+    "next_wake": "Read this file and R001.md; pursue all peer next actions",
+    "background_running": false
+  },
+  "budget": {
+    "worker_tasks_completed": 3,
+    "token_usage": null,
+    "cost": null,
+    "model_jobs": []
+  }
+}
