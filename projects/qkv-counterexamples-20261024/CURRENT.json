@@ -1,8 +1,8 @@
 {
   "schema": "qkv-preliminary-checkpoint-v1",
-  "revision": 2,
+  "revision": 3,
   "project_id": "qkv-counterexamples-20261024",
-  "date": "2026-10-24",
+  "date": "2026-10-23",
   "repo": "Yunbo-max/new",
   "branch": "research/qkv-counterexamples-20261024",
   "scope": "创新的QKV架构设计反直觉机制",
@@ -29,18 +29,19 @@
       "node_id": "QKV-A",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "routing-concentration-vs-value-risk",
-      "question": "Can task-visible reliability cues distinguish independent corroboration from correlated duplication beyond matched QK and AV?",
-      "prediction": "Identical QKV with different target laws can require opposite sharpening; identical AV limits output-only corrections.",
-      "falsifier": "Native effect absent or matched simple temperature/value controls suffice.",
-      "next_action": "Specify matched interfaces and inspect moment/covariance attention; compare upstream representations and SSA.",
+      "question": "Can observable imperfect provenance distinguish partial correlation beyond simple source/value controls?",
+      "prediction": "Visible exact duplicates are solved by -log multiplicity; nonlinear V resolves simple matched-AV examples.",
+      "falsifier": "Simple controls solve task or improvement needs invisible true provenance.",
+      "next_action": "Specify observable partial-correlation task and stronger simple baselines.",
       "status": "active",
-      "stage": "equivalence_and_identifiability_audit",
+      "stage": "diagnostic_specified",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 2,
+      "served_count": 3,
       "evidence": [
         "R001.md",
-        "R002.md"
+        "R002.md",
+        "R003.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -52,7 +53,7 @@
         "worker_source_read_cap": 3
       },
       "spent": {
-        "worker_tasks": 2,
+        "worker_tasks": 3,
         "tokens": null,
         "cost": null
       }
@@ -61,18 +62,19 @@
       "node_id": "QKV-B",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "key-radius-erasure",
-      "question": "Does QK normalization lose task-relevant pairwise logit structure after matched stable optimization?",
-      "prediction": "Restoring both norms exactly equals raw QK; raw key norm need not survive legal coordinate changes.",
-      "falsifier": "Radius carries no conditional information or matched retraining removes loss.",
-      "next_action": "Audit pairwise logit diagnostic vs QuacK, temperature and query-weighted prior art.",
+      "question": "Does centered logit residual predict real task loss after matched stable training?",
+      "prediction": "Scalar temperature exactly restores attention iff centered logits are proportional.",
+      "falsifier": "Matched training or task-optimal scalar controls remove practical gap.",
+      "next_action": "Refine matched training and distinct L2/KL/output oracle diagnostic protocol.",
       "status": "active",
-      "stage": "equivalence_and_identifiability_audit",
+      "stage": "diagnostic_specified",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 2,
+      "served_count": 3,
       "evidence": [
         "R001.md",
-        "R002.md"
+        "R002.md",
+        "R003.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -84,7 +86,7 @@
         "worker_source_read_cap": 3
       },
       "spent": {
-        "worker_tasks": 2,
+        "worker_tasks": 3,
         "tokens": null,
         "cost": null
       }
@@ -93,18 +95,19 @@
       "node_id": "QKV-C",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "coordinate-dependent-kv-sharing",
-      "question": "Does post-alignment cache reconstruction error predict output error under unseen query distributions?",
-      "prediction": "Delta logits = Q E^T; reconstruction error alone omits query and value sensitivity.",
-      "falsifier": "Practical converters invariant or simple existing alignment/uptraining removes effect.",
-      "next_action": "Read CAGA full text/code and score-aware compression before proposing a shift-sensitive criterion.",
+      "question": "Do calibration-uncovered query directions predict native errors after existing calibration controls?",
+      "prediction": "Fixed-cache zero calibration error can coexist with tanh²(1) test output MSE; moment domination bounds logit error.",
+      "falsifier": "Prefix/mixed calibration or affordable refresh removes native discrepancy.",
+      "next_action": "Specify within-context transition diagnostic and matched-rank calibration controls.",
       "status": "active",
-      "stage": "equivalence_and_identifiability_audit",
+      "stage": "diagnostic_specified",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 2,
+      "served_count": 3,
       "evidence": [
         "R001.md",
-        "R002.md"
+        "R002.md",
+        "R003.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -116,7 +119,7 @@
         "worker_source_read_cap": 3
       },
       "spent": {
-        "worker_tasks": 2,
+        "worker_tasks": 3,
         "tokens": null,
         "cost": null
       }
@@ -182,6 +185,23 @@
       "budget": {
         "work_units_reserved": 0
       },
+      "spent": {
+        "tokens": null,
+        "cost": null
+      }
+    },
+    {
+      "node_id": "QKV-A-known-source-exact-duplicate",
+      "parent_id": "QKV-A",
+      "status": "parked",
+      "stage": "simple_baseline_solves",
+      "question": "Exact known-source deduplication as a novel QKV architecture",
+      "reason": "ID deduplication or subtracting log multiplicity solves the specified target exactly.",
+      "evidence": [
+        "R003.md"
+      ],
+      "next_actor": "supervisor",
+      "next_action": "Reopen only with distinguishing evidence",
       "spent": {
         "tokens": null,
         "cost": null
@@ -311,6 +331,66 @@
         "no native model evidence",
         "formal design review not performed"
       ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual preliminary record; native checker not run",
+      "id": "R003-QKV-A",
+      "parent_question_id": "QKV-A",
+      "action": "deepen",
+      "evidence": [
+        "R003.md"
+      ],
+      "causal_reason": "Simple repair and precise mathematical boundary narrow the unresolved question.",
+      "mathematical_prediction": "Visible exact duplicates are solved by -log multiplicity; nonlinear V resolves simple matched-AV examples.",
+      "falsifier": "Simple controls solve task or improvement needs invisible true provenance.",
+      "next_question_id": "QKV-A",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual preliminary record; native checker not run",
+      "id": "R003-QKV-B",
+      "parent_question_id": "QKV-B",
+      "action": "deepen",
+      "evidence": [
+        "R003.md"
+      ],
+      "causal_reason": "Simple repair and precise mathematical boundary narrow the unresolved question.",
+      "mathematical_prediction": "Scalar temperature exactly restores attention iff centered logits are proportional.",
+      "falsifier": "Matched training or task-optimal scalar controls remove practical gap.",
+      "next_question_id": "QKV-B",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual preliminary record; native checker not run",
+      "id": "R003-QKV-C",
+      "parent_question_id": "QKV-C",
+      "action": "deepen",
+      "evidence": [
+        "R003.md"
+      ],
+      "causal_reason": "Simple repair and precise mathematical boundary narrow the unresolved question.",
+      "mathematical_prediction": "Fixed-cache zero calibration error can coexist with tanh²(1) test output MSE; moment domination bounds logit error.",
+      "falsifier": "Prefix/mixed calibration or affordable refresh removes native discrepancy.",
+      "next_question_id": "QKV-C",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
     }
   ],
   "review": {
@@ -320,16 +400,25 @@
   "run": {
     "status": "completed",
     "wake_source": "human continue",
-    "next_wake": "Restore R001/R002 and all three active diagnostic leaves plus parked claim history; follow per-node next actions",
+    "next_wake": "Restore R001-R003 and all peer diagnostic leaves; deepen observable-task/control specifications. No implementation before separate-conversation design acceptance.",
     "background_running": false
   },
   "budget": {
-    "worker_tasks_completed": 6,
+    "worker_tasks_completed": 9,
     "token_usage": null,
     "cost": null,
     "model_jobs": [],
-    "cumulative_usage_note": "Two bounded human wakes; total tokens/cost unknown, not reset."
+    "cumulative_usage_note": "Nine completed worker tasks across R001-R003, plus unreconciled earlier interrupted dispatch. Total usage unknown, not reset.",
+    "interrupted_dispatches": [
+      {
+        "id": "r003_a",
+        "status": "unknown; result not recovered",
+        "tokens": null,
+        "cost": null
+      }
+    ]
   },
-  "previous_checkpoint_sha": "4a1d826ac0ecefbedd705ba40d70b7a4a5096e1e",
-  "latest_report": "R002.md"
+  "previous_checkpoint_sha": "e568a797f453f07ff0a49961e70db4114791382e",
+  "latest_report": "R003.md",
+  "date_note": "Runtime reports 2026-10-23 UTC; retain established 20261024 project/branch identifiers without renaming history."
 }
