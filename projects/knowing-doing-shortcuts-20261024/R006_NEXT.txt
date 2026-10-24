@@ -1,0 +1,7 @@
+R006 full-frontier checkpoint. Parent: native revision 3 plus R004/R005 append-only reports.
+B1: evaluate actual conditional tool benefit, NOT hard-no-tool failure labels.
+B2: replace one-shot positive-part regret with repeated estimates, uncertainty and held-out controller evaluation.
+B3: separate outer candidate selection from inner agent strategy; winner's curse null must be controlled.
+B4: compare assigned budget under randomization, not correlations with realized token count.
+Actual Work reviewer: pending. GPU/model inference: not run. Project budget_verified=false; native Work batch absent.
+See ROUND-006.md and attached CPU-only scripts. All four leaves remain active.
