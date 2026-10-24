@@ -1,0 +1,115 @@
+{
+  "reproduction_note": "Output values from the executed /mnt/data/r009_probe.py, Python CPU environment; subset retained for compact GitHub checkpoint. Full local output sha256 11f5b7ae572de4ecfbf56af47a7293ec955ff485536970b47335d2970ceded14.",
+  "environment": {
+    "numpy": "2.3.5",
+    "torch": "2.10.0+cpu",
+    "scipy": "1.17.0",
+    "seed": 20261024
+  },
+  "A_parent": {
+    "Cov_global": 0,
+    "Cov_conditional": [
+      -1,
+      1
+    ],
+    "variance_original": 2,
+    "variance_calibrated": 1.5,
+    "risk_original": 1,
+    "risk_calibrated": 1.5
+  },
+  "A_child": {
+    "T": 9,
+    "g": 0.25,
+    "sigma_effective_sq": 1.4736842105263157,
+    "no_label_excess": 0.125,
+    "n4": {
+      "pe": 0.2957482682120778,
+      "regret": 0.1478741341060389
+    },
+    "n16": {
+      "pe": 0.13055434319656528,
+      "regret": 0.06527717159828264
+    },
+    "n64": {
+      "pe": 0.01148803309184143,
+      "regret": 0.005744016545920715
+    },
+    "n256": {
+      "pe": 0.000002546555984802283,
+      "regret": 0.0000012732779924011414
+    }
+  },
+  "B_parent": {
+    "Fisher_residual": 0.03806316583819601,
+    "eta0.05": {
+      "minimum_KL": 0.00004761050372121666,
+      "quadratic_KL": 0.00004757895729774502
+    },
+    "eta0.1": {
+      "minimum_KL": 0.00019044505240235982,
+      "quadratic_KL": 0.00019031582919098008
+    },
+    "eta0.2": {
+      "minimum_KL": 0.0007601562819948638,
+      "quadratic_KL": 0.0007612633167639203
+    }
+  },
+  "B_child": {
+    "unit_gain_scale2_full_equality": {
+      "BF16": true,
+      "FP16": true,
+      "FP32": false
+    },
+    "random_1000_vectors_full_equality": {
+      "BF16": 0.9950000047683716,
+      "FP16": 0.9359999895095825,
+      "FP32": 0
+    },
+    "random_component_equality": {
+      "BF16": 0.9999374747276306,
+      "FP16": 0.9994297027587891,
+      "FP32": 0
+    }
+  },
+  "C_parent": {
+    "N65536": {
+      "c-2": {
+        "output": 0.11920292032616457,
+        "mean_logit_square": 0.0025217294396296212
+      },
+      "c0": {
+        "output": 0.49999999982537685,
+        "mean_logit_square": 0.003753424625806694
+      },
+      "c2": {
+        "output": 0.880797077970818,
+        "mean_logit_square": 0.005229252986630537
+      }
+    }
+  },
+  "C_child": {
+    "t0.05_b1": {
+      "true_output": 0.3663751810288096,
+      "estimated_output": 0.3666666666666667,
+      "plain_error": 0.6336248189711904,
+      "corrected_error": 0.0002914856378570807,
+      "certificate_error_upper_bound": 0.0023794497489391274,
+      "certified": true
+    },
+    "t8_b4": {
+      "true_output": 1.0010058252833747,
+      "estimated_output": 6.666666666666667,
+      "plain_error": 2.9989941747166253,
+      "corrected_error": 5.665660841383293,
+      "certificate_error_upper_bound": 1017502.9915686178,
+      "certified": false
+    },
+    "t1_btanh1": {
+      "true_output": 0.7615941559557649,
+      "plain_error": 0,
+      "corrected_error": 0.1589372293628234,
+      "certificate_error_upper_bound": 3.0351930860714926,
+      "certified": false
+    }
+  }
+}
