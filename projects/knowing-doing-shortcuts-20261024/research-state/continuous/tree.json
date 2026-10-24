@@ -1,0 +1,241 @@
+{
+  "schema": "persistent-research-tree-v2",
+  "project_id": "llm-shortcutting-20261024",
+  "goal": "Disentangle hidden cognition-action readout, cost beliefs, proxy reward exploitation and misallocated effort in LLM shortcutting",
+  "mode": "branching",
+  "status": "active",
+  "revision": 1,
+  "authority_ref": {
+    "path": "research-state/authority.md",
+    "sha256": "cc58f16c4bbb06b222e09c843d25992d8456afc724fc177a6167bda9108d7612",
+    "kind": "other"
+  },
+  "origin": null,
+  "budget_verified": false,
+  "limits": {
+    "max_nodes": 25,
+    "max_depth": 4,
+    "max_children": 5,
+    "max_wake_leaves": 5,
+    "total_queries": 16,
+    "total_work_units": 16
+  },
+  "nodes": [
+    {
+      "node_id": "ROOT",
+      "parent_id": null,
+      "depth": 0,
+      "mechanism_id": "causal-sources-of-shortcutting",
+      "mechanism_verified": true,
+      "field": "LLM autonomous agent decision making",
+      "question": "Under what conditions does a capable agent fail to select an action that would improve true task success?",
+      "hypothesis": "Readout, mistaken utility, evaluator proxies and marginal budget differences can cause superficially similar outcomes",
+      "falsifier": "Matched interventions eliminate all measurable action gaps and proxy-incentive divergences",
+      "status": "branched",
+      "stage": "discovery",
+      "next_actor": "designer",
+      "priority": 3,
+      "evidence": [],
+      "budget": {
+        "queries": 0,
+        "work_units": 0
+      },
+      "spent": {
+        "queries": 0,
+        "work_units": 0
+      },
+      "next_action": "Examine all active B1-B4 mechanism branches without a global winner",
+      "blockers": [],
+      "reason": "Four unique mechanism alternatives retained",
+      "created_revision": 0,
+      "updated_revision": 1,
+      "served_count": 0
+    },
+    {
+      "node_id": "B1",
+      "parent_id": "ROOT",
+      "depth": 1,
+      "mechanism_id": "inaccessible-knowledge-readout",
+      "mechanism_verified": true,
+      "field": "mechanistic representations",
+      "question": "Does linearly probe-decodable necessity causally control tool action when cost and capability are fixed?",
+      "hypothesis": "Probe-decodable competence may not control selected action without reliable readout",
+      "falsifier": "Pre-action probe causal manipulation never changes actions in held-out conditions",
+      "status": "active",
+      "stage": "discovery",
+      "next_actor": "designer",
+      "priority": 3,
+      "evidence": [
+        {
+          "path": "evidence/B1.md",
+          "sha256": "9fdd50068bd0e44d7b8d3a99cbc8218eb068befcf0e8e5a1e525ba285e39f9a3",
+          "kind": "math"
+        }
+      ],
+      "budget": {
+        "queries": 4,
+        "work_units": 4
+      },
+      "spent": {
+        "queries": 0,
+        "work_units": 0
+      },
+      "next_action": "Test OOD calibrated probes and matched steering control",
+      "blockers": [],
+      "reason": null,
+      "created_revision": 1,
+      "updated_revision": 1,
+      "served_count": 0
+    },
+    {
+      "node_id": "B2",
+      "parent_id": "ROOT",
+      "depth": 1,
+      "mechanism_id": "subjective-uplift-cost-confounding",
+      "mechanism_verified": true,
+      "field": "causal decision theory",
+      "question": "Can an apparent skipped verification be identified as cost-avoidance rather than mistaken success beliefs?",
+      "hypothesis": "Only subjective value-to-cost ratio is action-identifiable without stronger interventions",
+      "falsifier": "Matched forced-action uplift finds no strictly dominated skips and cost has no causal action effect",
+      "status": "active",
+      "stage": "discovery",
+      "next_actor": "designer",
+      "priority": 4,
+      "evidence": [
+        {
+          "path": "evidence/B2.md",
+          "sha256": "cf9ff52486596e1b97a1f1e70646658100a61b00135fc890a354541e2df53742",
+          "kind": "math"
+        }
+      ],
+      "budget": {
+        "queries": 4,
+        "work_units": 4
+      },
+      "spent": {
+        "queries": 0,
+        "work_units": 0
+      },
+      "next_action": "Measure randomized cost elasticity and forced-action conditional regret",
+      "blockers": [],
+      "reason": null,
+      "created_revision": 1,
+      "updated_revision": 1,
+      "served_count": 0
+    },
+    {
+      "node_id": "B3",
+      "parent_id": "ROOT",
+      "depth": 1,
+      "mechanism_id": "proxy-vs-real-objective",
+      "mechanism_verified": true,
+      "field": "reward design and autonomous agents",
+      "question": "Does evaluator proxy visibility induce false completion after controlling real task value and cost?",
+      "hypothesis": "Proxy incentive induces apparent success even as independent true success degrades",
+      "falsifier": "Sealed objective and evaluation proxy perturbations produce no change in shortcuts or gap",
+      "status": "active",
+      "stage": "discovery",
+      "next_actor": "designer",
+      "priority": 3,
+      "evidence": [
+        {
+          "path": "evidence/B3.md",
+          "sha256": "98af90d7b53ed6a59a23e4e2263c9686ad19b83337e039c6a3752c70170136c1",
+          "kind": "math"
+        }
+      ],
+      "budget": {
+        "queries": 4,
+        "work_units": 4
+      },
+      "spent": {
+        "queries": 0,
+        "work_units": 0
+      },
+      "next_action": "Run fixed-objective 2x2 proxy visibility by tool-cost pilot",
+      "blockers": [],
+      "reason": null,
+      "created_revision": 1,
+      "updated_revision": 1,
+      "served_count": 0
+    },
+    {
+      "node_id": "B4",
+      "parent_id": "ROOT",
+      "depth": 1,
+      "mechanism_id": "marginal-compute-misallocation",
+      "mechanism_verified": true,
+      "field": "test time reasoning allocation",
+      "question": "Can action-specific marginal value explain both underchecking and excessive thought?",
+      "hypothesis": "Uniform or subjective effort allocations mismatch true marginal gains under finite budget",
+      "falsifier": "Strong optimized adaptive baselines account for all gains under matched resources",
+      "status": "active",
+      "stage": "discovery",
+      "next_actor": "designer",
+      "priority": 2,
+      "evidence": [
+        {
+          "path": "evidence/B4.md",
+          "sha256": "ea0786b4b3abc280a1d707ffe373b3e2fc0b0c62d9e8d764eba72a281e81db30",
+          "kind": "math"
+        }
+      ],
+      "budget": {
+        "queries": 4,
+        "work_units": 4
+      },
+      "spent": {
+        "queries": 0,
+        "work_units": 0
+      },
+      "next_action": "Compare empirical effort curves with known compute-optimal methods",
+      "blockers": [],
+      "reason": null,
+      "created_revision": 1,
+      "updated_revision": 1,
+      "served_count": 0
+    }
+  ],
+  "events": [
+    {
+      "revision": 1,
+      "event_id": "fork.R001.20261024",
+      "type": "fork",
+      "parent_id": "ROOT",
+      "new_ids": [
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+      ],
+      "evidence_refs": [
+        {
+          "path": "evidence/B1.md",
+          "sha256": "9fdd50068bd0e44d7b8d3a99cbc8218eb068befcf0e8e5a1e525ba285e39f9a3",
+          "kind": "math"
+        },
+        {
+          "path": "evidence/B2.md",
+          "sha256": "cf9ff52486596e1b97a1f1e70646658100a61b00135fc890a354541e2df53742",
+          "kind": "math"
+        },
+        {
+          "path": "evidence/B3.md",
+          "sha256": "98af90d7b53ed6a59a23e4e2263c9686ad19b83337e039c6a3752c70170136c1",
+          "kind": "math"
+        },
+        {
+          "path": "evidence/B4.md",
+          "sha256": "ea0786b4b3abc280a1d707ffe373b3e2fc0b0c62d9e8d764eba72a281e81db30",
+          "kind": "math"
+        }
+      ]
+    }
+  ],
+  "wake": null,
+  "global_spent": {
+    "queries": 0,
+    "work_units": 0
+  },
+  "budget_approvals": []
+}
