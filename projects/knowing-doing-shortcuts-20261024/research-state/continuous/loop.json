@@ -1,0 +1,19 @@
+{
+  "schema": "continuous-research-v1",
+  "project_id": "llm-shortcutting-20261024",
+  "goal": "Disentangle hidden cognition-action readout, cost beliefs, proxy reward exploitation and misallocated effort in LLM shortcutting",
+  "mode": "branching",
+  "authority_ref": {
+    "path": "research-state/authority.md",
+    "sha256": "cc58f16c4bbb06b222e09c843d25992d8456afc724fc177a6167bda9108d7612",
+    "kind": "other"
+  },
+  "status": "active",
+  "revision": 0,
+  "question_id": "ROOT",
+  "question": "Under what conditions does a capable agent fail to select an action that would improve true task success?",
+  "phase": "discovery",
+  "history": [],
+  "waiting_for": [],
+  "last_decision_id": null
+}
