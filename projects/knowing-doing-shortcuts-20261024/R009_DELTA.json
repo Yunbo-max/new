@@ -1,0 +1,51 @@
+{
+  "schema": "manual-fullfrontier-delta-v1",
+  "project_id": "llm-shortcutting-20261024",
+  "wake_id": "R009-20261024",
+  "parent_native_tree_revision": 3,
+  "authoritative_tree": "research-state/continuous/tree.json",
+  "native_tree_advanced": false,
+  "mode": "branching",
+  "no_primary_direction": true,
+  "active_nodes": [
+    "B1",
+    "B2",
+    "B3",
+    "B4"
+  ],
+  "reports": [
+    "ROUND-009.md"
+  ],
+  "scientific_outcomes": {
+    "B1": {
+      "stage": "deep_incomplete",
+      "evidence": "Confirmed When2Tool issue remains open, and corrected 5-seed certainty limitation",
+      "next": "Read author label archive and compare frozen-probe AUROC under repeated labels"
+    },
+    "B2": {
+      "stage": "deep_incomplete",
+      "evidence": "Simultaneous skip-rate and benefit LCB; two-stage prespecified confirmation design",
+      "next": "Authenticate same-state replay on native model and compare baselines"
+    },
+    "B3": {
+      "stage": "deep_incomplete",
+      "evidence": "Outer selector winner-curse negative control and fixed-candidate protocol",
+      "next": "Run hidden-score matched fixed-pool factorial when approved"
+    },
+    "B4": {
+      "stage": "deep_incomplete",
+      "evidence": "Stratified budget ITT design with consumed-token mediator distinction",
+      "next": "Run randomized budget arms on native model when approved"
+    }
+  },
+  "local_cpu": {
+    "r008_tests_passed": 14,
+    "r009_tests_passed": 21,
+    "real_llm_runs": 0,
+    "independent_review_runs": 0
+  },
+  "budget_verified": false,
+  "external_compute_status": "not authorized / not run",
+  "human_wake_required": true,
+  "local_zip_sha256": "5f1c989a7ef5f6caf1b308705f9e793fc174dc938c7a98fa3fe789068738a7e5"
+}
