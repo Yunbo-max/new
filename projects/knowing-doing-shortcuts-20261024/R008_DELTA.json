@@ -1,0 +1,30 @@
+{
+  "schema": "manual-fullfrontier-delta-v1",
+  "project_id": "llm-shortcutting-20261024",
+  "wake": "R008-20261024",
+  "parent_tree_revision": 3,
+  "authoritative_tree": "research-state/continuous/tree.json",
+  "status": "manual_science_checkpoint",
+  "native_tree_advanced": false,
+  "primary_direction": null,
+  "active": [
+    "B1",
+    "B2",
+    "B3",
+    "B4"
+  ],
+  "evidence": "ROUND-008.md",
+  "branch_science": {
+    "B1": "source-verified single-run necessity labels and author-acknowledged potential randomness; next repeat seeded labels",
+    "B2": "simultaneous Hoeffding bounds for conditional value; next genuinely matched action replay",
+    "B3": "outer candidate selection and visible-hidden gap attribution; next fixed-pool factorial",
+    "B4": "randomized assigned budget vs token-consumption mediator; next native budget intervention"
+  },
+  "reviewer": "pending",
+  "native_model_runs": 0,
+  "formal_independent_review": false,
+  "budget_verified": false,
+  "work_subagents_dispatched": 0,
+  "computational_budget": "unknown for past calls; GPU/API use unapproved",
+  "next_actor": "separate reviewer then authorized native executor"
+}
