@@ -1,0 +1,103 @@
+{
+  "schema": "manual-fullfrontier-preliminary-v1",
+  "project_id": "llm-shortcutting-20261024",
+  "mode": "branching",
+  "status": "active",
+  "no_primary_direction": true,
+  "plugin_version": "0.11.7-manual.fullfrontier.1",
+  "wake_id": "R001-20261024",
+  "wake_budget_minutes": 60,
+  "actual_wallclock_minutes": "not measured",
+  "provider_token_cost": "unknown",
+  "framework_role": "Human-woken one-time research; no active subagents or scheduled continuation",
+  "goal": "Disentangle capacity/knowledge readout, cost suppression, proxy gaming and effort allocation in LLM agent shortcuts",
+  "nodes": [
+    {
+      "id": "ROOT",
+      "parent": null,
+      "status": "branched",
+      "mechanism": "study multiple causal sources of missing execution",
+      "evidence": "ROUND-001.md"
+    },
+    {
+      "id": "B1",
+      "parent": "ROOT",
+      "status": "active",
+      "mechanism": "probe-decodable knowledge not controlling action",
+      "outcome": "CPU logical witness + published overlap; native unresolved",
+      "next": "Test intervention-specific causal accessibility and OOD probe validity",
+      "next_actor": "designer",
+      "level": "deep_incomplete"
+    },
+    {
+      "id": "B2",
+      "parent": "ROOT",
+      "status": "active",
+      "mechanism": "misestimated causal uplift vs subjective cost",
+      "outcome": "utility-threshold nonidentifiability derivation; CPU witness",
+      "next": "Factorial exogenous costs + forced-action success and conditional regret",
+      "next_actor": "designer",
+      "level": "deep_incomplete"
+    },
+    {
+      "id": "B3",
+      "parent": "ROOT",
+      "status": "active",
+      "mechanism": "optimizing exposed proxy instead of independent true success",
+      "outcome": "proxy/true ranking reversal CPU witness; published benchmark collision",
+      "next": "2x2 audit visibility versus cost factorial, independent harness",
+      "next_actor": "designer",
+      "level": "deep_incomplete"
+    },
+    {
+      "id": "B4",
+      "parent": "ROOT",
+      "status": "active",
+      "mechanism": "misallocation of marginal thinking/tool budget",
+      "outcome": "finite-resource CPU counterexample; known literature collision",
+      "next": "Compare to published compute-optimal and adaptive stopping baselines",
+      "next_actor": "designer",
+      "level": "deep_incomplete"
+    }
+  ],
+  "full_frontier_audit": {
+    "eligible": 4,
+    "investigated": 4,
+    "math_or_toy_evidence": 4,
+    "native_validated": 0,
+    "independent_reviewed": 0,
+    "unserved": 0,
+    "blocked_for_external_native_review": [
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ],
+    "next_batch": [
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ]
+  },
+  "resources": {
+    "gpu_training": "not authorized/not run",
+    "actual_spending": "unknown",
+    "scheduled_task": false
+  },
+  "evidence": [
+    {
+      "path": "ROUND-001.md",
+      "kind": "scientific report"
+    },
+    {
+      "path": "analytical_witness.py",
+      "kind": "code, executed locally on CPU"
+    },
+    {
+      "path": "README.md",
+      "kind": "protocol"
+    }
+  ],
+  "next_wake": "Reopen each B1-B4; inspect primary implementations, obtain independent reviewer before new method claims or costly native experiment; record actual per-branch receipts and Git SHA."
+}
