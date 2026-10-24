@@ -4,7 +4,7 @@
   "goal": "Disentangle hidden cognition-action readout, cost beliefs, proxy reward exploitation and misallocated effort in LLM shortcutting",
   "mode": "branching",
   "status": "active",
-  "revision": 1,
+  "revision": 2,
   "authority_ref": {
     "path": "research-state/authority.md",
     "sha256": "cc58f16c4bbb06b222e09c843d25992d8456afc724fc177a6167bda9108d7612",
@@ -70,6 +70,21 @@
           "path": "evidence/B1.md",
           "sha256": "9fdd50068bd0e44d7b8d3a99cbc8218eb068befcf0e8e5a1e525ba285e39f9a3",
           "kind": "math"
+        },
+        {
+          "path": "ROUND-002.md",
+          "sha256": "1cae919db549c1d611edc63a74a84b4443f128337ce4929b948df22db0c5e09e",
+          "kind": "math"
+        },
+        {
+          "path": "counterfactual_audit.py",
+          "sha256": "6f32312533ef005e6c4fa91a65c27b20b8815c37685c2c0e5bd2f7fae0840ddd",
+          "kind": "code"
+        },
+        {
+          "path": "CPU_WITNESSES_R002.json",
+          "sha256": "f664314630a8b7099fd89a0d9f0eaf4ed8a1534282eb5c2220d79be738c44244",
+          "kind": "experiment"
         }
       ],
       "budget": {
@@ -80,11 +95,11 @@
         "queries": 0,
         "work_units": 0
       },
-      "next_action": "Test OOD calibrated probes and matched steering control",
+      "next_action": "Test conditional benefit of necessity-axis patching against code-inspected When2Tool Probe&Prefill and generic tool propensity steering on held-out tasks.",
       "blockers": [],
-      "reason": null,
+      "reason": "R002 evidence added from direct manual scientific analysis and synthetic CPU witness; no native Work dispatch, reviewer, or model experiment.",
       "created_revision": 1,
-      "updated_revision": 1,
+      "updated_revision": 2,
       "served_count": 0
     },
     {
@@ -106,6 +121,21 @@
           "path": "evidence/B2.md",
           "sha256": "cf9ff52486596e1b97a1f1e70646658100a61b00135fc890a354541e2df53742",
           "kind": "math"
+        },
+        {
+          "path": "ROUND-002.md",
+          "sha256": "1cae919db549c1d611edc63a74a84b4443f128337ce4929b948df22db0c5e09e",
+          "kind": "math"
+        },
+        {
+          "path": "counterfactual_audit.py",
+          "sha256": "6f32312533ef005e6c4fa91a65c27b20b8815c37685c2c0e5bd2f7fae0840ddd",
+          "kind": "code"
+        },
+        {
+          "path": "CPU_WITNESSES_R002.json",
+          "sha256": "f664314630a8b7099fd89a0d9f0eaf4ed8a1534282eb5c2220d79be738c44244",
+          "kind": "experiment"
         }
       ],
       "budget": {
@@ -116,11 +146,11 @@
         "queries": 0,
         "work_units": 0
       },
-      "next_action": "Measure randomized cost elasticity and forced-action conditional regret",
+      "next_action": "With same pre-action histories, estimate forced-action value, randomize visible prices, and test regret after CTA/To Call or Not to Call calibrators.",
       "blockers": [],
-      "reason": null,
+      "reason": "R002 evidence added from direct manual scientific analysis and synthetic CPU witness; no native Work dispatch, reviewer, or model experiment.",
       "created_revision": 1,
-      "updated_revision": 1,
+      "updated_revision": 2,
       "served_count": 0
     },
     {
@@ -142,6 +172,21 @@
           "path": "evidence/B3.md",
           "sha256": "98af90d7b53ed6a59a23e4e2263c9686ad19b83337e039c6a3752c70170136c1",
           "kind": "math"
+        },
+        {
+          "path": "ROUND-002.md",
+          "sha256": "1cae919db549c1d611edc63a74a84b4443f128337ce4929b948df22db0c5e09e",
+          "kind": "math"
+        },
+        {
+          "path": "counterfactual_audit.py",
+          "sha256": "6f32312533ef005e6c4fa91a65c27b20b8815c37685c2c0e5bd2f7fae0840ddd",
+          "kind": "code"
+        },
+        {
+          "path": "CPU_WITNESSES_R002.json",
+          "sha256": "f664314630a8b7099fd89a0d9f0eaf4ed8a1534282eb5c2220d79be738c44244",
+          "kind": "experiment"
         }
       ],
       "budget": {
@@ -152,11 +197,11 @@
         "queries": 0,
         "work_units": 0
       },
-      "next_action": "Run fixed-objective 2x2 proxy visibility by tool-cost pilot",
+      "next_action": "Run sealed evaluator proxy visibility x price factorial; compare RHB environmental hardening and ACL EST, with hidden correctness as ground truth.",
       "blockers": [],
-      "reason": null,
+      "reason": "R002 evidence added from direct manual scientific analysis and synthetic CPU witness; no native Work dispatch, reviewer, or model experiment.",
       "created_revision": 1,
-      "updated_revision": 1,
+      "updated_revision": 2,
       "served_count": 0
     },
     {
@@ -178,6 +223,21 @@
           "path": "evidence/B4.md",
           "sha256": "ea0786b4b3abc280a1d707ffe373b3e2fc0b0c62d9e8d764eba72a281e81db30",
           "kind": "math"
+        },
+        {
+          "path": "ROUND-002.md",
+          "sha256": "1cae919db549c1d611edc63a74a84b4443f128337ce4929b948df22db0c5e09e",
+          "kind": "math"
+        },
+        {
+          "path": "counterfactual_audit.py",
+          "sha256": "6f32312533ef005e6c4fa91a65c27b20b8815c37685c2c0e5bd2f7fae0840ddd",
+          "kind": "code"
+        },
+        {
+          "path": "CPU_WITNESSES_R002.json",
+          "sha256": "f664314630a8b7099fd89a0d9f0eaf4ed8a1534282eb5c2220d79be738c44244",
+          "kind": "experiment"
         }
       ],
       "budget": {
@@ -188,11 +248,11 @@
         "queries": 0,
         "work_units": 0
       },
-      "next_action": "Compare empirical effort curves with known compute-optimal methods",
+      "next_action": "Measure discrete per-task verification/computation value curves and compare delayed-return policy to MUTO/CATS and oracle DP at equal resource cost.",
       "blockers": [],
-      "reason": null,
+      "reason": "R002 evidence added from direct manual scientific analysis and synthetic CPU witness; no native Work dispatch, reviewer, or model experiment.",
       "created_revision": 1,
-      "updated_revision": 1,
+      "updated_revision": 2,
       "served_count": 0
     }
   ],
@@ -228,6 +288,35 @@
           "path": "evidence/B4.md",
           "sha256": "ea0786b4b3abc280a1d707ffe373b3e2fc0b0c62d9e8d764eba72a281e81db30",
           "kind": "math"
+        }
+      ]
+    },
+    {
+      "revision": 2,
+      "event_id": "manual-science.R002.20261024",
+      "type": "manual_science_record",
+      "served_ids": [
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+      ],
+      "disposition": "four leaves received paper/code/math scrutiny; still deep_incomplete; no native batch issued",
+      "evidence_refs": [
+        {
+          "path": "ROUND-002.md",
+          "sha256": "1cae919db549c1d611edc63a74a84b4443f128337ce4929b948df22db0c5e09e",
+          "kind": "math"
+        },
+        {
+          "path": "counterfactual_audit.py",
+          "sha256": "6f32312533ef005e6c4fa91a65c27b20b8815c37685c2c0e5bd2f7fae0840ddd",
+          "kind": "code"
+        },
+        {
+          "path": "CPU_WITNESSES_R002.json",
+          "sha256": "f664314630a8b7099fd89a0d9f0eaf4ed8a1534282eb5c2220d79be738c44244",
+          "kind": "experiment"
         }
       ]
     }
