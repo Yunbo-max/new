@@ -1,0 +1,34 @@
+{
+  "schema": "manual-wake-r007-delta-v1",
+  "project_id": "llm-shortcutting-20261024",
+  "parent_tree_revision": 3,
+  "parent_tree_blob_sha": "0d400e44988c32a8c307bd111e9586f141762b62",
+  "report": "ROUND-007.md",
+  "nodes": {
+    "B1": {
+      "status": "active",
+      "delta": "forced continuation policy contaminates single-action effect",
+      "next": "validate continuation policy equivalence"
+    },
+    "B2": {
+      "status": "active",
+      "delta": "synthetic confidence certificate vs point estimate",
+      "next": "review CITA/CSI and real matched rollouts"
+    },
+    "B3": {
+      "status": "active",
+      "delta": "outer selection winner's curse null control",
+      "next": "hold candidate set fixed"
+    },
+    "B4": {
+      "status": "active",
+      "delta": "assigned vs consumed compute confounding",
+      "next": "randomized budget curves"
+    }
+  },
+  "model_runs": 0,
+  "independent_review": "pending",
+  "authorized_budget": false,
+  "full_harness": "R007_research_checkpoint.zip conversation attachment",
+  "native_tree_updated": false
+}
