@@ -1,0 +1,75 @@
+{
+  "report_version": "R014",
+  "source_sha": "5f0d21fc49c7b9f9ebd74c038ac7555bf593d23d",
+  "environment": {
+    "python": "3.11+",
+    "numpy": "2.3.5",
+    "torch": "2.10.0+cpu",
+    "seed": 20261024
+  },
+  "measured_original_full_cpu_script": {
+    "A_parent": {
+      "rho": -0.8,
+      "theory_baseline": 0.4,
+      "theory_after_head1_removed": 1,
+      "sample_baseline": 0.3968289010662713,
+      "sample_after": 1.0033498366425082
+    },
+    "A_child": {
+      "rho_range": [
+        0.3,
+        0.45
+      ],
+      "nominal_k": 0.4,
+      "robust_k": 0.1,
+      "no_label": 0.125,
+      "rho30_nominal": 0.105,
+      "rho30_robust": 0.11625,
+      "rho45_nominal": 0.135,
+      "rho45_robust": 0.12375
+    },
+    "B_parent": {
+      "D": 1024,
+      "H2_theory": 0.998046875,
+      "H2_cpu": 0.9980428901140352,
+      "H16_theory": 0.984375,
+      "H16_cpu": 0.9837753533519997
+    },
+    "B_child": {
+      "identical_BF16_normalized_K": true,
+      "raw_V_x": 1,
+      "raw_V_2x": 2
+    },
+    "C_parent": {
+      "N": 65536,
+      "d": 128,
+      "planted_score": 11.313708498984761,
+      "background_logZ": 11.587296909254555,
+      "target_mass": 0.43202635853328614,
+      "output_error_D0": 0,
+      "output_error_D1": 0.43202635853328614,
+      "output_error_D2": 0.8640527170665723
+    },
+    "C_child": {
+      "actual_weight_gap": 0.16666666666666666,
+      "printed_Eq35": 0.1111111111111111,
+      "evicted_logits": [
+        -2.010105077484762,
+        0.6238107163648713
+      ],
+      "moment_order_1_outputs": [
+        1.9174054605564645,
+        -0.08259453944353537
+      ],
+      "moment_order_2_outputs": [
+        -0.031062774127550947,
+        1.9689372258724491
+      ],
+      "moment_order_3_outputs": [
+        1.988478071305878,
+        -0.011521928694121903
+      ]
+    }
+  },
+  "execution": "Full original R014_math_checks.py verified via CPU before writing. GitHub carries an additional compact six-node witness; native Qwen not run."
+}
