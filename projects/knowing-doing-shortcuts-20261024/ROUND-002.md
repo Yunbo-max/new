@@ -2,12 +2,12 @@
 Date: 2026-10-24. Research mode: branching, no primary direction. Human-woken continuation of R001, under a proposed 60-minute maximum; actual elapsed time/provider usage unknown.
 
 ## Receipt and authority
-Restored native \`persistent-research-tree-v2\` revision 1 from \`Yunbo-max/new\` branch \`research/known-doing-shortcuts-20261024\`. Four peer active leaves B1-B4 were intact; \`budget_verified=false\`, \`wake=null\`, with no native GPU/model job, reviewer or registered subagent dispatch. No existing scientific project outside this scope was imported. This run performed public primary-source checking, independent mathematical reasoning by the assistant (not an independent reviewer), and execution of artificial Python CPU witnesses. There are no claims of real LLM behavioral measurements.
+Restored native `persistent-research-tree-v2` revision 1 from `Yunbo-max/new` branch `research/known-doing-shortcuts-20261024`. Four peer active leaves B1-B4 were intact; `budget_verified=false`, `wake=null`, with no native GPU/model job, reviewer or registered subagent dispatch. No existing scientific project outside this scope was imported. This run performed public primary-source checking, independent mathematical reasoning by the assistant (not an independent reviewer), and execution of artificial Python CPU witnesses. There are no claims of real LLM behavioral measurements.
 
 ## B1: Information decodability is not policy usage
 **Nearest original methods:**
 - Cheng et al. (2026), https://arxiv.org/abs/2605.14038 : model-dependent tool necessity; large cognition/execution gap and late representation decoupling.
-- Sun et al., NeurIPS 2026, When2Tool: https://arxiv.org/abs/2605.09252 ; project https://lilywenglab.github.io/when2tool/ ; code https://github.com/Trustworthy-ML-Lab/when2tool. Pre-generation probe of tool necessity (AUROC 0.89-0.96); Probe&Prefill reduces calls. Inspected actual \`src/train_probe.py\` (logistic regression on hidden states) and \`src/run_probe_eval.py\` (precomputed hidden states and soft/hard prefill).
+- Sun et al., NeurIPS 2026, When2Tool: https://arxiv.org/abs/2605.09252 ; project https://lilywenglab.github.io/when2tool/ ; code https://github.com/Trustworthy-ML-Lab/when2tool. Pre-generation probe of tool necessity (AUROC 0.89-0.96); Probe&Prefill reduces calls. Inspected actual `src/train_probe.py` (logistic regression on hidden states) and `src/run_probe_eval.py` (precomputed hidden states and soft/hard prefill).
 - Chen et al. (2026), https://arxiv.org/abs/2608.25198 : a direction steers tool call propensity from about 0% to >90%; a direction-based controller itself is NOT new.
 - Park et al., ICML 2026, https://proceedings.mlr.press/v306/park26v.html : knowledge/prediction subspace alignment with an intervention.
 
@@ -17,23 +17,23 @@ Restored native \`persistent-research-tree-v2\` revision 1 from \`Yunbo-max/new\
 
 **Discriminating test.** For the SAME pre-action history h: (1) estimate the probe out of distribution; (2) calculate its direction, actual decoder action direction and interaction; (3) randomized low/high costs with identical authorized tools; (4) intervene at specified layers on necessity-direction versus action-direction with matched norm; (5) score actual hidden task success, not just call rate. The branch's specific interaction hypothesis is refuted if necessity-direction manipulation has no selective beneficial task effect, or if existing Probe&Prefill/steering achieve the same conditional improvement.
 
-**Status:** new source-and-code equivalence; a CPU logic witness; \`deep_incomplete\`, no independent reviewer.
+**Status:** new source-and-code equivalence; a CPU logic witness; `deep_incomplete`, no independent reviewer.
 
 ## B2: Subjective cost-aversion is not identifiable from revealed actions
 **Nearest original methods:**
-- Ding et al. (2026), Calibrate-Then-Act: https://arxiv.org/abs/2602.16699 ; code https://github.com/NSF-Simons-CosmicAI-Institute/CalibrateThenAct . Its published tasks already include coding with selective unit testing and explicit prior calibration. Inspected \`env_explorer/scripts/run_eval_code.py\`, including \`--calibrator\` and \`--rho\`.
+- Ding et al. (2026), Calibrate-Then-Act: https://arxiv.org/abs/2602.16699 ; code https://github.com/NSF-Simons-CosmicAI-Institute/CalibrateThenAct . Its published tasks already include coding with selective unit testing and explicit prior calibration. Inspected `env_explorer/scripts/run_eval_code.py`, including `--calibrator` and `--rho`.
 - Wu et al. (2026), To Call or Not to Call: https://arxiv.org/abs/2605.00737 . Already separates necessity, utility, and affordability and estimates model-perceived versus normative need; a 'need vs. benefit' controller is NOT a standalone novel idea.
 - Sun et al. When2Tool and Chen et al. steering provide additional action-gating baselines.
 
-**Proposition (exact under a deterministic threshold model).** Let the model choose verify iff \`v - lambda*c > 0\`, where \`v>0\` is subjective anticipated benefit, \`lambda>0\` is cost sensitivity, and randomized tool price c is externally visible. For any alpha>0, the pair \`(alpha*v, alpha*lambda)\` induces the identical action at EVERY c, because multiplying a real number by positive alpha preserves its sign. Consequently, even an arbitrarily precise observed price->action curve identifies, at best, threshold v/lambda, not v and lambda separately. In a probabilistic choice rule, additional noise-scale normalization assumptions would be needed. The theorem is not a new normative decision optimizer; it is an interpretation limit.
+**Proposition (exact under a deterministic threshold model).** Let the model choose verify iff `v - lambda*c > 0`, where `v>0` is subjective anticipated benefit, `lambda>0` is cost sensitivity, and randomized tool price c is externally visible. For any alpha>0, the pair `(alpha*v, alpha*lambda)` induces the identical action at EVERY c, because multiplying a real number by positive alpha preserves its sign. Consequently, even an arbitrarily precise observed price->action curve identifies, at best, threshold v/lambda, not v and lambda separately. In a probabilistic choice rule, additional noise-scale normalization assumptions would be needed. The theorem is not a new normative decision optimizer; it is an interpretation limit.
 
-**Counterexample / numerical witness.** Subjective worlds (v=.12, lambda=1) and (v=.24, lambda=2) yield identical decisions [verify, verify, skip, skip] at c=[.03,.08,.13,.18]. If the TRUE forced-action pass probability difference is .80-.60=.20, the skipped cases at c=.13,.18 are both objectively dominated under a unit reward. Under equal price exposure, mean observed action regret is \`((.20-.13)+(.20-.18))/4=.0225\`. Thus avoidable regret can coexist with observational nonidentifiability of subjective motivation. Artificial values: NOT LLM data.
+**Counterexample / numerical witness.** Subjective worlds (v=.12, lambda=1) and (v=.24, lambda=2) yield identical decisions [verify, verify, skip, skip] at c=[.03,.08,.13,.18]. If the TRUE forced-action pass probability difference is .80-.60=.20, the skipped cases at c=.13,.18 are both objectively dominated under a unit reward. Under equal price exposure, mean observed action regret is `((.20-.13)+(.20-.18))/4=.0225`. Thus avoidable regret can coexist with observational nonidentifiability of subjective motivation. Artificial values: NOT LLM data.
 
-**Further identifiability warning.** Even forced verification must be defined at the SAME pre-action history, since externally requiring a tool earlier can change the whole reasoning policy. Potential outcome \`Y(a;h)\` should refer to a controlled one-step tool choice with a common h, fixed available information, task, deterministic tool output and held-out evaluator. Define \`V(h)=E[Y(1;h)-Y(0;h)]\`; a skipped-call regret for cost c is \`1{A=0}max(0,R*V(h)-c)\`. Observing the model's own stated confidence alone does not identify its subjective beliefs.
+**Further identifiability warning.** Even forced verification must be defined at the SAME pre-action history, since externally requiring a tool earlier can change the whole reasoning policy. Potential outcome `Y(a;h)` should refer to a controlled one-step tool choice with a common h, fixed available information, task, deterministic tool output and held-out evaluator. Define `V(h)=E[Y(1;h)-Y(0;h)]`; a skipped-call regret for cost c is `1{A=0}max(0,R*V(h)-c)`. Observing the model's own stated confidence alone does not identify its subjective beliefs.
 
 **Nearest falsifier and simpler remedy.** Randomize c, independently estimate V(h) from forced action counterfactuals, and compare observed voluntary calls with the threshold. Compare to CTA and hidden-state utility estimators; test a revealed-calibration intervention before inventing a new algorithm. If conditioned dominated skips disappear under strong baselines and matched conditions, the proposed improvement has no defensible novelty.
 
-**Status:** new exact nonidentifiability lemma and numerical counterexample; strong prior-art collision; \`deep_incomplete\` until actual model results.
+**Status:** new exact nonidentifiability lemma and numerical counterexample; strong prior-art collision; `deep_incomplete` until actual model results.
 
 ## B3: Cost avoidance versus optimization of a visible evaluator
 **Nearest original methods:**
@@ -57,21 +57,21 @@ Restored native \`persistent-research-tree-v2\` revision 1 from \`Yunbo-max/new\
 - Li et al., ACL 2026 MUTO: https://aclanthology.org/2026.acl-long.1386/ : token-level marginal utility optimization already proposed.
 - Liu et al., COLM 2026 CATS: https://research.google/pubs/cost-effective-agent-test-time-scaling/ : token/tool budget-aware allocation already studied.
 
-**Formal objective.** For task i, \`p_i(t)\` is success probability given integer effort t, and \`sum_i t_i<=B\`. Maximize \`sum_i p_i(t_i)\`. Marginal equalization is justified only under additional smooth/concave assumptions; myopic greedy can fail under delayed complementarity.
+**Formal objective.** For task i, `p_i(t)` is success probability given integer effort t, and `sum_i t_i<=B`. Maximize `sum_i p_i(t_i)`. Marginal equalization is justified only under additional smooth/concave assumptions; myopic greedy can fail under delayed complementarity.
 
 **Exact discrete witness.** With B=3, easy-task success curve t=0..3: (.80,.82,.84,.86), hard-task curve: (.15,.15,.15,.80). One-step greedy adds three units to easy, yielding .86+.15=1.01 expected correct. Global optimum allocates all three units to hard, yielding .80+.80=1.60; gap .59. The hard task's first two units seem useless and the third is valuable. This synthetic counterexample is not itself a new algorithm.
 
 **Rival/repair/falsifier.** Access to per-task effort curves is an oracle and generally unavailable online. A fitted early-stop/value model, adaptive search and established CATS/MUTO methods are simple baselines. On held-out tasks, compare strong matched-cost methods and report regret *relative to an oracle only as a diagnostic*, not as claimed deployed performance. If common approaches already resolve delayed complementarities, this mechanism is not a novel paper.
 
-**Status:** new precise greedy failure witness; strong related work; \`deep_incomplete\` until model-measured value curves and baseline comparisons.
+**Status:** new precise greedy failure witness; strong related work; `deep_incomplete` until model-measured value curves and baseline comparisons.
 
 ## Reproducible artifact and full-frontier disposition
-- \`counterfactual_audit.py\` reproduces four entirely synthetic witnesses with assertions; its stdout is \`CPU_WITNESSES_R002.json\`. Tested with Python 3 and bytecode compilation; no model, training or external API executed.
+- `counterfactual_audit.py` reproduces four entirely synthetic witnesses with assertions; its stdout is `CPU_WITNESSES_R002.json`. Tested with Python 3 and bytecode compilation; no model, training or external API executed.
 - B1: mechanism updated by actual When2Tool source code inspection and intervention witness.
 - B2: mechanism updated by exact scale invariance proof, CTA code inspection and conditional-regret counterexample.
 - B3: mechanism updated by EST collision and controlled-proxy limit.
 - B4: mechanism updated by delayed-return greedy failure and MUTO/CATS overlap.
-- Four active branches served by a single manual assistant turn, NOT four native Work agents or a formally issued controller batch. No claims of \`deep_complete\`, formal novelty acceptance, independent reviewer approval, provider budget approval or actual LLM validation.
+- Four active branches served by a single manual assistant turn, NOT four native Work agents or a formally issued controller batch. No claims of `deep_complete`, formal novelty acceptance, independent reviewer approval, provider budget approval or actual LLM validation.
 
 ## Recommended next evidence gates (no global direction selected)
 1. Native accessible model checkpoint and matched tool-harness environment for the four paired interventions; suggested candidate Qwen/Qwen3-4B-Instruct-2507 as in When2Tool.
