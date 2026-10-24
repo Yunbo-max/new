@@ -1,6 +1,6 @@
 {
   "schema": "qkv-preliminary-checkpoint-v1",
-  "revision": 7,
+  "revision": 8,
   "project_id": "qkv-counterexamples-20261024",
   "date": "2026-10-24",
   "repo": "Yunbo-max/new",
@@ -38,12 +38,12 @@
       "question": "When does observable calibration preserve target signal rather than merely reduce variance?",
       "prediction": "Variance minimization incurs excess risk Cov(theta,D)^2/Var(D) if D carries signal.",
       "falsifier": "No signal-preserving difference can be defined, or ordinary controls remove task benefit.",
-      "next_action": "Define accessible same-target difference and independent task evaluation before architecture design.",
+      "next_action": "Continue original R007 protocol and investigate the distinct new R008 child at matched information/bytes.",
       "status": "active",
       "stage": "deep_mathematical_record",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 7,
+      "served_count": 8,
       "evidence": [
         "R001.md",
         "R002.md",
@@ -51,7 +51,8 @@
         "R004.md",
         "R005-A.md",
         "R006.md",
-        "R007-A.md"
+        "R007-A.md",
+        "R008.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -68,7 +69,7 @@
         "cost": null
       },
       "last_outcome": "advanced",
-      "latest_analytical_stage": "R007 returned mathematical/design evidence; native and formal review incomplete"
+      "latest_analytical_stage": "R008 independent math/source/CPU advance; native evidence pending"
     },
     {
       "node_id": "QKV-B",
@@ -77,12 +78,12 @@
       "question": "Do key radial changes survive GQA-projected per-head temperature compensation?",
       "prediction": "Query scaling equals temperature; key radial tangent outside span of projected temperature tangents is locally irreducible.",
       "falsifier": "Projected residual or downstream effect vanishes under controls.",
-      "next_action": "Tokenize fixed 64-record probe, verify runtime/model files and obtain scoped diagnostic review.",
+      "next_action": "Continue original R007 protocol and investigate the distinct new R008 child at matched information/bytes.",
       "status": "active",
       "stage": "deep_incomplete",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 7,
+      "served_count": 8,
       "evidence": [
         "R001.md",
         "R002.md",
@@ -90,7 +91,8 @@
         "R004.md",
         "R005-B.md",
         "R006.md",
-        "R007-B.md"
+        "R007-B.md",
+        "R008.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -107,7 +109,7 @@
         "cost": null
       },
       "last_outcome": "advanced",
-      "latest_analytical_stage": "R007 returned mathematical/design evidence; native and formal review incomplete"
+      "latest_analytical_stage": "R008 independent math/source/CPU advance; native evidence pending"
     },
     {
       "node_id": "QKV-C",
@@ -116,12 +118,12 @@
       "question": "Do rare summarized entries attain log-N margins under native query switches at equal total bytes?",
       "prediction": "At t=log N full output tends1/2 while average variance and first-order output tend0.",
       "falsifier": "Effect diluted or exact-entry/adaptive-selection baselines recover it.",
-      "next_action": "Freeze C text manifest and compare actual target margin with predicted dilution boundary.",
+      "next_action": "Continue original R007 protocol and investigate the distinct new R008 child at matched information/bytes.",
       "status": "active",
       "stage": "deep_incomplete",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 7,
+      "served_count": 8,
       "evidence": [
         "R001.md",
         "R002.md",
@@ -129,7 +131,8 @@
         "R004.md",
         "R005-C.md",
         "R006.md",
-        "R007-C.md"
+        "R007-C.md",
+        "R008.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -146,7 +149,7 @@
         "cost": null
       },
       "last_outcome": "advanced",
-      "latest_analytical_stage": "R007 returned mathematical/design evidence; native and formal review incomplete"
+      "latest_analytical_stage": "R008 independent math/source/CPU advance; native evidence pending"
     },
     {
       "node_id": "QKV-A-naive-claim",
@@ -278,6 +281,102 @@
       "next_action": "Reopen only with explicit signal-preservation conditions and task evidence",
       "next_actor": "supervisor",
       "spent": {
+        "tokens": null,
+        "cost": null
+      }
+    },
+    {
+      "node_id": "QKV-A-signal-noise-identifiability",
+      "parent_id": "QKV-A",
+      "mechanism_id": "task-dependent-correlation-identifiability",
+      "question": "Can QKV-only paired calibration identify the desired signed correction when target and difference share signal?",
+      "prediction": "Observationally identical target worlds theta±=theta±g*d require beta*=-1/2±g and average excess risk >=2g².",
+      "falsifier": "Task/reward labels, genuine signal independence or same-information regularized GLS resolve native task.",
+      "next_action": "Freeze common target semantics and observable calibration information, compare same-budget GLS/heads.",
+      "status": "active",
+      "stage": "analytic_counterexample_native_unverified",
+      "priority": "peer",
+      "served_count": 1,
+      "evidence": [
+        "R008.md",
+        "R008-math-witness.py"
+      ],
+      "next_actor": "supervisor",
+      "blockers": [
+        "native protocol pending",
+        "novelty unaccepted",
+        "separate formal review missing"
+      ],
+      "budget": {
+        "worker_query_cap": 3,
+        "worker_source_read_cap": 3
+      },
+      "spent": {
+        "worker_tasks": 0,
+        "tokens": null,
+        "cost": null
+      }
+    },
+    {
+      "node_id": "QKV-B-precision-radial-collision",
+      "parent_id": "QKV-B",
+      "mechanism_id": "qknorm-dtype-cast-noninjectivity",
+      "question": "Do pretrained BF16 Qwen3 Q/K normalizations exhibit task-relevant radial collisions beyond vanilla temperature/readout controls?",
+      "prediction": "Unit-gain 128d eps1e-6 RMSNorm maps radius1 and2 identically after FP16/BF16 cast but not FP32.",
+      "falsifier": "Real learned activations/backend do not collide or output/task results equal after straightforward controls.",
+      "next_action": "Freeze R007 prompt tokenization/device/dtype; inspect trained gain and post-V/WO error.",
+      "status": "active",
+      "stage": "analytic_counterexample_native_unverified",
+      "priority": "peer",
+      "served_count": 1,
+      "evidence": [
+        "R008.md",
+        "R008-math-witness.py"
+      ],
+      "next_actor": "supervisor",
+      "blockers": [
+        "native protocol pending",
+        "novelty unaccepted",
+        "separate formal review missing"
+      ],
+      "budget": {
+        "worker_query_cap": 3,
+        "worker_source_read_cap": 3
+      },
+      "spent": {
+        "worker_tasks": 0,
+        "tokens": null,
+        "cost": null
+      }
+    },
+    {
+      "node_id": "QKV-C-unsafe-moment-correction",
+      "parent_id": "QKV-C",
+      "mechanism_id": "moment-mixture-nonmonotonic-error",
+      "question": "When can post-eviction first-order moment correction worsen the reference attention error, and do safe same-byte repairs exist?",
+      "prediction": "MomentKV Eq9/11/12 reachable state t8 M4 gives abs error5.66566 vs 2.99899 plain eviction; identical retained moments hide opposite gain signs.",
+      "falsifier": "Implementation contains additional unmodelled safeguards or native Qwen effects disappear with matched-resource repairs.",
+      "next_action": "Inspect MomentKV code; test controlled query transitions and same-byte exact, clip, certificate, fallback controls.",
+      "status": "active",
+      "stage": "analytic_counterexample_native_unverified",
+      "priority": "peer",
+      "served_count": 1,
+      "evidence": [
+        "R008.md",
+        "R008-math-witness.py"
+      ],
+      "next_actor": "supervisor",
+      "blockers": [
+        "native protocol pending",
+        "novelty unaccepted",
+        "separate formal review missing"
+      ],
+      "budget": {
+        "worker_query_cap": 3,
+        "worker_source_read_cap": 3
+      },
+      "spent": {
+        "worker_tasks": 0,
         "tokens": null,
         "cost": null
       }
@@ -709,19 +808,150 @@
         "no native model evidence",
         "formal design review not performed"
       ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual verified CPU math and source; native checker and separate reviewer not run",
+      "id": "R008-QKV-A",
+      "parent_question_id": "QKV-A",
+      "action": "deepen",
+      "evidence": [
+        "R008.md"
+      ],
+      "causal_reason": "New restriction, numerical counterexample and primary-equation audit from R008",
+      "mathematical_prediction": "Observationally identical target worlds theta±=theta±g*d require beta*=-1/2±g and average excess risk >=2g².",
+      "falsifier": "Task/reward labels, genuine signal independence or same-information regularized GLS resolve native task.",
+      "next_question_id": "R008-QKV-A",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model data absent",
+        "formal independent reviewer missing",
+        "novel architectural method not accepted"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual verified CPU math and source; native checker and separate reviewer not run",
+      "id": "R008-QKV-B",
+      "parent_question_id": "QKV-B",
+      "action": "deepen",
+      "evidence": [
+        "R008.md"
+      ],
+      "causal_reason": "New restriction, numerical counterexample and primary-equation audit from R008",
+      "mathematical_prediction": "Unit-gain 128d eps1e-6 RMSNorm maps radius1 and2 identically after FP16/BF16 cast but not FP32.",
+      "falsifier": "Real learned activations/backend do not collide or output/task results equal after straightforward controls.",
+      "next_question_id": "R008-QKV-B",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model data absent",
+        "formal independent reviewer missing",
+        "novel architectural method not accepted"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual verified CPU math and source; native checker and separate reviewer not run",
+      "id": "R008-QKV-C",
+      "parent_question_id": "QKV-C",
+      "action": "deepen",
+      "evidence": [
+        "R008.md"
+      ],
+      "causal_reason": "New restriction, numerical counterexample and primary-equation audit from R008",
+      "mathematical_prediction": "MomentKV Eq9/11/12 reachable state t8 M4 gives abs error5.66566 vs 2.99899 plain eviction; identical retained moments hide opposite gain signs.",
+      "falsifier": "Implementation contains additional unmodelled safeguards or native Qwen effects disappear with matched-resource repairs.",
+      "next_question_id": "R008-QKV-C",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model data absent",
+        "formal independent reviewer missing",
+        "novel architectural method not accepted"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual verified CPU math and source; native checker and separate reviewer not run",
+      "id": "R008-QKV-A-signal-noise-identifiability",
+      "parent_question_id": "QKV-A",
+      "action": "branch",
+      "evidence": [
+        "R008.md"
+      ],
+      "causal_reason": "New restriction, numerical counterexample and primary-equation audit from R008",
+      "mathematical_prediction": "Observationally identical target worlds theta±=theta±g*d require beta*=-1/2±g and average excess risk >=2g².",
+      "falsifier": "Task/reward labels, genuine signal independence or same-information regularized GLS resolve native task.",
+      "next_question_id": "R008-QKV-A-signal-noise-identifiability",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model data absent",
+        "formal independent reviewer missing",
+        "novel architectural method not accepted"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual verified CPU math and source; native checker and separate reviewer not run",
+      "id": "R008-QKV-B-precision-radial-collision",
+      "parent_question_id": "QKV-B",
+      "action": "branch",
+      "evidence": [
+        "R008.md"
+      ],
+      "causal_reason": "New restriction, numerical counterexample and primary-equation audit from R008",
+      "mathematical_prediction": "Unit-gain 128d eps1e-6 RMSNorm maps radius1 and2 identically after FP16/BF16 cast but not FP32.",
+      "falsifier": "Real learned activations/backend do not collide or output/task results equal after straightforward controls.",
+      "next_question_id": "R008-QKV-B-precision-radial-collision",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model data absent",
+        "formal independent reviewer missing",
+        "novel architectural method not accepted"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual verified CPU math and source; native checker and separate reviewer not run",
+      "id": "R008-QKV-C-unsafe-moment-correction",
+      "parent_question_id": "QKV-C",
+      "action": "branch",
+      "evidence": [
+        "R008.md"
+      ],
+      "causal_reason": "New restriction, numerical counterexample and primary-equation audit from R008",
+      "mathematical_prediction": "MomentKV Eq9/11/12 reachable state t8 M4 gives abs error5.66566 vs 2.99899 plain eviction; identical retained moments hide opposite gain signs.",
+      "falsifier": "Implementation contains additional unmodelled safeguards or native Qwen effects disappear with matched-resource repairs.",
+      "next_question_id": "R008-QKV-C-unsafe-moment-correction",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model data absent",
+        "formal independent reviewer missing",
+        "novel architectural method not accepted"
+      ]
     }
   ],
   "review": {
     "formal_independent_review": "not performed",
     "designer_subagents_are_not_formal_reviewers": true,
-    "latest_packet": "REVIEW-R005.md"
+    "latest_packet": "REVIEW-R008.md"
   },
   "run": {
     "status": "completed",
-    "wake_source": "human continue",
-    "host_mode": "Work",
+    "wake_source": "human continue (Chat analytic follow-up after concurrent Work R007)",
+    "host_mode": "Chat + plugin Skill, no native Work subagents in this R008",
     "background_running": false,
-    "next_wake": "Restore R007 full frontier, complete diagnostic manifests and signal preservation audit; separate formal review before implementation.",
+    "next_wake": "Restore 6 active (3 parent + 3 mechanism-distinct nested) and 7 parked, investigate every eligible leaf; independent Work reviewer still pending.",
+    "opening_active_count": 3,
+    "opening_advanced_count": 3,
+    "created_grounded_children": 3,
+    "closing_active_count": 6,
+    "unserved_opening": [],
+    "selected_budget_minutes": null,
+    "elapsed_minutes": null,
+    "requested_budget_options_minutes": [
+      60,
+      480
+    ],
     "actual_gpu_model_jobs": 0
   },
   "budget": {
@@ -738,32 +968,49 @@
         "cost": null
       }
     ],
-    "latest_wake_note": "R007: three returned Work designers; prompt JSON prepared, no numerical or model experiment."
+    "latest_wake_note": "R008 CPU mathematical tests (local NumPy/PyTorch) and source audit; no real Work subagents/GPU/inference. Prior R007 18 worker tasks and r003_a unknown receipt are retained."
   },
-  "previous_checkpoint_sha": "21a3af4d8c7b6c41b089e3bbba814d9dbea16a53",
-  "latest_report": "R007.md",
+  "previous_checkpoint_sha": "d04444f6a383456cfc79719e194b18b9ce0c71c9",
+  "latest_report": "R008.md",
   "date_note": "Project identifiers retained; this round dated using Europe/London client context.",
   "frontier_receipt": {
-    "round": "R007",
-    "parent_git_sha": "21a3af4d8c7b6c41b089e3bbba814d9dbea16a53",
-    "eligible": [
+    "round": "R008",
+    "parent_git_sha": "d04444f6a383456cfc79719e194b18b9ce0c71c9",
+    "opening_active": [
       "QKV-A",
       "QKV-B",
       "QKV-C"
     ],
-    "dispatched": [
+    "opening_advanced": [
       "QKV-A",
       "QKV-B",
       "QKV-C"
     ],
-    "advanced": [
+    "added_distinct_active_children": [
+      "QKV-A-signal-noise-identifiability",
+      "QKV-B-precision-radial-collision",
+      "QKV-C-unsafe-moment-correction"
+    ],
+    "closing_active": [
       "QKV-A",
       "QKV-B",
-      "QKV-C"
+      "QKV-C",
+      "QKV-A-signal-noise-identifiability",
+      "QKV-B-precision-radial-collision",
+      "QKV-C-unsafe-moment-correction"
     ],
-    "unserved": [],
-    "old_parked_retained": 6,
-    "new_parked": 1,
+    "parked_retained": [
+      "QKV-A-naive-claim",
+      "QKV-B-naive-claim",
+      "QKV-C-naive-claim",
+      "QKV-A-known-source-exact-duplicate",
+      "QKV-A-signed-correlation-cancellation",
+      "QKV-C-generic-cross-moment-repair",
+      "QKV-A-unlabeled-variance-minimization"
+    ],
+    "unserved_opening": [],
+    "real_work_subagents": [],
+    "model_jobs": [],
     "independent_formal_review": false
   },
   "previous_run_history": [
@@ -802,6 +1049,14 @@
       ],
       "selected_budget_minutes": null,
       "elapsed_minutes": null
+    },
+    {
+      "status": "completed",
+      "wake_source": "human continue",
+      "host_mode": "Work",
+      "background_running": false,
+      "next_wake": "Restore R007 full frontier, complete diagnostic manifests and signal preservation audit; separate formal review before implementation.",
+      "actual_gpu_model_jobs": 0
     }
   ],
   "frontier_receipt_history": [
@@ -851,6 +1106,29 @@
       ],
       "independent_formal_review": false,
       "execution": "Chat supervisory derivation plus private Python CPU arithmetic; NOT real model execution"
+    },
+    {
+      "round": "R007",
+      "parent_git_sha": "21a3af4d8c7b6c41b089e3bbba814d9dbea16a53",
+      "eligible": [
+        "QKV-A",
+        "QKV-B",
+        "QKV-C"
+      ],
+      "dispatched": [
+        "QKV-A",
+        "QKV-B",
+        "QKV-C"
+      ],
+      "advanced": [
+        "QKV-A",
+        "QKV-B",
+        "QKV-C"
+      ],
+      "unserved": [],
+      "old_parked_retained": 6,
+      "new_parked": 1,
+      "independent_formal_review": false
     }
   ]
 }
