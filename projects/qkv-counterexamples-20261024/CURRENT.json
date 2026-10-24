@@ -1,6 +1,6 @@
 {
   "schema": "qkv-preliminary-checkpoint-v1",
-  "revision": 4,
+  "revision": 5,
   "project_id": "qkv-counterexamples-20261024",
   "date": "2026-10-24",
   "repo": "Yunbo-max/new",
@@ -10,9 +10,14 @@
   "primary_direction": null,
   "imported_prior_projects": [],
   "framework": {
-    "loaded_skill_version": "0.11.3-manual.intake.1",
+    "loaded_skill_version": "exact current plugin.json version not inspected",
     "neutral_policy": "v11.4",
-    "native_v2_controller_adopted": false
+    "native_v2_controller_adopted": false,
+    "loaded_skill_release_family": "v11.6 Full-Frontier Deep Research",
+    "loaded_skill_version_history": [
+      "0.11.3-manual.intake.1 (R001-R004)"
+    ],
+    "full_frontier_policy_read": true
   },
   "authority": {
     "user_selected_scope_and_storage": true,
@@ -29,20 +34,21 @@
       "node_id": "QKV-A",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "routing-concentration-vs-value-risk",
-      "question": "Can finite observable calibration support correlation estimation beyond regularized GLS and ordinary multihead controls?",
-      "prediction": "Two ordinary positive-softmax heads plus output mixing exactly implement the signed BLUE example.",
-      "falsifier": "Estimated GLS or ordinary heads solve same-information task; oracle covariance is required.",
-      "next_action": "Specify held-out covariance families and observable calibration before any architecture claim.",
+      "question": "Does observable finite calibration make correction useful after estimation cost and shrinkage controls?",
+      "prediction": "Expected OLS risk=tau²/(b²+tau²)*(n-1)/(n-2); benefit requires n>2+tau²/b².",
+      "falsifier": "Shrinkage or ordinary heads remove same-information gap; true covariance labels are required.",
+      "next_action": "Review synthetic calibration design; identify native observable calibration before architecture claim.",
       "status": "active",
-      "stage": "diagnostic_boundary_refined",
+      "stage": "deep_mathematical_record",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 4,
+      "served_count": 5,
       "evidence": [
         "R001.md",
         "R002.md",
         "R003.md",
-        "R004.md"
+        "R004.md",
+        "R005-A.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -54,29 +60,31 @@
         "worker_source_read_cap": 3
       },
       "spent": {
-        "worker_tasks": 4,
+        "worker_tasks": 5,
         "tokens": null,
         "cost": null
-      }
+      },
+      "last_outcome": "advanced"
     },
     {
       "node_id": "QKV-B",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "key-radius-erasure",
-      "question": "Which normalization-induced probability changes survive value aggregation and downstream readout?",
-      "prediction": "KL-optimal temperature matches the c moment: V=c is preserved despite irreducible distribution mismatch.",
-      "falsifier": "Output/task gap disappears under temperature/value/matched-training controls.",
-      "next_action": "Freeze a native task/model/data protocol measuring value-sensitive rather than probability-only error.",
+      "question": "Does near radial invariance in actual RMSNorm affect value-sensitive held-out task utility?",
+      "prediction": "Output-optimal temperature differs from KL optimum; positive-epsilon nonzero-gain RMSNorm is injective in exact arithmetic.",
+      "falsifier": "Output controls erase task gap or apparent erasure is an incorrect idealization.",
+      "next_action": "Freeze radial intervention, dataset manifest and runtime for pinned Qwen3 diagnostic, then separate review.",
       "status": "active",
-      "stage": "diagnostic_boundary_refined",
+      "stage": "deep_incomplete",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 4,
+      "served_count": 5,
       "evidence": [
         "R001.md",
         "R002.md",
         "R003.md",
-        "R004.md"
+        "R004.md",
+        "R005-B.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -88,29 +96,31 @@
         "worker_source_read_cap": 3
       },
       "spent": {
-        "worker_tasks": 4,
+        "worker_tasks": 5,
         "tokens": null,
         "cost": null
-      }
+      },
+      "last_outcome": "advanced"
     },
     {
       "node_id": "QKV-C",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "coordinate-dependent-kv-sharing",
-      "question": "Do native transition errors survive residual storage and recomputation under matched total resources?",
-      "prediction": "Identical compressed caches require opposite future outputs; query-only refresh has average error at least tanh²(1).",
-      "falsifier": "Residual storage or affordable recomputation solves native task; failure occurs only in adversarial caches.",
-      "next_action": "Specify transition task and full retained-memory/recompute accounting, distinguishing old-cache recovery from future adaptation.",
+      "question": "When do query spread and moment storage make exact entries preferable to summaries at equal bytes?",
+      "prediction": "Centroid pairing collision yields opposite outputs; moment error bounded by exp(eta)*m2*(B+||C x||)/2.",
+      "falsifier": "MomentKV or equal-byte exact storage removes native gap.",
+      "next_action": "Freeze native query-switch task and equal-total-byte baselines; review centroid/moment witness.",
       "status": "active",
-      "stage": "diagnostic_boundary_refined",
+      "stage": "deep_incomplete",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 4,
+      "served_count": 5,
       "evidence": [
         "R001.md",
         "R002.md",
         "R003.md",
-        "R004.md"
+        "R004.md",
+        "R005-C.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -122,10 +132,11 @@
         "worker_source_read_cap": 3
       },
       "spent": {
-        "worker_tasks": 4,
+        "worker_tasks": 5,
         "tokens": null,
         "cost": null
-      }
+      },
+      "last_outcome": "advanced"
     },
     {
       "node_id": "QKV-A-naive-claim",
@@ -222,6 +233,23 @@
       ],
       "next_action": "Reopen only on distinguishing same-resource native evidence",
       "next_actor": "supervisor",
+      "spent": {
+        "tokens": null,
+        "cost": null
+      }
+    },
+    {
+      "node_id": "QKV-C-generic-cross-moment-repair",
+      "parent_id": "QKV-C",
+      "status": "parked",
+      "stage": "direct_prior_art_collision",
+      "question": "Add K-V covariance to centroid residual cache as a new method",
+      "reason": "MomentKV v1 Eq9 already implements this first-order repair.",
+      "evidence": [
+        "R005-C.md"
+      ],
+      "next_actor": "supervisor",
+      "next_action": "Reopen only with distinguishing evidence beyond moment repair",
       "spent": {
         "tokens": null,
         "cost": null
@@ -471,24 +499,85 @@
         "no native model evidence",
         "formal design review not performed"
       ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual preliminary record; native checker not run",
+      "id": "R005-QKV-A",
+      "parent_question_id": "QKV-A",
+      "action": "deepen",
+      "evidence": [
+        "R005-A.md"
+      ],
+      "causal_reason": "Finite-calibration, actual operator or direct prior-art boundary changes the next discriminating test.",
+      "mathematical_prediction": "Expected OLS risk=tau²/(b²+tau²)*(n-1)/(n-2); benefit requires n>2+tau²/b².",
+      "falsifier": "Shrinkage or ordinary heads remove same-information gap; true covariance labels are required.",
+      "next_question_id": "QKV-A",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual preliminary record; native checker not run",
+      "id": "R005-QKV-B",
+      "parent_question_id": "QKV-B",
+      "action": "deepen",
+      "evidence": [
+        "R005-B.md"
+      ],
+      "causal_reason": "Finite-calibration, actual operator or direct prior-art boundary changes the next discriminating test.",
+      "mathematical_prediction": "Output-optimal temperature differs from KL optimum; positive-epsilon nonzero-gain RMSNorm is injective in exact arithmetic.",
+      "falsifier": "Output controls erase task gap or apparent erasure is an incorrect idealization.",
+      "next_question_id": "QKV-B",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual preliminary record; native checker not run",
+      "id": "R005-QKV-C",
+      "parent_question_id": "QKV-C",
+      "action": "deepen",
+      "evidence": [
+        "R005-C.md"
+      ],
+      "causal_reason": "Finite-calibration, actual operator or direct prior-art boundary changes the next discriminating test.",
+      "mathematical_prediction": "Centroid pairing collision yields opposite outputs; moment error bounded by exp(eta)*m2*(B+||C x||)/2.",
+      "falsifier": "MomentKV or equal-byte exact storage removes native gap.",
+      "next_question_id": "QKV-C",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
     }
   ],
   "review": {
     "formal_independent_review": "not performed",
-    "designer_subagents_are_not_formal_reviewers": true
+    "designer_subagents_are_not_formal_reviewers": true,
+    "latest_packet": "REVIEW-R005.md"
   },
   "run": {
     "status": "completed",
     "wake_source": "human continue",
-    "next_wake": "Restore all peer leaves and parked descendants; specify native observable tasks. Separate-conversation design acceptance remains required before implementation.",
-    "background_running": false
+    "background_running": false,
+    "next_wake": "Restore complete frontier and R005 node reports. Freeze missing protocol choices/manifests; distinct real review required before code. No global primary direction."
   },
   "budget": {
-    "worker_tasks_completed": 12,
+    "worker_tasks_completed": 15,
     "token_usage": null,
     "cost": null,
     "model_jobs": [],
-    "cumulative_usage_note": "Twelve completed designer tasks across R001-R004, plus earlier interrupted dispatch. All cumulative tokens/costs remain unknown.",
+    "cumulative_usage_note": "15 completed designer tasks plus unreconciled earlier r003_a; total tokens/cost unknown.",
     "interrupted_dispatches": [
       {
         "id": "r003_a",
@@ -498,7 +587,28 @@
       }
     ]
   },
-  "previous_checkpoint_sha": "afde335c48c31099aece6e14168be68fdbe2a6a7",
-  "latest_report": "R004.md",
-  "date_note": "Project identifiers retained; this round dated using Europe/London client context."
+  "previous_checkpoint_sha": "14cde3c66e96975c130f1f0b6c7b0a5bc6f9c809",
+  "latest_report": "R005.md",
+  "date_note": "Project identifiers retained; this round dated using Europe/London client context.",
+  "frontier_receipt": {
+    "round": "R005",
+    "eligible": [
+      "QKV-A",
+      "QKV-B",
+      "QKV-C"
+    ],
+    "dispatched": [
+      "QKV-A",
+      "QKV-B",
+      "QKV-C"
+    ],
+    "advanced": [
+      "QKV-A",
+      "QKV-B",
+      "QKV-C"
+    ],
+    "unserved": [],
+    "previously_parked_retained": 5,
+    "newly_parked": 1
+  }
 }
