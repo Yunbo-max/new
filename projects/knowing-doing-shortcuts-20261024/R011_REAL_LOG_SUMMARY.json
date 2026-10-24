@@ -1,0 +1,33 @@
+{
+  "source": "https://github.com/latitude-dev/coding-agent-benchmark/blob/main/results/results.jsonl",
+  "source_blob_sha": "c8dadddf750e9068ca4aa5aa53935bc799db5792",
+  "observation_type": "real_public_coding_agent_logs_not_R011_model_experiment",
+  "rows": 847,
+  "models": 10,
+  "tasks": 18,
+  "successes": 729,
+  "failures": 118,
+  "pooled": {
+    "mean_tokens_solved": 1142.196159122085,
+    "mean_tokens_failed": 2330.915254237288,
+    "failed_minus_solved": 1188.719095115203,
+    "mean_tool_calls_solved": 6.300411522633745,
+    "mean_tool_calls_failed": 4.703389830508475
+  },
+  "conditional": {
+    "model_task_cells": 157,
+    "mixed_cells": 13,
+    "rows_in_mixed_cells": 200,
+    "equal_cell_failed_minus_solved": -245.38607737291946,
+    "bootstrap_95pct": [
+      -859.0128205128204,
+      425.03333333333325
+    ],
+    "bootstrap_draws": 5000,
+    "cells_positive": 3,
+    "cells_negative": 10
+  },
+  "runs_with_tool_errors": 0,
+  "runs_with_test_tampering": 0,
+  "limits": "Non-random and uneven task/model coverage; within-cell CI includes zero; can't infer causality or model intentionality."
+}
