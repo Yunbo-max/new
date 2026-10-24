@@ -1,0 +1,68 @@
+{
+  "schema": "manual-fullfrontier-delta-v1",
+  "project_id": "llm-shortcutting-20261024",
+  "round": "R012",
+  "date": "2026-10-24",
+  "parent_native_tree_revision": 3,
+  "authoritative_state": "research-state/continuous/tree.json",
+  "native_tree_changed": false,
+  "active": [
+    "B1",
+    "B2",
+    "B3",
+    "B4"
+  ],
+  "no_global_primary": true,
+  "evidence": [
+    "ROUND-012.md",
+    "r012_sql_effect_gate.py"
+  ],
+  "local_bundle": {
+    "filename": "R012_research_checkpoint.zip",
+    "sha256": "3d6e2c27da61f2b52982516cf4d72024c3448129f0ebd926b9637c2842ed02b3",
+    "executed_cpu_tests": 14,
+    "failures": 0
+  },
+  "per_leaf": {
+    "B1": {
+      "status": "active",
+      "stage": "deep_incomplete",
+      "new_evidence": "SafeActBench already establishes static-vs-interactive action gap with evidence ledger",
+      "next": "Compare evidence-established action state and actual causal tool effect, inspect original When2Tool labels if available"
+    },
+    "B2": {
+      "status": "active",
+      "stage": "deep_incomplete",
+      "new_evidence": "R011 receipt admission can accept silent SQLite no-op; R012 CPU state-effect validator catches false success; executable contracts previously published",
+      "next": "Separate reviewer inspect trustworthy world snapshot and action runner; integrate only after native approval"
+    },
+    "B3": {
+      "status": "active",
+      "stage": "deep_incomplete",
+      "new_evidence": "SpecBench source selects candidates from public evaluation and scores private results separately",
+      "next": "Freeze candidate pool; factorially vary outer selection and inner proxy exposure with no hidden-score leak"
+    },
+    "B4": {
+      "status": "active",
+      "stage": "deep_incomplete",
+      "new_evidence": "ICML Conformal Thinking and UK AISI compute curves further narrow naive risk/budget novelty",
+      "next": "Randomized budget ITT plus verified semantic outcomes, compare conformal/CATS/adaptive baselines"
+    }
+  },
+  "review": {
+    "formal_external_work_reviewer": "not_run",
+    "approval": false
+  },
+  "run": {
+    "native_llm": 0,
+    "gpu_jobs": 0,
+    "work_subagents": 0,
+    "provider_cost": "unknown",
+    "human_next_wake_required": true
+  },
+  "blockers": [
+    "GitHub author probe_data.zip inaccessible in present runtime",
+    "native research-budget verification pending",
+    "independent real Work reviewer pending"
+  ]
+}
