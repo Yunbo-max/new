@@ -1,0 +1,192 @@
+{
+  "A_parent": {
+    "observed_cov_a": 0.75,
+    "uncertainty_bound_C": 0.4,
+    "robust_beta": -0.175,
+    "worst_case_inside_bound": -0.06124999999999999,
+    "out_of_bound_target_cov": 0.8,
+    "shifted_excess_true_MSE": 0.07875000000000001,
+    "no_change_excess_MSE": 0.0
+  },
+  "A_child": {
+    "4": {
+      "correct_likelihood_regret": 0.09456772101458404,
+      "inverted_likelihood_regret": 0.215763708759934,
+      "by_domain_inversion_fraction": {
+        "0": 0.09456772101458404,
+        "0.1": 0.10668731978911904,
+        "0.3": 0.13092651733818902,
+        "0.5": 0.15516571488725903
+      }
+    },
+    "16": {
+      "correct_likelihood_regret": 0.04653150560642575,
+      "inverted_likelihood_regret": 0.3603406353141898,
+      "by_domain_inversion_fraction": {
+        "0": 0.04653150560642575,
+        "0.1": 0.07791241857720216,
+        "0.3": 0.14067424451875496,
+        "0.5": 0.2034360704603078
+      }
+    },
+    "64": {
+      "correct_likelihood_regret": 0.004435403590097167,
+      "inverted_likelihood_regret": 0.48701440419615655,
+      "by_domain_inversion_fraction": {
+        "0": 0.004435403590097167,
+        "0.1": 0.05269330365070311,
+        "0.3": 0.14920910377191496,
+        "0.5": 0.24572490389312684
+      }
+    },
+    "256": {
+      "correct_likelihood_regret": 3.2605479671660847e-07,
+      "inverted_likelihood_regret": 0.4999954302365971,
+      "by_domain_inversion_fraction": {
+        "0": 3.2605479671660847e-07,
+        "0.1": 0.04999983647297676,
+        "0.3": 0.14999885730933685,
+        "0.5": 0.2499978781456969
+      }
+    },
+    "no_label_midpoint_excess": 0.125,
+    "infinite_n_misspecified_limit": {
+      "0": 0.0,
+      "0.1": 0.05,
+      "0.3": 0.15,
+      "0.5": 0.25
+    }
+  },
+  "B_parent": {
+    "per_head_KL": 0.004665379120125747,
+    "head_1_query_scale": 1.0,
+    "head_2_query_scale": 1.8217323685298719,
+    "head_1_baseline_output": 0.5752103826044414,
+    "head_2_baseline_output": 0.8197936197829284,
+    "head_1_perturbation_delta": 0.04932984019252207,
+    "head_2_perturbation_delta": 0.0493298401925214,
+    "GQA_group_baseline_after_WO": -0.24458323717848707,
+    "GQA_group_perturbed_after_WO": -0.2445832371784864,
+    "GQA_group_post_WO_delta": 6.661338147750939e-16,
+    "output_blocks": [
+      1,
+      -1
+    ],
+    "status": "Distinct non-identical Q heads, same K/V, no pretrained weights; no model claim"
+  },
+  "B_child": {
+    "head_dim": 128,
+    "eps": 1e-06,
+    "samples_per_condition": 1000,
+    "scale_sweep": [
+      {
+        "input_mean_square_over_eps": 1,
+        "radial_inverse_condition": 2,
+        "ideal_normalized_x_to_2x_rel_change": 0.26491106406735176,
+        "bfloat16_full_vector_collision_rate": 0.0,
+        "float16_full_vector_collision_rate": 0.0,
+        "float32_full_vector_collision_rate": 0.0
+      },
+      {
+        "input_mean_square_over_eps": 10,
+        "radial_inverse_condition": 11,
+        "ideal_normalized_x_to_2x_rel_change": 0.03593954056562443,
+        "bfloat16_full_vector_collision_rate": 0.0,
+        "float16_full_vector_collision_rate": 0.0,
+        "float32_full_vector_collision_rate": 0.0
+      },
+      {
+        "input_mean_square_over_eps": 100,
+        "radial_inverse_condition": 101,
+        "ideal_normalized_x_to_2x_rel_change": 0.0037336782025920723,
+        "bfloat16_full_vector_collision_rate": 0.0,
+        "float16_full_vector_collision_rate": 0.0,
+        "float32_full_vector_collision_rate": 0.0
+      },
+      {
+        "input_mean_square_over_eps": 1000,
+        "radial_inverse_condition": 1001,
+        "ideal_normalized_x_to_2x_rel_change": 0.00037483602240984126,
+        "bfloat16_full_vector_collision_rate": 0.006000000052154064,
+        "float16_full_vector_collision_rate": 0.0,
+        "float32_full_vector_collision_rate": 0.0
+      },
+      {
+        "input_mean_square_over_eps": 10000,
+        "radial_inverse_condition": 10001,
+        "ideal_normalized_x_to_2x_rel_change": 3.7498359459986474e-05,
+        "bfloat16_full_vector_collision_rate": 0.9509999752044678,
+        "float16_full_vector_collision_rate": 0.6359999775886536,
+        "float32_full_vector_collision_rate": 0.0
+      },
+      {
+        "input_mean_square_over_eps": 100000,
+        "radial_inverse_condition": 100001,
+        "ideal_normalized_x_to_2x_rel_change": 3.749983593870354e-06,
+        "bfloat16_full_vector_collision_rate": 0.9440000057220459,
+        "float16_full_vector_collision_rate": 0.5220000147819519,
+        "float32_full_vector_collision_rate": 0.0
+      },
+      {
+        "input_mean_square_over_eps": 1000000,
+        "radial_inverse_condition": 1000001,
+        "ideal_normalized_x_to_2x_rel_change": 3.74999836072476e-07,
+        "bfloat16_full_vector_collision_rate": 1.0,
+        "float16_full_vector_collision_rate": 1.0,
+        "float32_full_vector_collision_rate": 0.0
+      },
+      {
+        "input_mean_square_over_eps": 100000000,
+        "radial_inverse_condition": 100000001,
+        "ideal_normalized_x_to_2x_rel_change": 3.750000088231786e-09,
+        "bfloat16_full_vector_collision_rate": 1.0,
+        "float16_full_vector_collision_rate": 1.0,
+        "float32_full_vector_collision_rate": 1.0
+      }
+    ]
+  },
+  "C_parent": {
+    "d": 128,
+    "background_tokens": 65536,
+    "planted_score": 11.313708498984761,
+    "necessary_cosine_for_lnN": 0.9802581434685471,
+    "one_planted_key_softmax_mass_mean": 0.4318905423988864,
+    "one_planted_key_softmax_mass_p05": 0.4295931457362347,
+    "one_planted_key_softmax_mass_p95": 0.4336461513537001,
+    "background_distribution": "exact iid isotropic uniform-sphere key marginal; planted key exactly aligned with q",
+    "analytical_mass_with_E_expZapprox_exp_half": 0.4312761492699225
+  },
+  "C_child": {
+    "worlds": {
+      "-1": {
+        "stored_moments": [
+          3,
+          0.0,
+          0.0,
+          2.0
+        ],
+        "full_attention_output": 0.0011319556066830027,
+        "plain_eviction_abs_error": 1.998868044393317,
+        "moment_correction_abs_error": 0.998868044393317,
+        "correction_helps": true
+      },
+      "1": {
+        "stored_moments": [
+          3,
+          0.0,
+          0.0,
+          2.0
+        ],
+        "full_attention_output": 1.7095500918792637,
+        "plain_eviction_abs_error": 0.29044990812073634,
+        "moment_correction_abs_error": 0.7095500918792637,
+        "correction_helps": false
+      }
+    },
+    "harm_from_correction_in_plus": 0.4191001837585273,
+    "benefit_from_correction_in_minus": 0.9999999999999999,
+    "bayes_correction_threshold_prior_P_minus": 0.29532811605205245,
+    "required_extra_information": "at least a bit resolving the hidden world for a pointwise optimal gate; statistic alone cannot do so",
+    "new_oct_2026_prior_art_access": "Perturbed Retrieval certificate retains/scans all keys, distinct from permanent moment-based eviction"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schema": "qkv-preliminary-checkpoint-v1",
-  "revision": 10,
+  "revision": 11,
   "project_id": "qkv-counterexamples-20261024",
   "date": "2026-10-24",
   "repo": "Yunbo-max/new",
@@ -36,14 +36,14 @@
       "parent_id": "QKV-ROOT",
       "mechanism_id": "routing-concentration-vs-value-risk",
       "question": "When does observable calibration preserve target signal rather than merely reduce variance?",
-      "prediction": "Closed-form minimax shrinkage given an EXTERNALLY JUSTIFIED covariance uncertainty bound.",
-      "falsifier": "If C cannot be validated, nontrivial correction may be worse; standard ridge/GLS solves apparent gain.",
-      "next_action": "Preserve R010 negative and positive witnesses; test against nearest same-information native baseline after separate review.",
+      "prediction": "A robust correction bound is invalid outside its externally assumed target-covariance uncertainty set.",
+      "falsifier": "No task-specific covariance certificate or ordinary ridge/GLS solves observed advantage.",
+      "next_action": "Independent review plus frozen native activation/task interface; preserve R011 falsification and nearest classical repair.",
       "status": "active",
       "stage": "deep_mathematical_record",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 10,
+      "served_count": 11,
       "evidence": [
         "R001.md",
         "R002.md",
@@ -58,7 +58,10 @@
         "R009-metrics.json",
         "R010-A.md",
         "R010_cpu_probe.py",
-        "R010_metrics.json"
+        "R010_metrics.json",
+        "R011-A.md",
+        "R011_math_checks.py",
+        "R011_metrics.json"
       ],
       "blockers": [
         "novelty not accepted",
@@ -82,14 +85,14 @@
       "parent_id": "QKV-ROOT",
       "mechanism_id": "key-radius-erasure",
       "question": "Do key radial changes survive GQA-projected per-head temperature compensation?",
-      "prediction": "Two-token radial perturbations preserving score ordering are exactly positive-temperature repairable; three-token KL may vanish in the Value output.",
-      "falsifier": "With V/WO and matched temperature, native utility gap vanishes.",
-      "next_action": "Preserve R010 negative and positive witnesses; test against nearest same-information native baseline after separate review.",
+      "prediction": "Two Q-heads sharing KV may each have nonzero output perturbation yet cancel in the combined ordinary output projection.",
+      "falsifier": "Any apparent per-head mismatch disappears post-WO or is repaired by standard heads.",
+      "next_action": "Independent review plus frozen native activation/task interface; preserve R011 falsification and nearest classical repair.",
       "status": "active",
       "stage": "deep_incomplete",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 10,
+      "served_count": 11,
       "evidence": [
         "R001.md",
         "R002.md",
@@ -104,7 +107,10 @@
         "R009-metrics.json",
         "R010-B.md",
         "R010_cpu_probe.py",
-        "R010_metrics.json"
+        "R010_metrics.json",
+        "R011-B.md",
+        "R011_math_checks.py",
+        "R011_metrics.json"
       ],
       "blockers": [
         "novelty not accepted",
@@ -128,14 +134,14 @@
       "parent_id": "QKV-ROOT",
       "mechanism_id": "coordinate-dependent-kv-sharing",
       "question": "Do rare summarized entries attain log-N margins under native query switches at equal total bytes?",
-      "prediction": "Rare logN logits geometrically feasible yet astronomically rare under independent isotropic keys; learned anisotropy matters.",
-      "falsifier": "Native score margins are lower or key selection baseline stores important entries.",
-      "next_action": "Preserve R010 negative and positive witnesses; test against nearest same-information native baseline after separate review.",
+      "prediction": "A task-conditioned aligned key can carry large attention mass among 65536 isotropic noise keys; iid null cannot bound targeted retrieval.",
+      "falsifier": "Native aligned targets are always retained by standard selection or their post-V output is negligible.",
+      "next_action": "Independent review plus frozen native activation/task interface; preserve R011 falsification and nearest classical repair.",
       "status": "active",
       "stage": "deep_incomplete",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 10,
+      "served_count": 11,
       "evidence": [
         "R001.md",
         "R002.md",
@@ -150,7 +156,10 @@
         "R009-metrics.json",
         "R010-C.md",
         "R010_cpu_probe.py",
-        "R010_metrics.json"
+        "R010_metrics.json",
+        "R011-C.md",
+        "R011_math_checks.py",
+        "R011_metrics.json"
       ],
       "blockers": [
         "novelty not accepted",
@@ -308,13 +317,13 @@
       "parent_id": "QKV-A",
       "mechanism_id": "task-dependent-correlation-identifiability",
       "question": "Can QKV-only paired calibration identify the desired signed correction when target and difference share signal?",
-      "prediction": "Bayes posterior mean beats the no-label midpoint even at n=4, correcting R009's hard-sign-only interpretation.",
-      "falsifier": "Strong Bayes/label-calibration controls reproduce benefit.",
-      "next_action": "Preserve R010 negative and positive witnesses; test against nearest same-information native baseline after separate review.",
+      "prediction": "A nominal Bayes label learner suffers when the sign of label likelihood flips in hidden domains; at rho=.3 and many labels the excess risk approaches 0.15 >0.125 no-label.",
+      "falsifier": "Validated, shift-robust calibration and same-information classical predictors remove advantage.",
+      "next_action": "Independent review plus frozen native activation/task interface; preserve R011 falsification and nearest classical repair.",
       "status": "active",
       "stage": "analytic_counterexample_native_unverified",
       "priority": "peer",
-      "served_count": 3,
+      "served_count": 4,
       "evidence": [
         "R008.md",
         "R008-math-witness.py",
@@ -323,7 +332,10 @@
         "R009-metrics.json",
         "R010-A.md",
         "R010_cpu_probe.py",
-        "R010_metrics.json"
+        "R010_metrics.json",
+        "R011-A.md",
+        "R011_math_checks.py",
+        "R011_metrics.json"
       ],
       "next_actor": "supervisor",
       "blockers": [
@@ -347,13 +359,13 @@
       "parent_id": "QKV-B",
       "mechanism_id": "qknorm-dtype-cast-noninjectivity",
       "question": "Do pretrained BF16 Qwen3 Q/K normalizations exhibit task-relevant radial collisions beyond vanilla temperature/readout controls?",
-      "prediction": "At high norm-to-epsilon ratio, BF16 collisions erase a tiny ~3.75e-7 radial signal; task effect not established.",
-      "falsifier": "Real model norms/backend and downstream NLL show no relevant loss.",
-      "next_action": "Preserve R010 negative and positive witnesses; test against nearest same-information native baseline after separate review.",
+      "prediction": "BF16 and FP16 full-vector norm-cast collision rates vary strongly with pre-norm energy / epsilon; native impact remains unmeasured.",
+      "falsifier": "Real trained activations are concentrated in regimes without relevant cast-induced task differences.",
+      "next_action": "Independent review plus frozen native activation/task interface; preserve R011 falsification and nearest classical repair.",
       "status": "active",
       "stage": "analytic_counterexample_native_unverified",
       "priority": "peer",
-      "served_count": 3,
+      "served_count": 4,
       "evidence": [
         "R008.md",
         "R008-math-witness.py",
@@ -362,7 +374,10 @@
         "R009-metrics.json",
         "R010-B.md",
         "R010_cpu_probe.py",
-        "R010_metrics.json"
+        "R010_metrics.json",
+        "R011-B.md",
+        "R011_math_checks.py",
+        "R011_metrics.json"
       ],
       "next_actor": "supervisor",
       "blockers": [
@@ -386,13 +401,13 @@
       "parent_id": "QKV-C",
       "mechanism_id": "moment-mixture-nonmonotonic-error",
       "question": "When can post-eviction first-order moment correction worsen the reference attention error, and do safe same-byte repairs exist?",
-      "prediction": "MomentKV Eq9/11/12 can worsen exact output even as score spread tends to zero; prior-query selection requires growing logits.",
-      "falsifier": "Full released implementation contains guard or same-byte simple repairs defeat benefit.",
-      "next_action": "Preserve R010 negative and positive witnesses; test against nearest same-information native baseline after separate review.",
+      "prediction": "Two distinct full caches with identical stored moments admit opposite optimal correction decisions; safety requires additional information or assumptions.",
+      "falsifier": "Implementation includes extra state/guards and standard randomized/error-certification baselines dominate.",
+      "next_action": "Independent review plus frozen native activation/task interface; preserve R011 falsification and nearest classical repair.",
       "status": "active",
       "stage": "analytic_counterexample_native_unverified",
       "priority": "peer",
-      "served_count": 3,
+      "served_count": 4,
       "evidence": [
         "R008.md",
         "R008-math-witness.py",
@@ -401,7 +416,10 @@
         "R009-metrics.json",
         "R010-C.md",
         "R010_cpu_probe.py",
-        "R010_metrics.json"
+        "R010_metrics.json",
+        "R011-C.md",
+        "R011_math_checks.py",
+        "R011_metrics.json"
       ],
       "next_actor": "supervisor",
       "blockers": [
@@ -1231,19 +1249,151 @@
         "separate Work review missing",
         "novelty not accepted"
       ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "import of checksummed local R011, CPU reproduction succeeded; formal review not performed",
+      "id": "R011-QKV-A",
+      "parent_question_id": "QKV-A",
+      "action": "deepen",
+      "evidence": [
+        "R011-A.md",
+        "R011_math_checks.py",
+        "R011_metrics.json"
+      ],
+      "causal_reason": "New causal falsifier and matched information countercontrols beyond R010",
+      "mathematical_prediction": "A robust correction bound is invalid outside its externally assumed target-covariance uncertainty set.",
+      "falsifier": "No task-specific covariance certificate or ordinary ridge/GLS solves observed advantage.",
+      "next_question_id": "QKV-A",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model evidence absent",
+        "independent reviewer missing",
+        "new QKV design not accepted"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "import of checksummed local R011, CPU reproduction succeeded; formal review not performed",
+      "id": "R011-QKV-A-signal-noise-identifiability",
+      "parent_question_id": "QKV-A-signal-noise-identifiability",
+      "action": "deepen",
+      "evidence": [
+        "R011-A.md",
+        "R011_math_checks.py",
+        "R011_metrics.json"
+      ],
+      "causal_reason": "New causal falsifier and matched information countercontrols beyond R010",
+      "mathematical_prediction": "A nominal Bayes label learner suffers when the sign of label likelihood flips in hidden domains; at rho=.3 and many labels the excess risk approaches 0.15 >0.125 no-label.",
+      "falsifier": "Validated, shift-robust calibration and same-information classical predictors remove advantage.",
+      "next_question_id": "QKV-A-signal-noise-identifiability",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model evidence absent",
+        "independent reviewer missing",
+        "new QKV design not accepted"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "import of checksummed local R011, CPU reproduction succeeded; formal review not performed",
+      "id": "R011-QKV-B",
+      "parent_question_id": "QKV-B",
+      "action": "deepen",
+      "evidence": [
+        "R011-B.md",
+        "R011_math_checks.py",
+        "R011_metrics.json"
+      ],
+      "causal_reason": "New causal falsifier and matched information countercontrols beyond R010",
+      "mathematical_prediction": "Two Q-heads sharing KV may each have nonzero output perturbation yet cancel in the combined ordinary output projection.",
+      "falsifier": "Any apparent per-head mismatch disappears post-WO or is repaired by standard heads.",
+      "next_question_id": "QKV-B",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model evidence absent",
+        "independent reviewer missing",
+        "new QKV design not accepted"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "import of checksummed local R011, CPU reproduction succeeded; formal review not performed",
+      "id": "R011-QKV-B-precision-radial-collision",
+      "parent_question_id": "QKV-B-precision-radial-collision",
+      "action": "deepen",
+      "evidence": [
+        "R011-B.md",
+        "R011_math_checks.py",
+        "R011_metrics.json"
+      ],
+      "causal_reason": "New causal falsifier and matched information countercontrols beyond R010",
+      "mathematical_prediction": "BF16 and FP16 full-vector norm-cast collision rates vary strongly with pre-norm energy / epsilon; native impact remains unmeasured.",
+      "falsifier": "Real trained activations are concentrated in regimes without relevant cast-induced task differences.",
+      "next_question_id": "QKV-B-precision-radial-collision",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model evidence absent",
+        "independent reviewer missing",
+        "new QKV design not accepted"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "import of checksummed local R011, CPU reproduction succeeded; formal review not performed",
+      "id": "R011-QKV-C",
+      "parent_question_id": "QKV-C",
+      "action": "deepen",
+      "evidence": [
+        "R011-C.md",
+        "R011_math_checks.py",
+        "R011_metrics.json"
+      ],
+      "causal_reason": "New causal falsifier and matched information countercontrols beyond R010",
+      "mathematical_prediction": "A task-conditioned aligned key can carry large attention mass among 65536 isotropic noise keys; iid null cannot bound targeted retrieval.",
+      "falsifier": "Native aligned targets are always retained by standard selection or their post-V output is negligible.",
+      "next_question_id": "QKV-C",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model evidence absent",
+        "independent reviewer missing",
+        "new QKV design not accepted"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "import of checksummed local R011, CPU reproduction succeeded; formal review not performed",
+      "id": "R011-QKV-C-unsafe-moment-correction",
+      "parent_question_id": "QKV-C-unsafe-moment-correction",
+      "action": "deepen",
+      "evidence": [
+        "R011-C.md",
+        "R011_math_checks.py",
+        "R011_metrics.json"
+      ],
+      "causal_reason": "New causal falsifier and matched information countercontrols beyond R010",
+      "mathematical_prediction": "Two distinct full caches with identical stored moments admit opposite optimal correction decisions; safety requires additional information or assumptions.",
+      "falsifier": "Implementation includes extra state/guards and standard randomized/error-certification baselines dominate.",
+      "next_question_id": "QKV-C-unsafe-moment-correction",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model evidence absent",
+        "independent reviewer missing",
+        "new QKV design not accepted"
+      ]
     }
   ],
   "review": {
     "formal_independent_review": "not performed",
     "designer_subagents_are_not_formal_reviewers": true,
-    "latest_packet": "REVIEW-R010.md"
+    "latest_packet": "REVIEW-R011.md"
   },
   "run": {
     "status": "completed",
-    "wake_source": "prior human-woken R010, safely checkpointed from local on a later continue",
-    "host_mode": "Chat CPU evidence; no Work subagents",
+    "wake_source": "earlier manual R011, now GitHub synced",
+    "host_mode": "Chat CPU data; not new Work worker launch",
     "background_running": false,
-    "next_wake": "Import/checkpoint R011 while preserving research tree; independent review still pending.",
+    "next_wake": "Continue all six nodes with R012, verify closest prior art and native protocol feasibility.",
     "selected_budget_minutes": null,
     "elapsed_minutes": null
   },
@@ -1261,14 +1411,14 @@
         "cost": null
       }
     ],
-    "latest_wake_note": "R010 reverified and synchronized; no new Work worker tasks. Historic 18 preserved and r003_a remains unknown."
+    "latest_wake_note": "R011 synced after previous unsynced evidence; previous 18 Work designer tasks retained. No GPU/inference/paid job; r003_a unreconciled."
   },
-  "previous_checkpoint_sha": "288d9b00194fd98699a2dea5abd372706e4dfb8f",
-  "latest_report": "R010.md",
+  "previous_checkpoint_sha": "dec48329b33e71678bde46394143b571ee0ad53a",
+  "latest_report": "R011.md",
   "date_note": "Project identifiers retained; this round dated using Europe/London client context.",
   "frontier_receipt": {
-    "round": "R010",
-    "source_head": "288d9b00194fd98699a2dea5abd372706e4dfb8f",
+    "round": "R011",
+    "source_head": "dec48329b33e71678bde46394143b571ee0ad53a",
     "eligible": [
       "QKV-A",
       "QKV-A-signal-noise-identifiability",
@@ -1298,7 +1448,7 @@
     "new_worker_tasks": [],
     "native_model_runs": [],
     "formal_review": "not performed",
-    "materialized_local_package": "R010 artifacts authored in earlier Chat wake; SHA256SUMS checks passed locally and scripts rerun"
+    "sync_note": "Local 2026-10-24 six-node research with validated SHA256SUMS and rerun script; synchronized after R010."
   },
   "previous_run_history": [
     {
@@ -1380,6 +1530,15 @@
         480
       ],
       "actual_gpu_model_jobs": 0
+    },
+    {
+      "status": "completed",
+      "wake_source": "prior human-woken R010, safely checkpointed from local on a later continue",
+      "host_mode": "Chat CPU evidence; no Work subagents",
+      "background_running": false,
+      "next_wake": "Import/checkpoint R011 while preserving research tree; independent review still pending.",
+      "selected_budget_minutes": null,
+      "elapsed_minutes": null
     }
   ],
   "frontier_receipt_history": [
@@ -1543,6 +1702,40 @@
         "test": 32,
         "invalid": 0
       }
+    },
+    {
+      "round": "R010",
+      "source_head": "288d9b00194fd98699a2dea5abd372706e4dfb8f",
+      "eligible": [
+        "QKV-A",
+        "QKV-A-signal-noise-identifiability",
+        "QKV-B",
+        "QKV-B-precision-radial-collision",
+        "QKV-C",
+        "QKV-C-unsafe-moment-correction"
+      ],
+      "analytically_advanced": [
+        "QKV-A",
+        "QKV-A-signal-noise-identifiability",
+        "QKV-B",
+        "QKV-B-precision-radial-collision",
+        "QKV-C",
+        "QKV-C-unsafe-moment-correction"
+      ],
+      "unserved": [],
+      "parked_retained": [
+        "QKV-A-naive-claim",
+        "QKV-B-naive-claim",
+        "QKV-C-naive-claim",
+        "QKV-A-known-source-exact-duplicate",
+        "QKV-A-signed-correlation-cancellation",
+        "QKV-C-generic-cross-moment-repair",
+        "QKV-A-unlabeled-variance-minimization"
+      ],
+      "new_worker_tasks": [],
+      "native_model_runs": [],
+      "formal_review": "not performed",
+      "materialized_local_package": "R010 artifacts authored in earlier Chat wake; SHA256SUMS checks passed locally and scripts rerun"
     }
   ]
 }
