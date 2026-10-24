@@ -1,0 +1,82 @@
+{
+  "schema": "manual-fullfrontier-delta-v1",
+  "round": "R010",
+  "date": "2026-10-24",
+  "project_id": "llm-shortcutting-20261024",
+  "native_authority": {
+    "path": "research-state/continuous/tree.json",
+    "last_confirmed_revision": 3,
+    "update_this_round": false,
+    "budget_verified": false,
+    "wake": null
+  },
+  "source_evidence": [
+    "ROUND-010.md",
+    "r010_action_gate.py",
+    "https://github.com/Trustworthy-ML-Lab/when2tool/issues/1",
+    "https://huggingface.co/Dwootton/when2tool-tool-intent"
+  ],
+  "local_bundle": {
+    "filename": "R010_research_checkpoint.zip",
+    "sha256": "9da555ee769bb49d4cee0000744d8651c05b60acbe51ecd02b353b599c074385",
+    "tests_passed": 11,
+    "tests_failed": 0
+  },
+  "whole_frontier": {
+    "eligible": [
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ],
+    "investigated": [
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ],
+    "native_validated": [],
+    "independent_reviewed": [],
+    "native_unserved": [
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ],
+    "parked": [],
+    "global_primary": null
+  },
+  "per_node": {
+    "B1": {
+      "stage": "deep_incomplete",
+      "delta": "External author-label reproduction .9445 AUROC and .9489 accuracy on Qwen3-4B with unresolved source issue; raw archive inaccessible",
+      "next": "Get per-example author labels and scores; pin dataset/model revision and run repeated labels with independent seeds"
+    },
+    "B2": {
+      "stage": "deep_incomplete",
+      "delta": "External failure-denial forks reveal affordance disclosure as major confound; coded conservative positive-action value test",
+      "next": "Pre-document alternative capability and contrast persistent vs transient failures under common rollout history"
+    },
+    "B3": {
+      "stage": "deep_incomplete",
+      "delta": "Closest HackProbe already supports black-box detection and honest reselection, reducing novelty of evaluator-swapping",
+      "next": "Freeze candidate pool and isolate outer selector from inner agent response to incentive"
+    },
+    "B4": {
+      "stage": "deep_incomplete",
+      "delta": "ICLR2026 strategic compute-bandit and COLM2026 CATS are strong published baselines",
+      "next": "Obtain native budget curves and compare cost-matched adaptive stopping plus serial/parallel policies"
+    }
+  },
+  "truthfulness": {
+    "third_party_aggregates_only": true,
+    "raw_author_archive_read": false,
+    "model_inference_runs": 0,
+    "GPU_runs": 0,
+    "formal_review_runs": 0,
+    "subagents_dispatched": 0,
+    "background_process": false,
+    "provider_spend": "unknown"
+  },
+  "next_actor": "independent Work scientific reviewer before actual Qwen native experiments"
+}
