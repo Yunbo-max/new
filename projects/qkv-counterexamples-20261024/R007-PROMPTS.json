@@ -1,0 +1,715 @@
+{
+  "schema": "qkv-retrieval-prompts-v1",
+  "purpose": "R007-B mechanism diagnostic, not benchmark score",
+  "model_revision": "167b8104f88905a951069f5f95f9776908da5f68",
+  "chat_template": {
+    "enable_thinking": false,
+    "add_generation_prompt": true
+  },
+  "records": [
+    {
+      "id": 0,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem00 = 07\nitem01 = 24\nitem02 = 41\nitem03 = 58\nitem04 = 75\nitem05 = 92\nitem06 = 09\nitem07 = 26\nReturn only the two-digit value for item00."
+        }
+      ],
+      "answer": "07"
+    },
+    {
+      "id": 1,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem00 = 20\nitem01 = 37\nitem02 = 54\nitem03 = 71\nitem04 = 88\nitem05 = 05\nitem06 = 22\nitem07 = 39\nReturn only the two-digit value for item01."
+        }
+      ],
+      "answer": "37"
+    },
+    {
+      "id": 2,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem00 = 33\nitem01 = 50\nitem02 = 67\nitem03 = 84\nitem04 = 01\nitem05 = 18\nitem06 = 35\nitem07 = 52\nReturn only the two-digit value for item02."
+        }
+      ],
+      "answer": "67"
+    },
+    {
+      "id": 3,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem00 = 46\nitem01 = 63\nitem02 = 80\nitem03 = 97\nitem04 = 14\nitem05 = 31\nitem06 = 48\nitem07 = 65\nReturn only the two-digit value for item03."
+        }
+      ],
+      "answer": "97"
+    },
+    {
+      "id": 4,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem00 = 59\nitem01 = 76\nitem02 = 93\nitem03 = 10\nitem04 = 27\nitem05 = 44\nitem06 = 61\nitem07 = 78\nReturn only the two-digit value for item04."
+        }
+      ],
+      "answer": "27"
+    },
+    {
+      "id": 5,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem00 = 72\nitem01 = 89\nitem02 = 06\nitem03 = 23\nitem04 = 40\nitem05 = 57\nitem06 = 74\nitem07 = 91\nReturn only the two-digit value for item05."
+        }
+      ],
+      "answer": "57"
+    },
+    {
+      "id": 6,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem00 = 85\nitem01 = 02\nitem02 = 19\nitem03 = 36\nitem04 = 53\nitem05 = 70\nitem06 = 87\nitem07 = 04\nReturn only the two-digit value for item06."
+        }
+      ],
+      "answer": "87"
+    },
+    {
+      "id": 7,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem00 = 98\nitem01 = 15\nitem02 = 32\nitem03 = 49\nitem04 = 66\nitem05 = 83\nitem06 = 00\nitem07 = 17\nReturn only the two-digit value for item07."
+        }
+      ],
+      "answer": "17"
+    },
+    {
+      "id": 8,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem01 = 28\nitem02 = 45\nitem03 = 62\nitem04 = 79\nitem05 = 96\nitem06 = 13\nitem07 = 30\nitem00 = 11\nReturn only the two-digit value for item00."
+        }
+      ],
+      "answer": "11"
+    },
+    {
+      "id": 9,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem01 = 41\nitem02 = 58\nitem03 = 75\nitem04 = 92\nitem05 = 09\nitem06 = 26\nitem07 = 43\nitem00 = 24\nReturn only the two-digit value for item01."
+        }
+      ],
+      "answer": "41"
+    },
+    {
+      "id": 10,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem01 = 54\nitem02 = 71\nitem03 = 88\nitem04 = 05\nitem05 = 22\nitem06 = 39\nitem07 = 56\nitem00 = 37\nReturn only the two-digit value for item02."
+        }
+      ],
+      "answer": "71"
+    },
+    {
+      "id": 11,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem01 = 67\nitem02 = 84\nitem03 = 01\nitem04 = 18\nitem05 = 35\nitem06 = 52\nitem07 = 69\nitem00 = 50\nReturn only the two-digit value for item03."
+        }
+      ],
+      "answer": "01"
+    },
+    {
+      "id": 12,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem01 = 80\nitem02 = 97\nitem03 = 14\nitem04 = 31\nitem05 = 48\nitem06 = 65\nitem07 = 82\nitem00 = 63\nReturn only the two-digit value for item04."
+        }
+      ],
+      "answer": "31"
+    },
+    {
+      "id": 13,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem01 = 93\nitem02 = 10\nitem03 = 27\nitem04 = 44\nitem05 = 61\nitem06 = 78\nitem07 = 95\nitem00 = 76\nReturn only the two-digit value for item05."
+        }
+      ],
+      "answer": "61"
+    },
+    {
+      "id": 14,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem01 = 06\nitem02 = 23\nitem03 = 40\nitem04 = 57\nitem05 = 74\nitem06 = 91\nitem07 = 08\nitem00 = 89\nReturn only the two-digit value for item06."
+        }
+      ],
+      "answer": "91"
+    },
+    {
+      "id": 15,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem01 = 19\nitem02 = 36\nitem03 = 53\nitem04 = 70\nitem05 = 87\nitem06 = 04\nitem07 = 21\nitem00 = 02\nReturn only the two-digit value for item07."
+        }
+      ],
+      "answer": "21"
+    },
+    {
+      "id": 16,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem02 = 49\nitem03 = 66\nitem04 = 83\nitem05 = 00\nitem06 = 17\nitem07 = 34\nitem00 = 15\nitem01 = 32\nReturn only the two-digit value for item00."
+        }
+      ],
+      "answer": "15"
+    },
+    {
+      "id": 17,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem02 = 62\nitem03 = 79\nitem04 = 96\nitem05 = 13\nitem06 = 30\nitem07 = 47\nitem00 = 28\nitem01 = 45\nReturn only the two-digit value for item01."
+        }
+      ],
+      "answer": "45"
+    },
+    {
+      "id": 18,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem02 = 75\nitem03 = 92\nitem04 = 09\nitem05 = 26\nitem06 = 43\nitem07 = 60\nitem00 = 41\nitem01 = 58\nReturn only the two-digit value for item02."
+        }
+      ],
+      "answer": "75"
+    },
+    {
+      "id": 19,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem02 = 88\nitem03 = 05\nitem04 = 22\nitem05 = 39\nitem06 = 56\nitem07 = 73\nitem00 = 54\nitem01 = 71\nReturn only the two-digit value for item03."
+        }
+      ],
+      "answer": "05"
+    },
+    {
+      "id": 20,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem02 = 01\nitem03 = 18\nitem04 = 35\nitem05 = 52\nitem06 = 69\nitem07 = 86\nitem00 = 67\nitem01 = 84\nReturn only the two-digit value for item04."
+        }
+      ],
+      "answer": "35"
+    },
+    {
+      "id": 21,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem02 = 14\nitem03 = 31\nitem04 = 48\nitem05 = 65\nitem06 = 82\nitem07 = 99\nitem00 = 80\nitem01 = 97\nReturn only the two-digit value for item05."
+        }
+      ],
+      "answer": "65"
+    },
+    {
+      "id": 22,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem02 = 27\nitem03 = 44\nitem04 = 61\nitem05 = 78\nitem06 = 95\nitem07 = 12\nitem00 = 93\nitem01 = 10\nReturn only the two-digit value for item06."
+        }
+      ],
+      "answer": "95"
+    },
+    {
+      "id": 23,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem02 = 40\nitem03 = 57\nitem04 = 74\nitem05 = 91\nitem06 = 08\nitem07 = 25\nitem00 = 06\nitem01 = 23\nReturn only the two-digit value for item07."
+        }
+      ],
+      "answer": "25"
+    },
+    {
+      "id": 24,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem03 = 70\nitem04 = 87\nitem05 = 04\nitem06 = 21\nitem07 = 38\nitem00 = 19\nitem01 = 36\nitem02 = 53\nReturn only the two-digit value for item00."
+        }
+      ],
+      "answer": "19"
+    },
+    {
+      "id": 25,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem03 = 83\nitem04 = 00\nitem05 = 17\nitem06 = 34\nitem07 = 51\nitem00 = 32\nitem01 = 49\nitem02 = 66\nReturn only the two-digit value for item01."
+        }
+      ],
+      "answer": "49"
+    },
+    {
+      "id": 26,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem03 = 96\nitem04 = 13\nitem05 = 30\nitem06 = 47\nitem07 = 64\nitem00 = 45\nitem01 = 62\nitem02 = 79\nReturn only the two-digit value for item02."
+        }
+      ],
+      "answer": "79"
+    },
+    {
+      "id": 27,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem03 = 09\nitem04 = 26\nitem05 = 43\nitem06 = 60\nitem07 = 77\nitem00 = 58\nitem01 = 75\nitem02 = 92\nReturn only the two-digit value for item03."
+        }
+      ],
+      "answer": "09"
+    },
+    {
+      "id": 28,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem03 = 22\nitem04 = 39\nitem05 = 56\nitem06 = 73\nitem07 = 90\nitem00 = 71\nitem01 = 88\nitem02 = 05\nReturn only the two-digit value for item04."
+        }
+      ],
+      "answer": "39"
+    },
+    {
+      "id": 29,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem03 = 35\nitem04 = 52\nitem05 = 69\nitem06 = 86\nitem07 = 03\nitem00 = 84\nitem01 = 01\nitem02 = 18\nReturn only the two-digit value for item05."
+        }
+      ],
+      "answer": "69"
+    },
+    {
+      "id": 30,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem03 = 48\nitem04 = 65\nitem05 = 82\nitem06 = 99\nitem07 = 16\nitem00 = 97\nitem01 = 14\nitem02 = 31\nReturn only the two-digit value for item06."
+        }
+      ],
+      "answer": "99"
+    },
+    {
+      "id": 31,
+      "split": "calibration",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem03 = 61\nitem04 = 78\nitem05 = 95\nitem06 = 12\nitem07 = 29\nitem00 = 10\nitem01 = 27\nitem02 = 44\nReturn only the two-digit value for item07."
+        }
+      ],
+      "answer": "29"
+    },
+    {
+      "id": 32,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem04 = 91\nitem05 = 08\nitem06 = 25\nitem07 = 42\nitem00 = 23\nitem01 = 40\nitem02 = 57\nitem03 = 74\nReturn only the two-digit value for item00."
+        }
+      ],
+      "answer": "23"
+    },
+    {
+      "id": 33,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem04 = 04\nitem05 = 21\nitem06 = 38\nitem07 = 55\nitem00 = 36\nitem01 = 53\nitem02 = 70\nitem03 = 87\nReturn only the two-digit value for item01."
+        }
+      ],
+      "answer": "53"
+    },
+    {
+      "id": 34,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem04 = 17\nitem05 = 34\nitem06 = 51\nitem07 = 68\nitem00 = 49\nitem01 = 66\nitem02 = 83\nitem03 = 00\nReturn only the two-digit value for item02."
+        }
+      ],
+      "answer": "83"
+    },
+    {
+      "id": 35,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem04 = 30\nitem05 = 47\nitem06 = 64\nitem07 = 81\nitem00 = 62\nitem01 = 79\nitem02 = 96\nitem03 = 13\nReturn only the two-digit value for item03."
+        }
+      ],
+      "answer": "13"
+    },
+    {
+      "id": 36,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem04 = 43\nitem05 = 60\nitem06 = 77\nitem07 = 94\nitem00 = 75\nitem01 = 92\nitem02 = 09\nitem03 = 26\nReturn only the two-digit value for item04."
+        }
+      ],
+      "answer": "43"
+    },
+    {
+      "id": 37,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem04 = 56\nitem05 = 73\nitem06 = 90\nitem07 = 07\nitem00 = 88\nitem01 = 05\nitem02 = 22\nitem03 = 39\nReturn only the two-digit value for item05."
+        }
+      ],
+      "answer": "73"
+    },
+    {
+      "id": 38,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem04 = 69\nitem05 = 86\nitem06 = 03\nitem07 = 20\nitem00 = 01\nitem01 = 18\nitem02 = 35\nitem03 = 52\nReturn only the two-digit value for item06."
+        }
+      ],
+      "answer": "03"
+    },
+    {
+      "id": 39,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem04 = 82\nitem05 = 99\nitem06 = 16\nitem07 = 33\nitem00 = 14\nitem01 = 31\nitem02 = 48\nitem03 = 65\nReturn only the two-digit value for item07."
+        }
+      ],
+      "answer": "33"
+    },
+    {
+      "id": 40,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem05 = 12\nitem06 = 29\nitem07 = 46\nitem00 = 27\nitem01 = 44\nitem02 = 61\nitem03 = 78\nitem04 = 95\nReturn only the two-digit value for item00."
+        }
+      ],
+      "answer": "27"
+    },
+    {
+      "id": 41,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem05 = 25\nitem06 = 42\nitem07 = 59\nitem00 = 40\nitem01 = 57\nitem02 = 74\nitem03 = 91\nitem04 = 08\nReturn only the two-digit value for item01."
+        }
+      ],
+      "answer": "57"
+    },
+    {
+      "id": 42,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem05 = 38\nitem06 = 55\nitem07 = 72\nitem00 = 53\nitem01 = 70\nitem02 = 87\nitem03 = 04\nitem04 = 21\nReturn only the two-digit value for item02."
+        }
+      ],
+      "answer": "87"
+    },
+    {
+      "id": 43,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem05 = 51\nitem06 = 68\nitem07 = 85\nitem00 = 66\nitem01 = 83\nitem02 = 00\nitem03 = 17\nitem04 = 34\nReturn only the two-digit value for item03."
+        }
+      ],
+      "answer": "17"
+    },
+    {
+      "id": 44,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem05 = 64\nitem06 = 81\nitem07 = 98\nitem00 = 79\nitem01 = 96\nitem02 = 13\nitem03 = 30\nitem04 = 47\nReturn only the two-digit value for item04."
+        }
+      ],
+      "answer": "47"
+    },
+    {
+      "id": 45,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem05 = 77\nitem06 = 94\nitem07 = 11\nitem00 = 92\nitem01 = 09\nitem02 = 26\nitem03 = 43\nitem04 = 60\nReturn only the two-digit value for item05."
+        }
+      ],
+      "answer": "77"
+    },
+    {
+      "id": 46,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem05 = 90\nitem06 = 07\nitem07 = 24\nitem00 = 05\nitem01 = 22\nitem02 = 39\nitem03 = 56\nitem04 = 73\nReturn only the two-digit value for item06."
+        }
+      ],
+      "answer": "07"
+    },
+    {
+      "id": 47,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem05 = 03\nitem06 = 20\nitem07 = 37\nitem00 = 18\nitem01 = 35\nitem02 = 52\nitem03 = 69\nitem04 = 86\nReturn only the two-digit value for item07."
+        }
+      ],
+      "answer": "37"
+    },
+    {
+      "id": 48,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem06 = 33\nitem07 = 50\nitem00 = 31\nitem01 = 48\nitem02 = 65\nitem03 = 82\nitem04 = 99\nitem05 = 16\nReturn only the two-digit value for item00."
+        }
+      ],
+      "answer": "31"
+    },
+    {
+      "id": 49,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem06 = 46\nitem07 = 63\nitem00 = 44\nitem01 = 61\nitem02 = 78\nitem03 = 95\nitem04 = 12\nitem05 = 29\nReturn only the two-digit value for item01."
+        }
+      ],
+      "answer": "61"
+    },
+    {
+      "id": 50,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem06 = 59\nitem07 = 76\nitem00 = 57\nitem01 = 74\nitem02 = 91\nitem03 = 08\nitem04 = 25\nitem05 = 42\nReturn only the two-digit value for item02."
+        }
+      ],
+      "answer": "91"
+    },
+    {
+      "id": 51,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem06 = 72\nitem07 = 89\nitem00 = 70\nitem01 = 87\nitem02 = 04\nitem03 = 21\nitem04 = 38\nitem05 = 55\nReturn only the two-digit value for item03."
+        }
+      ],
+      "answer": "21"
+    },
+    {
+      "id": 52,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem06 = 85\nitem07 = 02\nitem00 = 83\nitem01 = 00\nitem02 = 17\nitem03 = 34\nitem04 = 51\nitem05 = 68\nReturn only the two-digit value for item04."
+        }
+      ],
+      "answer": "51"
+    },
+    {
+      "id": 53,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem06 = 98\nitem07 = 15\nitem00 = 96\nitem01 = 13\nitem02 = 30\nitem03 = 47\nitem04 = 64\nitem05 = 81\nReturn only the two-digit value for item05."
+        }
+      ],
+      "answer": "81"
+    },
+    {
+      "id": 54,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem06 = 11\nitem07 = 28\nitem00 = 09\nitem01 = 26\nitem02 = 43\nitem03 = 60\nitem04 = 77\nitem05 = 94\nReturn only the two-digit value for item06."
+        }
+      ],
+      "answer": "11"
+    },
+    {
+      "id": 55,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem06 = 24\nitem07 = 41\nitem00 = 22\nitem01 = 39\nitem02 = 56\nitem03 = 73\nitem04 = 90\nitem05 = 07\nReturn only the two-digit value for item07."
+        }
+      ],
+      "answer": "41"
+    },
+    {
+      "id": 56,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem07 = 54\nitem00 = 35\nitem01 = 52\nitem02 = 69\nitem03 = 86\nitem04 = 03\nitem05 = 20\nitem06 = 37\nReturn only the two-digit value for item00."
+        }
+      ],
+      "answer": "35"
+    },
+    {
+      "id": 57,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem07 = 67\nitem00 = 48\nitem01 = 65\nitem02 = 82\nitem03 = 99\nitem04 = 16\nitem05 = 33\nitem06 = 50\nReturn only the two-digit value for item01."
+        }
+      ],
+      "answer": "65"
+    },
+    {
+      "id": 58,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem07 = 80\nitem00 = 61\nitem01 = 78\nitem02 = 95\nitem03 = 12\nitem04 = 29\nitem05 = 46\nitem06 = 63\nReturn only the two-digit value for item02."
+        }
+      ],
+      "answer": "95"
+    },
+    {
+      "id": 59,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem07 = 93\nitem00 = 74\nitem01 = 91\nitem02 = 08\nitem03 = 25\nitem04 = 42\nitem05 = 59\nitem06 = 76\nReturn only the two-digit value for item03."
+        }
+      ],
+      "answer": "25"
+    },
+    {
+      "id": 60,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem07 = 06\nitem00 = 87\nitem01 = 04\nitem02 = 21\nitem03 = 38\nitem04 = 55\nitem05 = 72\nitem06 = 89\nReturn only the two-digit value for item04."
+        }
+      ],
+      "answer": "55"
+    },
+    {
+      "id": 61,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem07 = 19\nitem00 = 00\nitem01 = 17\nitem02 = 34\nitem03 = 51\nitem04 = 68\nitem05 = 85\nitem06 = 02\nReturn only the two-digit value for item05."
+        }
+      ],
+      "answer": "85"
+    },
+    {
+      "id": 62,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem07 = 32\nitem00 = 13\nitem01 = 30\nitem02 = 47\nitem03 = 64\nitem04 = 81\nitem05 = 98\nitem06 = 15\nReturn only the two-digit value for item06."
+        }
+      ],
+      "answer": "15"
+    },
+    {
+      "id": 63,
+      "split": "test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Use the following lookup table.\nitem07 = 45\nitem00 = 26\nitem01 = 43\nitem02 = 60\nitem03 = 77\nitem04 = 94\nitem05 = 11\nitem06 = 28\nReturn only the two-digit value for item07."
+        }
+      ],
+      "answer": "45"
+    }
+  ]
+}

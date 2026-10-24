@@ -1,6 +1,6 @@
 {
   "schema": "qkv-preliminary-checkpoint-v1",
-  "revision": 6,
+  "revision": 7,
   "project_id": "qkv-counterexamples-20261024",
   "date": "2026-10-24",
   "repo": "Yunbo-max/new",
@@ -35,22 +35,23 @@
       "node_id": "QKV-A",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "routing-concentration-vs-value-risk",
-      "question": "Does observable finite calibration make correction useful after estimation cost and shrinkage controls?",
-      "prediction": "For full-pair unlabeled Gaussian calibration, E test risk=0.5+(T+0.5)/(n-3), exceeding the single observation if n<=2T+4.",
-      "falsifier": "Cross-validated same-information GLS, shrinkage or ordinary multihead mixing removes native utility gain.",
-      "next_action": "Freeze native available calibration signals without oracle theta labels; compare regularized GLS and ordinary multihead at equal sample budget.",
+      "question": "When does observable calibration preserve target signal rather than merely reduce variance?",
+      "prediction": "Variance minimization incurs excess risk Cov(theta,D)^2/Var(D) if D carries signal.",
+      "falsifier": "No signal-preserving difference can be defined, or ordinary controls remove task benefit.",
+      "next_action": "Define accessible same-target difference and independent task evaluation before architecture design.",
       "status": "active",
       "stage": "deep_mathematical_record",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 6,
+      "served_count": 7,
       "evidence": [
         "R001.md",
         "R002.md",
         "R003.md",
         "R004.md",
         "R005-A.md",
-        "R006.md"
+        "R006.md",
+        "R007-A.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -62,33 +63,34 @@
         "worker_source_read_cap": 3
       },
       "spent": {
-        "worker_tasks": 5,
+        "worker_tasks": 6,
         "tokens": null,
         "cost": null
       },
       "last_outcome": "advanced",
-      "latest_analytical_stage": "R006 mathematical supplemental evidence; native/review incomplete"
+      "latest_analytical_stage": "R007 returned mathematical/design evidence; native and formal review incomplete"
     },
     {
       "node_id": "QKV-B",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "key-radius-erasure",
-      "question": "Does near radial invariance in actual RMSNorm affect value-sensitive held-out task utility?",
-      "prediction": "With p=softmax(1,0,-2), q=softmax(alpha*(1,0,-1)), V=[(1,0,-1),(0,1,0)], all alpha have nonzero output error; best squared error ~0.00214741535.",
-      "falsifier": "Additional value/out projections or matched retraining erase the downstream mismatch on real activation data.",
-      "next_action": "Freeze two-feature value-output sensitivity experiment with pinned Qwen checkpoint, dataset/transformer runtime and matched V/WO controls.",
+      "question": "Do key radial changes survive GQA-projected per-head temperature compensation?",
+      "prediction": "Query scaling equals temperature; key radial tangent outside span of projected temperature tangents is locally irreducible.",
+      "falsifier": "Projected residual or downstream effect vanishes under controls.",
+      "next_action": "Tokenize fixed 64-record probe, verify runtime/model files and obtain scoped diagnostic review.",
       "status": "active",
       "stage": "deep_incomplete",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 6,
+      "served_count": 7,
       "evidence": [
         "R001.md",
         "R002.md",
         "R003.md",
         "R004.md",
         "R005-B.md",
-        "R006.md"
+        "R006.md",
+        "R007-B.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -100,33 +102,34 @@
         "worker_source_read_cap": 3
       },
       "spent": {
-        "worker_tasks": 5,
+        "worker_tasks": 6,
         "tokens": null,
         "cost": null
       },
       "last_outcome": "advanced",
-      "latest_analytical_stage": "R006 mathematical supplemental evidence; native/review incomplete"
+      "latest_analytical_stage": "R007 returned mathematical/design evidence; native and formal review incomplete"
     },
     {
       "node_id": "QKV-C",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "coordinate-dependent-kv-sharing",
-      "question": "When do query spread and moment storage make exact entries preferable to summaries at equal bytes?",
-      "prediction": "For N independent erased cache signs and b auxiliary bits, average future-query MSE >= tanh^2(1)*max(0,1-2 ln(2)*b/N).",
-      "falsifier": "Stored residuals, pre-eviction RestoreKV and exact-token same-byte controls remove actual prefix-query-transition loss.",
-      "next_action": "Freeze finite-budget native cache switch protocol and complete retained-byte/recompute accounting.",
+      "question": "Do rare summarized entries attain log-N margins under native query switches at equal total bytes?",
+      "prediction": "At t=log N full output tends1/2 while average variance and first-order output tend0.",
+      "falsifier": "Effect diluted or exact-entry/adaptive-selection baselines recover it.",
+      "next_action": "Freeze C text manifest and compare actual target margin with predicted dilution boundary.",
       "status": "active",
       "stage": "deep_incomplete",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 6,
+      "served_count": 7,
       "evidence": [
         "R001.md",
         "R002.md",
         "R003.md",
         "R004.md",
         "R005-C.md",
-        "R006.md"
+        "R006.md",
+        "R007-C.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -138,12 +141,12 @@
         "worker_source_read_cap": 3
       },
       "spent": {
-        "worker_tasks": 5,
+        "worker_tasks": 6,
         "tokens": null,
         "cost": null
       },
       "last_outcome": "advanced",
-      "latest_analytical_stage": "R006 mathematical supplemental evidence; native/review incomplete"
+      "latest_analytical_stage": "R007 returned mathematical/design evidence; native and formal review incomplete"
     },
     {
       "node_id": "QKV-A-naive-claim",
@@ -257,6 +260,23 @@
       ],
       "next_actor": "supervisor",
       "next_action": "Reopen only with distinguishing evidence beyond moment repair",
+      "spent": {
+        "tokens": null,
+        "cost": null
+      }
+    },
+    {
+      "node_id": "QKV-A-unlabeled-variance-minimization",
+      "parent_id": "QKV-A",
+      "status": "parked",
+      "stage": "objective_confounding",
+      "question": "Unlabeled variance minimization as generic attention repair",
+      "reason": "Can remove target signal even with infinite calibration.",
+      "evidence": [
+        "R007-A.md"
+      ],
+      "next_action": "Reopen only with explicit signal-preservation conditions and task evidence",
+      "next_actor": "supervisor",
       "spent": {
         "tokens": null,
         "cost": null
@@ -629,6 +649,66 @@
         "no native model evidence",
         "formal design review not performed"
       ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual preliminary; native checker not run",
+      "id": "R007-QKV-A",
+      "parent_question_id": "QKV-A",
+      "action": "deepen",
+      "evidence": [
+        "R007-A.md"
+      ],
+      "causal_reason": "New signal-confounding, projected tangent or dilution boundary changes diagnostic assumptions.",
+      "mathematical_prediction": "Variance minimization incurs excess risk Cov(theta,D)^2/Var(D) if D carries signal.",
+      "falsifier": "No signal-preserving difference can be defined, or ordinary controls remove task benefit.",
+      "next_question_id": "QKV-A",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual preliminary; native checker not run",
+      "id": "R007-QKV-B",
+      "parent_question_id": "QKV-B",
+      "action": "deepen",
+      "evidence": [
+        "R007-B.md"
+      ],
+      "causal_reason": "New signal-confounding, projected tangent or dilution boundary changes diagnostic assumptions.",
+      "mathematical_prediction": "Query scaling equals temperature; key radial tangent outside span of projected temperature tangents is locally irreducible.",
+      "falsifier": "Projected residual or downstream effect vanishes under controls.",
+      "next_question_id": "QKV-B",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual preliminary; native checker not run",
+      "id": "R007-QKV-C",
+      "parent_question_id": "QKV-C",
+      "action": "deepen",
+      "evidence": [
+        "R007-C.md"
+      ],
+      "causal_reason": "New signal-confounding, projected tangent or dilution boundary changes diagnostic assumptions.",
+      "mathematical_prediction": "At t=log N full output tends1/2 while average variance and first-order output tend0.",
+      "falsifier": "Effect diluted or exact-entry/adaptive-selection baselines recover it.",
+      "next_question_id": "QKV-C",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
     }
   ],
   "review": {
@@ -638,11 +718,40 @@
   },
   "run": {
     "status": "completed",
-    "wake_source": "human start; Chat manual analytical wake",
-    "host_mode": "Chat + research-autopilot plugin skill (not native Work subagents)",
+    "wake_source": "human continue",
+    "host_mode": "Work",
     "background_running": false,
-    "next_wake": "A/B/C require native observable task and independent design review; no primary branch.",
-    "active": [
+    "next_wake": "Restore R007 full frontier, complete diagnostic manifests and signal preservation audit; separate formal review before implementation.",
+    "actual_gpu_model_jobs": 0
+  },
+  "budget": {
+    "worker_tasks_completed": 18,
+    "token_usage": null,
+    "cost": null,
+    "model_jobs": [],
+    "cumulative_usage_note": "18 completed designer tasks; R006 CPU receipts inherited not rerun; unknown total cost preserved.",
+    "interrupted_dispatches": [
+      {
+        "id": "r003_a",
+        "status": "unknown; result not recovered",
+        "tokens": null,
+        "cost": null
+      }
+    ],
+    "latest_wake_note": "R007: three returned Work designers; prompt JSON prepared, no numerical or model experiment."
+  },
+  "previous_checkpoint_sha": "21a3af4d8c7b6c41b089e3bbba814d9dbea16a53",
+  "latest_report": "R007.md",
+  "date_note": "Project identifiers retained; this round dated using Europe/London client context.",
+  "frontier_receipt": {
+    "round": "R007",
+    "parent_git_sha": "21a3af4d8c7b6c41b089e3bbba814d9dbea16a53",
+    "eligible": [
+      "QKV-A",
+      "QKV-B",
+      "QKV-C"
+    ],
+    "dispatched": [
       "QKV-A",
       "QKV-B",
       "QKV-C"
@@ -652,64 +761,10 @@
       "QKV-B",
       "QKV-C"
     ],
-    "blocked_from_native_acceptance": [
-      "QKV-A",
-      "QKV-B",
-      "QKV-C"
-    ],
     "unserved": [],
-    "actual_gpu_model_jobs": 0,
-    "requested_budget_options_minutes": [
-      60,
-      480
-    ],
-    "selected_budget_minutes": null,
-    "elapsed_minutes": null
-  },
-  "budget": {
-    "worker_tasks_completed": 15,
-    "token_usage": null,
-    "cost": null,
-    "model_jobs": [],
-    "cumulative_usage_note": "15 completed designer tasks plus unreconciled earlier r003_a; total tokens/cost unknown.",
-    "interrupted_dispatches": [
-      {
-        "id": "r003_a",
-        "status": "unknown; result not recovered",
-        "tokens": null,
-        "cost": null
-      }
-    ],
-    "latest_wake_note": "R006 Chat supervisor plus CPU numerical check, no Work workers; preserve prior worker_tasks_completed=15 and unreconciled r003_a."
-  },
-  "previous_checkpoint_sha": "e414235f28cb2f5910c868963836dcfb9577fb30",
-  "latest_report": "R006.md",
-  "date_note": "Project identifiers retained; this round dated using Europe/London client context.",
-  "frontier_receipt": {
-    "round": "R006",
-    "parent_git_sha": "e414235f28cb2f5910c868963836dcfb9577fb30",
-    "eligible": [
-      "QKV-A",
-      "QKV-B",
-      "QKV-C"
-    ],
-    "dispatched_work_subagents": [],
-    "advanced_analytical": [
-      "QKV-A",
-      "QKV-B",
-      "QKV-C"
-    ],
-    "unserved": [],
-    "all_parked_retained": [
-      "QKV-A-naive-claim",
-      "QKV-B-naive-claim",
-      "QKV-C-naive-claim",
-      "QKV-A-known-source-exact-duplicate",
-      "QKV-A-signed-correlation-cancellation",
-      "QKV-C-generic-cross-moment-repair"
-    ],
-    "independent_formal_review": false,
-    "execution": "Chat supervisory derivation plus private Python CPU arithmetic; NOT real model execution"
+    "old_parked_retained": 6,
+    "new_parked": 1,
+    "independent_formal_review": false
   },
   "previous_run_history": [
     {
@@ -717,6 +772,36 @@
       "wake_source": "human continue",
       "background_running": false,
       "next_wake": "Restore complete frontier and R005 node reports. Freeze missing protocol choices/manifests; distinct real review required before code. No global primary direction."
+    },
+    {
+      "status": "completed",
+      "wake_source": "human start; Chat manual analytical wake",
+      "host_mode": "Chat + research-autopilot plugin skill (not native Work subagents)",
+      "background_running": false,
+      "next_wake": "A/B/C require native observable task and independent design review; no primary branch.",
+      "active": [
+        "QKV-A",
+        "QKV-B",
+        "QKV-C"
+      ],
+      "advanced": [
+        "QKV-A",
+        "QKV-B",
+        "QKV-C"
+      ],
+      "blocked_from_native_acceptance": [
+        "QKV-A",
+        "QKV-B",
+        "QKV-C"
+      ],
+      "unserved": [],
+      "actual_gpu_model_jobs": 0,
+      "requested_budget_options_minutes": [
+        60,
+        480
+      ],
+      "selected_budget_minutes": null,
+      "elapsed_minutes": null
     }
   ],
   "frontier_receipt_history": [
@@ -740,6 +825,32 @@
       "unserved": [],
       "previously_parked_retained": 5,
       "newly_parked": 1
+    },
+    {
+      "round": "R006",
+      "parent_git_sha": "e414235f28cb2f5910c868963836dcfb9577fb30",
+      "eligible": [
+        "QKV-A",
+        "QKV-B",
+        "QKV-C"
+      ],
+      "dispatched_work_subagents": [],
+      "advanced_analytical": [
+        "QKV-A",
+        "QKV-B",
+        "QKV-C"
+      ],
+      "unserved": [],
+      "all_parked_retained": [
+        "QKV-A-naive-claim",
+        "QKV-B-naive-claim",
+        "QKV-C-naive-claim",
+        "QKV-A-known-source-exact-duplicate",
+        "QKV-A-signed-correlation-cancellation",
+        "QKV-C-generic-cross-moment-repair"
+      ],
+      "independent_formal_review": false,
+      "execution": "Chat supervisory derivation plus private Python CPU arithmetic; NOT real model execution"
     }
   ]
 }
