@@ -1,0 +1,4 @@
+R013 checkpoint. The native tree is still revision 3, B1-B4 remain active and unreviewed.
+New evidence: ROUND-013.md and R013_REAL_CASE_RESULTS.json.
+The local R013 ZIP contains portable tests and source-audit code.
+Next wake: restore all B1-B4, review causal information and treatment controls before GPU experiments.
