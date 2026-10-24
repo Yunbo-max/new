@@ -1,8 +1,8 @@
 {
   "schema": "qkv-preliminary-checkpoint-v1",
-  "revision": 3,
+  "revision": 4,
   "project_id": "qkv-counterexamples-20261024",
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "repo": "Yunbo-max/new",
   "branch": "research/qkv-counterexamples-20261024",
   "scope": "创新的QKV架构设计反直觉机制",
@@ -29,19 +29,20 @@
       "node_id": "QKV-A",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "routing-concentration-vs-value-risk",
-      "question": "Can observable imperfect provenance distinguish partial correlation beyond simple source/value controls?",
-      "prediction": "Visible exact duplicates are solved by -log multiplicity; nonlinear V resolves simple matched-AV examples.",
-      "falsifier": "Simple controls solve task or improvement needs invisible true provenance.",
-      "next_action": "Specify observable partial-correlation task and stronger simple baselines.",
+      "question": "Can finite observable calibration support correlation estimation beyond regularized GLS and ordinary multihead controls?",
+      "prediction": "Two ordinary positive-softmax heads plus output mixing exactly implement the signed BLUE example.",
+      "falsifier": "Estimated GLS or ordinary heads solve same-information task; oracle covariance is required.",
+      "next_action": "Specify held-out covariance families and observable calibration before any architecture claim.",
       "status": "active",
-      "stage": "diagnostic_specified",
+      "stage": "diagnostic_boundary_refined",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 3,
+      "served_count": 4,
       "evidence": [
         "R001.md",
         "R002.md",
-        "R003.md"
+        "R003.md",
+        "R004.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -53,7 +54,7 @@
         "worker_source_read_cap": 3
       },
       "spent": {
-        "worker_tasks": 3,
+        "worker_tasks": 4,
         "tokens": null,
         "cost": null
       }
@@ -62,19 +63,20 @@
       "node_id": "QKV-B",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "key-radius-erasure",
-      "question": "Does centered logit residual predict real task loss after matched stable training?",
-      "prediction": "Scalar temperature exactly restores attention iff centered logits are proportional.",
-      "falsifier": "Matched training or task-optimal scalar controls remove practical gap.",
-      "next_action": "Refine matched training and distinct L2/KL/output oracle diagnostic protocol.",
+      "question": "Which normalization-induced probability changes survive value aggregation and downstream readout?",
+      "prediction": "KL-optimal temperature matches the c moment: V=c is preserved despite irreducible distribution mismatch.",
+      "falsifier": "Output/task gap disappears under temperature/value/matched-training controls.",
+      "next_action": "Freeze a native task/model/data protocol measuring value-sensitive rather than probability-only error.",
       "status": "active",
-      "stage": "diagnostic_specified",
+      "stage": "diagnostic_boundary_refined",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 3,
+      "served_count": 4,
       "evidence": [
         "R001.md",
         "R002.md",
-        "R003.md"
+        "R003.md",
+        "R004.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -86,7 +88,7 @@
         "worker_source_read_cap": 3
       },
       "spent": {
-        "worker_tasks": 3,
+        "worker_tasks": 4,
         "tokens": null,
         "cost": null
       }
@@ -95,19 +97,20 @@
       "node_id": "QKV-C",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "coordinate-dependent-kv-sharing",
-      "question": "Do calibration-uncovered query directions predict native errors after existing calibration controls?",
-      "prediction": "Fixed-cache zero calibration error can coexist with tanh²(1) test output MSE; moment domination bounds logit error.",
-      "falsifier": "Prefix/mixed calibration or affordable refresh removes native discrepancy.",
-      "next_action": "Specify within-context transition diagnostic and matched-rank calibration controls.",
+      "question": "Do native transition errors survive residual storage and recomputation under matched total resources?",
+      "prediction": "Identical compressed caches require opposite future outputs; query-only refresh has average error at least tanh²(1).",
+      "falsifier": "Residual storage or affordable recomputation solves native task; failure occurs only in adversarial caches.",
+      "next_action": "Specify transition task and full retained-memory/recompute accounting, distinguishing old-cache recovery from future adaptation.",
       "status": "active",
-      "stage": "diagnostic_specified",
+      "stage": "diagnostic_boundary_refined",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 3,
+      "served_count": 4,
       "evidence": [
         "R001.md",
         "R002.md",
-        "R003.md"
+        "R003.md",
+        "R004.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -119,7 +122,7 @@
         "worker_source_read_cap": 3
       },
       "spent": {
-        "worker_tasks": 3,
+        "worker_tasks": 4,
         "tokens": null,
         "cost": null
       }
@@ -202,6 +205,23 @@
       ],
       "next_actor": "supervisor",
       "next_action": "Reopen only with distinguishing evidence",
+      "spent": {
+        "tokens": null,
+        "cost": null
+      }
+    },
+    {
+      "node_id": "QKV-A-signed-correlation-cancellation",
+      "parent_id": "QKV-A",
+      "status": "parked",
+      "stage": "simple_baseline_and_prior_art",
+      "question": "Signed correlated-noise cancellation as a new QKV mechanism",
+      "reason": "Classical GLS and exact ordinary two-head construction; Differential Transformer prior art.",
+      "evidence": [
+        "R004.md"
+      ],
+      "next_action": "Reopen only on distinguishing same-resource native evidence",
+      "next_actor": "supervisor",
       "spent": {
         "tokens": null,
         "cost": null
@@ -391,6 +411,66 @@
         "no native model evidence",
         "formal design review not performed"
       ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual preliminary record; native checker not run",
+      "id": "R004-QKV-A",
+      "parent_question_id": "QKV-A",
+      "action": "deepen",
+      "evidence": [
+        "R004.md"
+      ],
+      "causal_reason": "Explicit stronger baseline or indistinguishability argument narrows architecture justification.",
+      "mathematical_prediction": "Two ordinary positive-softmax heads plus output mixing exactly implement the signed BLUE example.",
+      "falsifier": "Estimated GLS or ordinary heads solve same-information task; oracle covariance is required.",
+      "next_question_id": "QKV-A",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual preliminary record; native checker not run",
+      "id": "R004-QKV-B",
+      "parent_question_id": "QKV-B",
+      "action": "deepen",
+      "evidence": [
+        "R004.md"
+      ],
+      "causal_reason": "Explicit stronger baseline or indistinguishability argument narrows architecture justification.",
+      "mathematical_prediction": "KL-optimal temperature matches the c moment: V=c is preserved despite irreducible distribution mismatch.",
+      "falsifier": "Output/task gap disappears under temperature/value/matched-training controls.",
+      "next_question_id": "QKV-B",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual preliminary record; native checker not run",
+      "id": "R004-QKV-C",
+      "parent_question_id": "QKV-C",
+      "action": "deepen",
+      "evidence": [
+        "R004.md"
+      ],
+      "causal_reason": "Explicit stronger baseline or indistinguishability argument narrows architecture justification.",
+      "mathematical_prediction": "Identical compressed caches require opposite future outputs; query-only refresh has average error at least tanh²(1).",
+      "falsifier": "Residual storage or affordable recomputation solves native task; failure occurs only in adversarial caches.",
+      "next_question_id": "QKV-C",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
     }
   ],
   "review": {
@@ -400,15 +480,15 @@
   "run": {
     "status": "completed",
     "wake_source": "human continue",
-    "next_wake": "Restore R001-R003 and all peer diagnostic leaves; deepen observable-task/control specifications. No implementation before separate-conversation design acceptance.",
+    "next_wake": "Restore all peer leaves and parked descendants; specify native observable tasks. Separate-conversation design acceptance remains required before implementation.",
     "background_running": false
   },
   "budget": {
-    "worker_tasks_completed": 9,
+    "worker_tasks_completed": 12,
     "token_usage": null,
     "cost": null,
     "model_jobs": [],
-    "cumulative_usage_note": "Nine completed worker tasks across R001-R003, plus unreconciled earlier interrupted dispatch. Total usage unknown, not reset.",
+    "cumulative_usage_note": "Twelve completed designer tasks across R001-R004, plus earlier interrupted dispatch. All cumulative tokens/costs remain unknown.",
     "interrupted_dispatches": [
       {
         "id": "r003_a",
@@ -418,7 +498,7 @@
       }
     ]
   },
-  "previous_checkpoint_sha": "e568a797f453f07ff0a49961e70db4114791382e",
-  "latest_report": "R003.md",
-  "date_note": "Runtime reports 2026-10-23 UTC; retain established 20261024 project/branch identifiers without renaming history."
+  "previous_checkpoint_sha": "afde335c48c31099aece6e14168be68fdbe2a6a7",
+  "latest_report": "R004.md",
+  "date_note": "Project identifiers retained; this round dated using Europe/London client context."
 }
