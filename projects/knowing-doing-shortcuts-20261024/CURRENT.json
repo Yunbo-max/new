@@ -5,7 +5,7 @@
   "status": "active",
   "no_primary_direction": true,
   "plugin_version": "0.11.7-manual.fullfrontier.1",
-  "wake_id": "R001-20261024",
+  "wake_id": "R003-20261024",
   "wake_budget_minutes": 60,
   "actual_wallclock_minutes": "not measured",
   "provider_token_cost": "unknown",
@@ -24,8 +24,8 @@
       "parent": "ROOT",
       "status": "active",
       "mechanism": "probe-decodable knowledge not controlling action",
-      "outcome": "CPU logical witness + published overlap; native unresolved",
-      "next": "Test intervention-specific causal accessibility and OOD probe validity",
+      "outcome": "probe cosine basis-dependence witness and source check",
+      "next": "matched readout/steering interventions with hidden task quality",
       "next_actor": "designer",
       "level": "deep_incomplete"
     },
@@ -34,8 +34,8 @@
       "parent": "ROOT",
       "status": "active",
       "mechanism": "misestimated causal uplift vs subjective cost",
-      "outcome": "utility-threshold nonidentifiability derivation; CPU witness",
-      "next": "Factorial exogenous costs + forced-action success and conditional regret",
+      "outcome": "stochastic cost-choice scale nonidentifiability",
+      "next": "matched-history forced action potential outcomes and calibrated noise",
       "next_actor": "designer",
       "level": "deep_incomplete"
     },
@@ -44,8 +44,8 @@
       "parent": "ROOT",
       "status": "active",
       "mechanism": "optimizing exposed proxy instead of independent true success",
-      "outcome": "proxy/true ranking reversal CPU witness; published benchmark collision",
-      "next": "2x2 audit visibility versus cost factorial, independent harness",
+      "outcome": "proxy exploitability control DiD toy with false task success",
+      "next": "sealed grader, placebo cue, true exploitability randomization",
       "next_actor": "designer",
       "level": "deep_incomplete"
     },
@@ -54,8 +54,8 @@
       "parent": "ROOT",
       "status": "active",
       "mechanism": "misallocation of marginal thinking/tool budget",
-      "outcome": "finite-resource CPU counterexample; known literature collision",
-      "next": "Compare to published compute-optimal and adaptive stopping baselines",
+      "outcome": "greedy exact on 1225 concave cases, false under delayed gains",
+      "next": "measure empirical task-level nonconcave effort curves",
       "next_actor": "designer",
       "level": "deep_incomplete"
     }
@@ -63,17 +63,12 @@
   "full_frontier_audit": {
     "eligible": 4,
     "investigated": 4,
-    "math_or_toy_evidence": 4,
-    "native_validated": 0,
+    "math_and_source_records": 4,
+    "actual_model_runs": 0,
     "independent_reviewed": 0,
+    "subagents_dispatched": 0,
     "unserved": 0,
-    "blocked_for_external_native_review": [
-      "B1",
-      "B2",
-      "B3",
-      "B4"
-    ],
-    "next_batch": [
+    "pending": [
       "B1",
       "B2",
       "B3",
@@ -97,13 +92,27 @@
     {
       "path": "README.md",
       "kind": "protocol"
+    },
+    {
+      "path": "ROUND-003.md",
+      "kind": "research report"
+    },
+    {
+      "path": "r003_witness.js",
+      "kind": "CPU/V8 mathematical witness"
+    },
+    {
+      "path": "R003_RESULTS.json",
+      "kind": "synthetic numerical output"
     }
   ],
   "next_wake": "Reopen each B1-B4; inspect primary implementations, obtain independent reviewer before new method claims or costly native experiment; record actual per-branch receipts and Git SHA.",
   "authoritative_state": "research-state/continuous/tree.json",
   "authoritative_schema": "persistent-research-tree-v2",
-  "native_tree_revision": 1,
+  "native_tree_revision": 3,
   "native_tree_verified_readback": true,
   "native_budget_verified": false,
-  "note": "CURRENT.json is a human-readable snapshot. The authoritative full-frontier research tree is research-state/continuous/tree.json; the retained loop.json is a historical seed only."
+  "note": "CURRENT.json is a human-readable snapshot. The authoritative full-frontier research tree is research-state/continuous/tree.json; the retained loop.json is a historical seed only.",
+  "last_completed_scientific_round": "R003",
+  "latest_round_report": "ROUND-003.md"
 }
