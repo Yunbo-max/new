@@ -1,0 +1,189 @@
+{
+  "environment": {
+    "seed": 20261024,
+    "numpy": "2.3.5",
+    "torch": "2.10.0+cpu",
+    "python": "3.13.5"
+  },
+  "status": "synthetic CPU only",
+  "QKV-A": {
+    "known_a": 0.75,
+    "known_variance_D": 2.0,
+    "interval_examples": {
+      "(-0.4, 0.4)": {
+        "beta": -0.175,
+        "worst_excess_risk": -0.06124999999999999
+      },
+      "(0.85, 1.05)": {
+        "beta": 0.04999999999999999,
+        "worst_excess_risk": -0.0049999999999999975
+      },
+      "(0.5, 0.9)": {
+        "beta": -0.0,
+        "worst_excess_risk": 0.0
+      }
+    },
+    "synthetic_label_ci": {
+      "8": {
+        "-0.2": {
+          "coverage": 0.948,
+          "nonzero_rate": 0.709,
+          "mean_population_risk_delta": -0.19467951207116915,
+          "positive_delta_and_CI_covers": 0
+        },
+        "0.2": {
+          "coverage": 0.9533333333333334,
+          "nonzero_rate": 0.3426666666666667,
+          "mean_population_risk_delta": -0.028980130097008904,
+          "positive_delta_and_CI_covers": 0
+        },
+        "0.8": {
+          "coverage": 0.9553333333333334,
+          "nonzero_rate": 0.04666666666666667,
+          "mean_population_risk_delta": 0.0008138408518369092,
+          "positive_delta_and_CI_covers": 0
+        },
+        "1.1": {
+          "coverage": 0.9523333333333334,
+          "nonzero_rate": 0.17633333333333334,
+          "mean_population_risk_delta": -0.00596919261733164,
+          "positive_delta_and_CI_covers": 0
+        }
+      },
+      "32": {
+        "-0.2": {
+          "coverage": 0.9556666666666667,
+          "nonzero_rate": 1.0,
+          "mean_population_risk_delta": -0.39057593189875794,
+          "positive_delta_and_CI_covers": 0
+        },
+        "0.2": {
+          "coverage": 0.9523333333333334,
+          "nonzero_rate": 0.9273333333333333,
+          "mean_population_risk_delta": -0.09448358301820825,
+          "positive_delta_and_CI_covers": 0
+        },
+        "0.8": {
+          "coverage": 0.949,
+          "nonzero_rate": 0.067,
+          "mean_population_risk_delta": 0.0001198812100389001,
+          "positive_delta_and_CI_covers": 0
+        },
+        "1.1": {
+          "coverage": 0.9493333333333334,
+          "nonzero_rate": 0.6136666666666667,
+          "mean_population_risk_delta": -0.02146203474908798,
+          "positive_delta_and_CI_covers": 0
+        }
+      },
+      "128": {
+        "-0.2": {
+          "coverage": 0.9526666666666667,
+          "nonzero_rate": 1.0,
+          "mean_population_risk_delta": -0.4373311663094793,
+          "positive_delta_and_CI_covers": 0
+        },
+        "0.2": {
+          "coverage": 0.9546666666666667,
+          "nonzero_rate": 1.0,
+          "mean_population_risk_delta": -0.13746777758180012,
+          "positive_delta_and_CI_covers": 0
+        },
+        "0.8": {
+          "coverage": 0.9496666666666667,
+          "nonzero_rate": 0.10233333333333333,
+          "mean_population_risk_delta": -5.433386350363357e-05,
+          "positive_delta_and_CI_covers": 0
+        },
+        "1.1": {
+          "coverage": 0.9493333333333334,
+          "nonzero_rate": 0.995,
+          "mean_population_risk_delta": -0.0472755539776328,
+          "positive_delta_and_CI_covers": 0
+        }
+      }
+    }
+  },
+  "QKV-A-signal-noise-identifiability": {
+    "rho": 0.3,
+    "g": 0.25,
+    "noise_variance": 1.4736842105263157,
+    "no_label_excess": 0.125,
+    "n": {
+      "4": {
+        "misspecified_bayes_excess": 0.13118166119548924,
+        "mixture_bayes_excess": 0.1201874153622335
+      },
+      "16": {
+        "misspecified_bayes_excess": 0.1405199247124177,
+        "mixture_bayes_excess": 0.11233253066966013
+      },
+      "64": {
+        "misspecified_bayes_excess": 0.1499129849560935,
+        "mixture_bayes_excess": 0.10599249544826467
+      },
+      "256": {
+        "misspecified_bayes_excess": 0.14931264834309257,
+        "mixture_bayes_excess": 0.10472541836711884
+      }
+    },
+    "asymptotic_misspecified_excess": 0.15,
+    "asymptotic_mixture_excess": 0.105
+  },
+  "QKV-B": {
+    "eta": 0.15,
+    "group_output_change_norm": 0.037598150575971045,
+    "head_temperature_repair": [
+      1.0837440179475812,
+      1.0167908432235975
+    ],
+    "group_output_remaining_error": 1.311841151391874e-12,
+    "each_head_routing_KL_remains_positive": [
+      0.0005825128112131872,
+      0.00028859699088987223
+    ],
+    "temperature_group_tangent_rank": 2,
+    "temperature_group_tangent_condition": 1.2970262555258507
+  },
+  "QKV-B-precision-radial-collision": {
+    "bitwise_equal_keys_x_vs_2x": true,
+    "value_path_retains_original_radius_delta": 0.5,
+    "when_values_equal_attention_output_delta": 0.0,
+    "radial_log_sensitivity_eps_over_u_plus_eps": {
+      "1": 0.5,
+      "100": 0.009900990099009901,
+      "10000": 9.999000099990002e-05,
+      "1000000": 9.99999000001e-07
+    },
+    "radial_inverse_condition_number": {
+      "1": 2,
+      "100": 101,
+      "10000": 10001,
+      "1000000": 1000001
+    }
+  },
+  "QKV-C": {
+    "d": 128,
+    "N_background": 65536,
+    "log_partition_excess": 0.49809607989918625,
+    "exact_isotropic_sphere_exp_score_moment": 1.6455852234712056,
+    "perfect_key_score": 11.313708498984761,
+    "threshold_logN_plus_logMGF": 11.58845096885831,
+    "analytic_mass_using_background_mgf": 0.43174319811185524,
+    "sampled_64_backgrounds_mass_mean": 0.43149470607017865,
+    "sampled_64_backgrounds_mass_std": 0.0012055626116357714,
+    "normal_score_mgf_approx_mass": 0.4312761492699225
+  },
+  "QKV-C-unsafe-moment-correction": {
+    "n": 20000,
+    "fixture": "evicted +/-t keys and +/-1 values, retained value Normal(0,1), t Uniform(0,2)",
+    "full_correction_cert_fraction": 0.1853,
+    "damped_correction_cert_fraction": 0.2491,
+    "average_selected_damping_lambda": 0.17339584706220948,
+    "nonzero_lambda_median": 0.7939329472325993,
+    "full_correction_true_improvement_fraction": 0.86255,
+    "damped_correction_true_improvement_fraction": 0.2491,
+    "false_certifications": 0,
+    "proved_rule": "if norm(err_true_to_full_correction)<=B and D=norm(full_correction-plain)>B, lambda=1-B/D gives strictly improved squared error versus plain whenever D>0"
+  }
+}
