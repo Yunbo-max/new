@@ -1,0 +1,242 @@
+{
+  "schema": "r015-cpu-math-v1",
+  "source_project_revision": 14,
+  "seed": 20261024,
+  "execution": "local CPU synthetic analytical checks only, not Qwen inference",
+  "A_parent": {
+    "0.8": {
+      "cov_e1e2": -0.8,
+      "optimal_partial_lambda": 0.19999999999999996,
+      "exact_mse": {
+        "no_change": 0.39999999999999997,
+        "partial_oracle": 0.36,
+        "full_repair": 1.0
+      },
+      "cpu_mse": {
+        "no_change": 0.39954584921900227,
+        "partial_oracle": 0.3599413676043962,
+        "full_repair": 0.9954807604809789
+      }
+    },
+    "1.2": {
+      "cov_e1e2": -1.2,
+      "optimal_partial_lambda": 0.0,
+      "exact_mse": {
+        "no_change": 0.39999999999999997,
+        "partial_oracle": 0.39999999999999997,
+        "full_repair": 1.7999999999999998
+      },
+      "cpu_mse": {
+        "no_change": 0.4027498073337908,
+        "partial_oracle": 0.4027498073337908,
+        "full_repair": 1.7991857305095385
+      }
+    }
+  },
+  "A_child": {
+    "16": {
+      "margin": 0.30596835383510207,
+      "expected_risk": 0.12350623470781912,
+      "no_label_risk": 0.125,
+      "prob_nonzero_action": 0.24585586390776254,
+      "coverage_probability": 1.0000000000000004,
+      "prob_risk_worse_than_no_label": 0.0
+    },
+    "32": {
+      "margin": 0.21635229782528567,
+      "expected_risk": 0.12120999289936639,
+      "no_label_risk": 0.125,
+      "prob_nonzero_action": 0.4950776801436093,
+      "coverage_probability": 0.9988313352059279,
+      "prob_risk_worse_than_no_label": 0.0
+    },
+    "64": {
+      "margin": 0.15298417691755103,
+      "expected_risk": 0.11676881703540914,
+      "no_label_risk": 0.125,
+      "prob_nonzero_action": 0.8169336268973392,
+      "coverage_probability": 0.9974726094917319,
+      "prob_risk_worse_than_no_label": 0.0
+    },
+    "128": {
+      "margin": 0.10817614891264284,
+      "expected_risk": 0.11162946095356446,
+      "no_label_risk": 0.125,
+      "prob_nonzero_action": 0.9888950924306795,
+      "coverage_probability": 0.9973093199323155,
+      "prob_risk_worse_than_no_label": 0.0
+    },
+    "256": {
+      "margin": 0.07649208845877552,
+      "expected_risk": 0.10833565630963213,
+      "no_label_risk": 0.125,
+      "prob_nonzero_action": 0.999986494525431,
+      "coverage_probability": 0.9964920711307163,
+      "prob_risk_worse_than_no_label": 5.350408459364352e-31
+    },
+    "nominal_n_to_enable_positive": 37.44665341942488,
+    "nominal_n_for_shrink_ge_0_1": 66.57182830119977
+  },
+  "B_parent": {
+    "per_query_temperature_tangents": [
+      -1.0,
+      0.0,
+      1.0,
+      2.0
+    ],
+    "global_temperature_tangent": 0.5,
+    "per_query_oracle_squared_error": 0.0036000000000000008,
+    "global_fitted_squared_error": 0.0536,
+    "extra_shared_parameter_penalty": 0.05000000000000001,
+    "positive_temperature_ranges_at_eta_0_1": [
+      0.9,
+      1.0,
+      1.1,
+      1.2
+    ]
+  },
+  "B_child": {
+    "hidden_dim_toy": 6,
+    "local_value_rank": 2,
+    "local_value_nullity": 4,
+    "qk_cast_keys_equal": true,
+    "local_values_equal": true,
+    "other_value_head_norm_difference": 1.4142135623730951,
+    "Qwen3_0p6B_possible_one_value_head_nullity_at_least": 896,
+    "Qwen3_0p6B_all_8_value_heads_potentially_full_rank": true
+  },
+  "C_parent": {
+    "base_decision_margin": -0.2,
+    "attention_mass": 0.432,
+    "value_logit_contrasts": {
+      "-1": {
+        "final_margin": -0.632,
+        "positive_class_probability": 0.3470571822944104,
+        "flips_winner_relative_to_base": false,
+        "delta_margin": -0.432
+      },
+      "0": {
+        "final_margin": -0.2,
+        "positive_class_probability": 0.45016600268752216,
+        "flips_winner_relative_to_base": false,
+        "delta_margin": 0.0
+      },
+      "0.25": {
+        "final_margin": -0.09200000000000001,
+        "positive_class_probability": 0.47701620894755165,
+        "flips_winner_relative_to_base": false,
+        "delta_margin": 0.108
+      },
+      "1": {
+        "final_margin": 0.23199999999999998,
+        "positive_class_probability": 0.55774124330949,
+        "flips_winner_relative_to_base": true,
+        "delta_margin": 0.432
+      },
+      "2": {
+        "final_margin": 0.6639999999999999,
+        "positive_class_probability": 0.6601583597237574,
+        "flips_winner_relative_to_base": true,
+        "delta_margin": 0.864
+      }
+    },
+    "paged_memory": {
+      "blocks_before": 1024,
+      "tokens_before": 16384,
+      "logical_surviving_tokens": 1024,
+      "logical_fraction": 0.0625,
+      "worst_spread_used_blocks": 1024,
+      "best_compacted_used_blocks": 64,
+      "random_selection_mean_used_blocks": 659.67,
+      "random_selection_sd_used_blocks": 9.930412881647973,
+      "random_selection_mean_physical_fraction": 0.644208984375
+    }
+  },
+  "C_child": {
+    "test_score_t": 1.0,
+    "kept_token": {
+      "key": 0,
+      "value": 0
+    },
+    "worlds": {
+      "1": {
+        "-1": {
+          "retained_stats": [
+            3.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "full_attention_output": -0.21355226703407257,
+          "summary_only_prediction": 0.0,
+          "prediction_abs_error": 0.21355226703407257
+        },
+        "1": {
+          "retained_stats": [
+            3.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "full_attention_output": 0.21355226703407257,
+          "summary_only_prediction": 0.0,
+          "prediction_abs_error": 0.21355226703407257
+        }
+      },
+      "10": {
+        "-1": {
+          "retained_stats": [
+            3.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "full_attention_output": -2.1355226703407255,
+          "summary_only_prediction": 0.0,
+          "prediction_abs_error": 2.1355226703407255
+        },
+        "1": {
+          "retained_stats": [
+            3.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "full_attention_output": 2.1355226703407255,
+          "summary_only_prediction": 0.0,
+          "prediction_abs_error": 2.1355226703407255
+        }
+      },
+      "100": {
+        "-1": {
+          "retained_stats": [
+            3.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "full_attention_output": -21.355226703407258,
+          "summary_only_prediction": 0.0,
+          "prediction_abs_error": 21.355226703407258
+        },
+        "1": {
+          "retained_stats": [
+            3.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "full_attention_output": 21.355226703407258,
+          "summary_only_prediction": 0.0,
+          "prediction_abs_error": 21.355226703407258
+        }
+      }
+    },
+    "unbounded_output_slope_per_unit_amplitude": 0.21355226703407257,
+    "full_output_when_max_value_norm_is_Vmax_bound": 0.10677613351703628,
+    "qualification": "Applies only when the summarized-interface has no certified global or stored Value norm bound; model weights/normalization can supply a finite but loose global bound."
+  },
+  "python": "3.13.5",
+  "numpy": "2.3.5",
+  "torch": "2.10.0+cpu"
+}
