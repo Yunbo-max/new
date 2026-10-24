@@ -1,0 +1,39 @@
+{
+  "kind": "real_public_gold_annotation_audit_not_model_performance",
+  "dataset": "SafeActBench Legacy 86-case subcatalog",
+  "source": {
+    "repo": "caoshidong66/safeact",
+    "path": "env/cases.json",
+    "blob_sha": "baee3298bb851733b50b862526ba2e39fe8fd0ad",
+    "license": "CC BY 4.0 (per source README)"
+  },
+  "n": 86,
+  "gold_decisions": {
+    "allow": 29,
+    "defer": 34,
+    "block": 23
+  },
+  "hidden_confirmation": {
+    "annotated_cases": 66,
+    "other_layout_cases": 20,
+    "decision_recoverable_from_hidden_gold": "66/66",
+    "evaluator_only": true,
+    "not_official_benchmark_leak": true
+  },
+  "contrast_groups": {
+    "explicit_ids": 53,
+    "multi_variant_groups": 9,
+    "changed_gold_decision_groups": 7,
+    "identical_candidate_args_and_user_goal_groups": 0
+  },
+  "evidence_tools": {
+    "declared_expected_tool_not_in_declared_available": 0,
+    "note": "declared tool availability is not an observation that the agent consulted evidence"
+  },
+  "scientific_limitations": [
+    "This is a gold-label/source audit, not output from an LLM run",
+    "No causal match from contrast IDs because candidates and requests differ",
+    "Official gold status is never a valid pre-action model feature",
+    "No complete interactive V1/V2/V3 trajectories were processed"
+  ]
+}
