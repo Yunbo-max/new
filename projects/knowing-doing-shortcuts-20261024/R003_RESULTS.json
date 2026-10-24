@@ -1,0 +1,25 @@
+{
+  "kind": "synthetic_only",
+  "B1": {
+    "cosine_before": 0,
+    "cosine_after": -0.9999500037496876,
+    "logit_difference": 0
+  },
+  "B2": {
+    "choice_prob_difference": 1.1102230246251565e-16,
+    "mean_regret": 0.0225
+  },
+  "B3": {
+    "difference_in_differences": 0.3,
+    "hidden_success_difference": -0.14,
+    "visible_proxy_difference": 0.105
+  },
+  "B4": {
+    "concave_curve_pairs": 1225,
+    "greedy_failures": 0,
+    "delayed_payoff_gap": 0.59
+  },
+  "model_runs": 0,
+  "independent_reviews": 0,
+  "passed": true
+}
