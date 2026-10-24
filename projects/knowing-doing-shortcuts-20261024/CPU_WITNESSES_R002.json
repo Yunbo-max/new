@@ -1,0 +1,63 @@
+{
+  "B1": {
+    "action_alignment": 0.5,
+    "action_change_under_knowledge_axis_steering": 0,
+    "probe_accuracy": 1
+  },
+  "B2": {
+    "actual_forced_action_uplift": 0.20000000000000007,
+    "costs": [
+      0.03,
+      0.08,
+      0.13,
+      0.18
+    ],
+    "decisions_a": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "decisions_b": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "inferred_subjective_threshold": 0.12,
+    "mean_dominated_skip_regret": 0.0225,
+    "non_identifiable_parameters": [
+      [
+        0.12,
+        1
+      ],
+      [
+        0.24,
+        2
+      ]
+    ]
+  },
+  "B3": {
+    "policy_table": {
+      "visible=0;costmult=1": "honest",
+      "visible=0;costmult=2": "honest",
+      "visible=1;costmult=1": "shortcut",
+      "visible=1;costmult=2": "shortcut"
+    },
+    "warning": "a proxy effect does NOT prove internal gaming intent"
+  },
+  "B4": {
+    "greedy_allocation": [
+      3,
+      0
+    ],
+    "greedy_expected_correct": 1.01,
+    "optimal": {
+      "easy_units": 0,
+      "expected_correct": 1.6,
+      "hard_units": 3
+    },
+    "regret": 0.59
+  },
+  "experiment_type": "synthetic_cpu_only"
+}
