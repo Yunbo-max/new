@@ -99,5 +99,11 @@
       "kind": "protocol"
     }
   ],
-  "next_wake": "Reopen each B1-B4; inspect primary implementations, obtain independent reviewer before new method claims or costly native experiment; record actual per-branch receipts and Git SHA."
+  "next_wake": "Reopen each B1-B4; inspect primary implementations, obtain independent reviewer before new method claims or costly native experiment; record actual per-branch receipts and Git SHA.",
+  "authoritative_state": "research-state/continuous/tree.json",
+  "authoritative_schema": "persistent-research-tree-v2",
+  "native_tree_revision": 1,
+  "native_tree_verified_readback": true,
+  "native_budget_verified": false,
+  "note": "CURRENT.json is a human-readable snapshot. The authoritative full-frontier research tree is research-state/continuous/tree.json; the retained loop.json is a historical seed only."
 }
