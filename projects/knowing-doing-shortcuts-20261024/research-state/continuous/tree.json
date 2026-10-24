@@ -4,7 +4,7 @@
   "goal": "Disentangle hidden cognition-action readout, cost beliefs, proxy reward exploitation and misallocated effort in LLM shortcutting",
   "mode": "branching",
   "status": "active",
-  "revision": 2,
+  "revision": 3,
   "authority_ref": {
     "path": "research-state/authority.md",
     "sha256": "cc58f16c4bbb06b222e09c843d25992d8456afc724fc177a6167bda9108d7612",
@@ -85,6 +85,26 @@
           "path": "CPU_WITNESSES_R002.json",
           "sha256": "f664314630a8b7099fd89a0d9f0eaf4ed8a1534282eb5c2220d79be738c44244",
           "kind": "experiment"
+        },
+        {
+          "path": "evidence/B1_R003.md",
+          "sha256": "3044fc91e9792229cf5677fb61741c2c0e1d441924683d9e198ec0931c0c2916",
+          "kind": "math"
+        },
+        {
+          "path": "ROUND-003.md",
+          "sha256": "958281c022f453337c91df7596b85c17b9ef4f59e1eedccc2b393c30563ea921",
+          "kind": "math"
+        },
+        {
+          "path": "r003_witness.js",
+          "sha256": "bc196af5f41f4448b9a560c5e81798c1055a33c92eca5a8a2fc619cec1ec5119",
+          "kind": "code"
+        },
+        {
+          "path": "R003_RESULTS.json",
+          "sha256": "6469e92e9d13da14534952fc97fde86cafbd6bb9b01d1fb804648bd9e2be225e",
+          "kind": "experiment"
         }
       ],
       "budget": {
@@ -95,11 +115,11 @@
         "queries": 0,
         "work_units": 0
       },
-      "next_action": "Test conditional benefit of necessity-axis patching against code-inspected When2Tool Probe&Prefill and generic tool propensity steering on held-out tasks.",
+      "next_action": "Check within-model task-accuracy effects of knowledge/action readout interventions and compare When2Tool",
       "blockers": [],
-      "reason": "R002 evidence added from direct manual scientific analysis and synthetic CPU witness; no native Work dispatch, reviewer, or model experiment.",
+      "reason": "R003: verified math/counterexample and primary-source collision, artificial V8-only tests; no native Work dispatch, model runs or formal review.",
       "created_revision": 1,
-      "updated_revision": 2,
+      "updated_revision": 3,
       "served_count": 0
     },
     {
@@ -136,6 +156,26 @@
           "path": "CPU_WITNESSES_R002.json",
           "sha256": "f664314630a8b7099fd89a0d9f0eaf4ed8a1534282eb5c2220d79be738c44244",
           "kind": "experiment"
+        },
+        {
+          "path": "evidence/B2_R003.md",
+          "sha256": "fac971dabcbb74a83c79c42985bcb26366e277fca5d7d38db583eda61cab7c6e",
+          "kind": "math"
+        },
+        {
+          "path": "ROUND-003.md",
+          "sha256": "958281c022f453337c91df7596b85c17b9ef4f59e1eedccc2b393c30563ea921",
+          "kind": "math"
+        },
+        {
+          "path": "r003_witness.js",
+          "sha256": "bc196af5f41f4448b9a560c5e81798c1055a33c92eca5a8a2fc619cec1ec5119",
+          "kind": "code"
+        },
+        {
+          "path": "R003_RESULTS.json",
+          "sha256": "6469e92e9d13da14534952fc97fde86cafbd6bb9b01d1fb804648bd9e2be225e",
+          "kind": "experiment"
         }
       ],
       "budget": {
@@ -146,11 +186,11 @@
         "queries": 0,
         "work_units": 0
       },
-      "next_action": "With same pre-action histories, estimate forced-action value, randomize visible prices, and test regret after CTA/To Call or Not to Call calibrators.",
+      "next_action": "Test paired matched-history forced-action gains under randomized prices; control decision temperature and CTA",
       "blockers": [],
-      "reason": "R002 evidence added from direct manual scientific analysis and synthetic CPU witness; no native Work dispatch, reviewer, or model experiment.",
+      "reason": "R003: verified math/counterexample and primary-source collision, artificial V8-only tests; no native Work dispatch, model runs or formal review.",
       "created_revision": 1,
-      "updated_revision": 2,
+      "updated_revision": 3,
       "served_count": 0
     },
     {
@@ -187,6 +227,26 @@
           "path": "CPU_WITNESSES_R002.json",
           "sha256": "f664314630a8b7099fd89a0d9f0eaf4ed8a1534282eb5c2220d79be738c44244",
           "kind": "experiment"
+        },
+        {
+          "path": "evidence/B3_R003.md",
+          "sha256": "109a0ddbd1d24aaf955c6c9bceede8e167bae331ee6357187f9959c95d66934e",
+          "kind": "math"
+        },
+        {
+          "path": "ROUND-003.md",
+          "sha256": "958281c022f453337c91df7596b85c17b9ef4f59e1eedccc2b393c30563ea921",
+          "kind": "math"
+        },
+        {
+          "path": "r003_witness.js",
+          "sha256": "bc196af5f41f4448b9a560c5e81798c1055a33c92eca5a8a2fc619cec1ec5119",
+          "kind": "code"
+        },
+        {
+          "path": "R003_RESULTS.json",
+          "sha256": "6469e92e9d13da14534952fc97fde86cafbd6bb9b01d1fb804648bd9e2be225e",
+          "kind": "experiment"
         }
       ],
       "budget": {
@@ -197,11 +257,11 @@
         "queries": 0,
         "work_units": 0
       },
-      "next_action": "Run sealed evaluator proxy visibility x price factorial; compare RHB environmental hardening and ACL EST, with hidden correctness as ground truth.",
+      "next_action": "Apply randomized proxy-exposure x exploitability negative-control design with sealed gold grader",
       "blockers": [],
-      "reason": "R002 evidence added from direct manual scientific analysis and synthetic CPU witness; no native Work dispatch, reviewer, or model experiment.",
+      "reason": "R003: verified math/counterexample and primary-source collision, artificial V8-only tests; no native Work dispatch, model runs or formal review.",
       "created_revision": 1,
-      "updated_revision": 2,
+      "updated_revision": 3,
       "served_count": 0
     },
     {
@@ -238,6 +298,26 @@
           "path": "CPU_WITNESSES_R002.json",
           "sha256": "f664314630a8b7099fd89a0d9f0eaf4ed8a1534282eb5c2220d79be738c44244",
           "kind": "experiment"
+        },
+        {
+          "path": "evidence/B4_R003.md",
+          "sha256": "b90d59ea6057723fd8da731b355c8293d42e502a68ae0c1aab647f7b458b5c9b",
+          "kind": "math"
+        },
+        {
+          "path": "ROUND-003.md",
+          "sha256": "958281c022f453337c91df7596b85c17b9ef4f59e1eedccc2b393c30563ea921",
+          "kind": "math"
+        },
+        {
+          "path": "r003_witness.js",
+          "sha256": "bc196af5f41f4448b9a560c5e81798c1055a33c92eca5a8a2fc619cec1ec5119",
+          "kind": "code"
+        },
+        {
+          "path": "R003_RESULTS.json",
+          "sha256": "6469e92e9d13da14534952fc97fde86cafbd6bb9b01d1fb804648bd9e2be225e",
+          "kind": "experiment"
         }
       ],
       "budget": {
@@ -248,11 +328,11 @@
         "queries": 0,
         "work_units": 0
       },
-      "next_action": "Measure discrete per-task verification/computation value curves and compare delayed-return policy to MUTO/CATS and oracle DP at equal resource cost.",
+      "next_action": "Estimate nonconcavity of empirical effort curves and compare greedy vs adaptive dynamic-programming policies at matched costs",
       "blockers": [],
-      "reason": "R002 evidence added from direct manual scientific analysis and synthetic CPU witness; no native Work dispatch, reviewer, or model experiment.",
+      "reason": "R003: verified math/counterexample and primary-source collision, artificial V8-only tests; no native Work dispatch, model runs or formal review.",
       "created_revision": 1,
-      "updated_revision": 2,
+      "updated_revision": 3,
       "served_count": 0
     }
   ],
@@ -319,6 +399,55 @@
           "kind": "experiment"
         }
       ]
+    },
+    {
+      "revision": 3,
+      "event_id": "manual-science.R003.20261024",
+      "type": "manual_science_record",
+      "served_ids": [
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+      ],
+      "evidence_refs": [
+        {
+          "path": "ROUND-003.md",
+          "sha256": "958281c022f453337c91df7596b85c17b9ef4f59e1eedccc2b393c30563ea921",
+          "kind": "math"
+        },
+        {
+          "path": "r003_witness.js",
+          "sha256": "bc196af5f41f4448b9a560c5e81798c1055a33c92eca5a8a2fc619cec1ec5119",
+          "kind": "code"
+        },
+        {
+          "path": "R003_RESULTS.json",
+          "sha256": "6469e92e9d13da14534952fc97fde86cafbd6bb9b01d1fb804648bd9e2be225e",
+          "kind": "experiment"
+        },
+        {
+          "path": "evidence/B1_R003.md",
+          "sha256": "3044fc91e9792229cf5677fb61741c2c0e1d441924683d9e198ec0931c0c2916",
+          "kind": "math"
+        },
+        {
+          "path": "evidence/B2_R003.md",
+          "sha256": "fac971dabcbb74a83c79c42985bcb26366e277fca5d7d38db583eda61cab7c6e",
+          "kind": "math"
+        },
+        {
+          "path": "evidence/B3_R003.md",
+          "sha256": "109a0ddbd1d24aaf955c6c9bceede8e167bae331ee6357187f9959c95d66934e",
+          "kind": "math"
+        },
+        {
+          "path": "evidence/B4_R003.md",
+          "sha256": "b90d59ea6057723fd8da731b355c8293d42e502a68ae0c1aab647f7b458b5c9b",
+          "kind": "math"
+        }
+      ],
+      "disposition": "four independently grounded nodes; mathematical diagnostic; no real LLM experiment or formal reviewer; zero native batches"
     }
   ],
   "wake": null,
