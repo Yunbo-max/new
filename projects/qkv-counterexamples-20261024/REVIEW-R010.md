@@ -1,0 +1,12 @@
+# R010 Independent Work Review Handoff — NOT an acceptance
+
+**Subject:** Local R010_UNCOMMITTED package derived from GitHub `Yunbo-max/new` research branch HEAD `288d9b00194fd98699a2dea5abd372706e4dfb8f`, revision9. Its GitHub upload was BLOCKED at creation. Reviewer must not claim to have inspected a nonexistent R010 commit; inspect these exact local file hashes in `SHA256SUMS.txt` or after actual authorized upload compare new Git SHA and hashes. Formal reviewer must be a different real Work conversation, not this Chat designer.
+
+- QKV-A parent: verify robust quadratic risk expansion and minimax soft threshold, admissible joint covariance matrices, and how an actual operator could obtain C without task/oracle labels. Contrast ridge, GLS, standard multihead/readout with same information.
+- QKV-A child: independently verify Gaussian likelihood ratio, Bayes posterior-mean regret and n=4 quadrature; explicitly limit R009 harmful-label result to the hard sign rule. Verify g,T,noise parameters are legitimately given, not fitted with privileged test labels.
+- QKV-B parent: two-token exact temperature with required positivity/gap conditions, three-token nonconstant-V output equality despite positive KL, and real GQA value/WO compensation.
+- QKV-B child: pinned Qwen3 normalization FP32 -> input dtype cast -> gain ordering, real-vs-floating injectivity, proof of one-logit output bound and the actual training/input norm distribution; no native failure inferred.
+- QKV-C parent: normalized Q/K score bound and exact regularized beta/spherical-cap tail; independence/isotropy assumptions must be explicit and challenged with real learned QK and TriAttention controls.
+- QKV-C child: MomentKV original Eq9/11/12, Appendix B.2 pointwise wording, old-query Algorithm1 eviction ordering, small-t Taylor expansion and distinction from released implementation. Test sufficient error certificates' extra bytes and trivial/clipped/exact-storage and Xie randomized alternatives.
+
+**Blocking gates:** missing native Qwen3 weights and tokenized prompt hashes; no authorized GPU spend, dataset/range, complete baseline fairness, or independent accept/revise/reject. Read R001–R009, retain six active peers and seven parked historical nodes, no primary winner. All prior negative evidence remains. This packet is only a reviewer request, never reviewer proof.
