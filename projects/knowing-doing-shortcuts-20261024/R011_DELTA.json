@@ -1,0 +1,68 @@
+{
+  "schema": "manual-fullfrontier-delta-v1",
+  "project_id": "llm-shortcutting-20261024",
+  "round": "R011",
+  "date": "2026-10-24",
+  "parent_native_tree_revision": 3,
+  "authoritative_tree": "research-state/continuous/tree.json",
+  "native_tree_changed": false,
+  "no_primary_direction": true,
+  "active": [
+    "B1",
+    "B2",
+    "B3",
+    "B4"
+  ],
+  "research_evidence": [
+    "ROUND-011.md",
+    "r011_action_gate_v2.py",
+    "R011_REAL_LOG_SUMMARY.json"
+  ],
+  "scientific_outcomes": {
+    "B1": {
+      "status": "active",
+      "stage": "deep_incomplete",
+      "evidence": "When2Tool issue author attachment identified but binary unavailable; source audit corroborated necessity-label limitation",
+      "next": "Obtain original label/probe archive via approved materialization; repeat no-tool labels and fixed-probe AUROC"
+    },
+    "B2": {
+      "status": "active",
+      "stage": "deep_incomplete",
+      "evidence": "R010 log gate accepted intentionally incorrect forced-call action; R011 new gate requires executed action and tool receipts; 17 local tests passed",
+      "next": "Separate Work reviewer validates real runner/action receipts before model inference"
+    },
+    "B3": {
+      "status": "active",
+      "stage": "deep_incomplete",
+      "evidence": "Real 847-run benchmark records 0 tool-error and 0 tamper flags; lacks compositional visible/hidden tests, unsuitable for proxy-gaming attribution",
+      "next": "Run fixed-candidate SpecBench outer selection and proxy-exposure negative-control factorial"
+    },
+    "B4": {
+      "status": "active",
+      "stage": "deep_incomplete",
+      "evidence": "847 real external agent runs: pooled failed-minus-success output tokens +1188.72, within 13 mixed model/task groups −245.39; approximate 95% group bootstrap CI [−859,+425]",
+      "next": "Randomly assign model budgets within matched tasks and compare cost-matched CATS/Bandit/fixed baselines"
+    }
+  },
+  "source_pin": {
+    "repo": "latitude-dev/coding-agent-benchmark",
+    "path": "results/results.jsonl",
+    "blob_sha": "c8dadddf750e9068ca4aa5aa53935bc799db5792"
+  },
+  "local_package": {
+    "filename": "R011_research_checkpoint.zip",
+    "sha256": "9a3170b553639b9b59527eb82ecddb3b251dd7cdd4e9f0df5fbeb281dd071ba0",
+    "cpu_regression_tests_passed": 17,
+    "model_runs": 0
+  },
+  "gate": {
+    "budget_verified": false,
+    "formal_external_reviewer_accepted": false,
+    "authorized_native_llm_runs": 0,
+    "work_subagents_dispatched": 0,
+    "active_native_wake": null,
+    "provider_cost": "unknown",
+    "next_wake_human_required": true
+  },
+  "disposition": "4/4 active leaves received node-specific scientific checking; real observational analysis is not native intervention or causal proof"
+}
