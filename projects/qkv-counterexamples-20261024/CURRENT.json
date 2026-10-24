@@ -1,6 +1,6 @@
 {
   "schema": "qkv-preliminary-checkpoint-v1",
-  "revision": 5,
+  "revision": 6,
   "project_id": "qkv-counterexamples-20261024",
   "date": "2026-10-24",
   "repo": "Yunbo-max/new",
@@ -10,14 +10,15 @@
   "primary_direction": null,
   "imported_prior_projects": [],
   "framework": {
-    "loaded_skill_version": "exact current plugin.json version not inspected",
+    "loaded_skill_version": "0.11.7-manual.fullfrontier.1",
     "neutral_policy": "v11.4",
     "native_v2_controller_adopted": false,
     "loaded_skill_release_family": "v11.6 Full-Frontier Deep Research",
     "loaded_skill_version_history": [
       "0.11.3-manual.intake.1 (R001-R004)"
     ],
-    "full_frontier_policy_read": true
+    "full_frontier_policy_read": true,
+    "verified_plugin_release_id": "pluginrel_6adc877c6ebc8191a9c4c0577deea609"
   },
   "authority": {
     "user_selected_scope_and_storage": true,
@@ -35,20 +36,21 @@
       "parent_id": "QKV-ROOT",
       "mechanism_id": "routing-concentration-vs-value-risk",
       "question": "Does observable finite calibration make correction useful after estimation cost and shrinkage controls?",
-      "prediction": "Expected OLS risk=tau²/(b²+tau²)*(n-1)/(n-2); benefit requires n>2+tau²/b².",
-      "falsifier": "Shrinkage or ordinary heads remove same-information gap; true covariance labels are required.",
-      "next_action": "Review synthetic calibration design; identify native observable calibration before architecture claim.",
+      "prediction": "For full-pair unlabeled Gaussian calibration, E test risk=0.5+(T+0.5)/(n-3), exceeding the single observation if n<=2T+4.",
+      "falsifier": "Cross-validated same-information GLS, shrinkage or ordinary multihead mixing removes native utility gain.",
+      "next_action": "Freeze native available calibration signals without oracle theta labels; compare regularized GLS and ordinary multihead at equal sample budget.",
       "status": "active",
       "stage": "deep_mathematical_record",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 5,
+      "served_count": 6,
       "evidence": [
         "R001.md",
         "R002.md",
         "R003.md",
         "R004.md",
-        "R005-A.md"
+        "R005-A.md",
+        "R006.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -64,27 +66,29 @@
         "tokens": null,
         "cost": null
       },
-      "last_outcome": "advanced"
+      "last_outcome": "advanced",
+      "latest_analytical_stage": "R006 mathematical supplemental evidence; native/review incomplete"
     },
     {
       "node_id": "QKV-B",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "key-radius-erasure",
       "question": "Does near radial invariance in actual RMSNorm affect value-sensitive held-out task utility?",
-      "prediction": "Output-optimal temperature differs from KL optimum; positive-epsilon nonzero-gain RMSNorm is injective in exact arithmetic.",
-      "falsifier": "Output controls erase task gap or apparent erasure is an incorrect idealization.",
-      "next_action": "Freeze radial intervention, dataset manifest and runtime for pinned Qwen3 diagnostic, then separate review.",
+      "prediction": "With p=softmax(1,0,-2), q=softmax(alpha*(1,0,-1)), V=[(1,0,-1),(0,1,0)], all alpha have nonzero output error; best squared error ~0.00214741535.",
+      "falsifier": "Additional value/out projections or matched retraining erase the downstream mismatch on real activation data.",
+      "next_action": "Freeze two-feature value-output sensitivity experiment with pinned Qwen checkpoint, dataset/transformer runtime and matched V/WO controls.",
       "status": "active",
       "stage": "deep_incomplete",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 5,
+      "served_count": 6,
       "evidence": [
         "R001.md",
         "R002.md",
         "R003.md",
         "R004.md",
-        "R005-B.md"
+        "R005-B.md",
+        "R006.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -100,27 +104,29 @@
         "tokens": null,
         "cost": null
       },
-      "last_outcome": "advanced"
+      "last_outcome": "advanced",
+      "latest_analytical_stage": "R006 mathematical supplemental evidence; native/review incomplete"
     },
     {
       "node_id": "QKV-C",
       "parent_id": "QKV-ROOT",
       "mechanism_id": "coordinate-dependent-kv-sharing",
       "question": "When do query spread and moment storage make exact entries preferable to summaries at equal bytes?",
-      "prediction": "Centroid pairing collision yields opposite outputs; moment error bounded by exp(eta)*m2*(B+||C x||)/2.",
-      "falsifier": "MomentKV or equal-byte exact storage removes native gap.",
-      "next_action": "Freeze native query-switch task and equal-total-byte baselines; review centroid/moment witness.",
+      "prediction": "For N independent erased cache signs and b auxiliary bits, average future-query MSE >= tanh^2(1)*max(0,1-2 ln(2)*b/N).",
+      "falsifier": "Stored residuals, pre-eviction RestoreKV and exact-token same-byte controls remove actual prefix-query-transition loss.",
+      "next_action": "Freeze finite-budget native cache switch protocol and complete retained-byte/recompute accounting.",
       "status": "active",
       "stage": "deep_incomplete",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 5,
+      "served_count": 6,
       "evidence": [
         "R001.md",
         "R002.md",
         "R003.md",
         "R004.md",
-        "R005-C.md"
+        "R005-C.md",
+        "R006.md"
       ],
       "blockers": [
         "novelty not accepted",
@@ -136,7 +142,8 @@
         "tokens": null,
         "cost": null
       },
-      "last_outcome": "advanced"
+      "last_outcome": "advanced",
+      "latest_analytical_stage": "R006 mathematical supplemental evidence; native/review incomplete"
     },
     {
       "node_id": "QKV-A-naive-claim",
@@ -559,6 +566,69 @@
         "no native model evidence",
         "formal design review not performed"
       ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual Chat analytical record; no native checker/reviewer/model run",
+      "id": "R006-QKV-A",
+      "parent_question_id": "QKV-A",
+      "action": "deepen",
+      "evidence": [
+        "R005.md",
+        "R006.md"
+      ],
+      "causal_reason": "Unlabeled full-pair finite calibration threshold distinct from R005 labeled risk",
+      "mathematical_prediction": "For full-pair unlabeled Gaussian calibration, E test risk=0.5+(T+0.5)/(n-3), exceeding the single observation if n<=2T+4.",
+      "falsifier": "Cross-validated same-information GLS, shrinkage or ordinary multihead mixing removes native utility gain.",
+      "next_question_id": "QKV-A",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual Chat analytical record; no native checker/reviewer/model run",
+      "id": "R006-QKV-B",
+      "parent_question_id": "QKV-B",
+      "action": "deepen",
+      "evidence": [
+        "R005.md",
+        "R006.md"
+      ],
+      "causal_reason": "Two-feature value map is injective on simplex differences; rescues rank-one countercontrol",
+      "mathematical_prediction": "With p=softmax(1,0,-2), q=softmax(alpha*(1,0,-1)), V=[(1,0,-1),(0,1,0)], all alpha have nonzero output error; best squared error ~0.00214741535.",
+      "falsifier": "Additional value/out projections or matched retraining erase the downstream mismatch on real activation data.",
+      "next_question_id": "QKV-B",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "validation": "manual Chat analytical record; no native checker/reviewer/model run",
+      "id": "R006-QKV-C",
+      "parent_question_id": "QKV-C",
+      "action": "deepen",
+      "evidence": [
+        "R005.md",
+        "R006.md"
+      ],
+      "causal_reason": "A post-erasure finite-bits error lower bound complementing R005 centroid/moment analysis",
+      "mathematical_prediction": "For N independent erased cache signs and b auxiliary bits, average future-query MSE >= tanh^2(1)*max(0,1-2 ln(2)*b/N).",
+      "falsifier": "Stored residuals, pre-eviction RestoreKV and exact-token same-byte controls remove actual prefix-query-transition loss.",
+      "next_question_id": "QKV-C",
+      "next_actor": "supervisor",
+      "blockers": [
+        "novelty not accepted",
+        "no native model evidence",
+        "formal design review not performed"
+      ]
     }
   ],
   "review": {
@@ -568,9 +638,33 @@
   },
   "run": {
     "status": "completed",
-    "wake_source": "human continue",
+    "wake_source": "human start; Chat manual analytical wake",
+    "host_mode": "Chat + research-autopilot plugin skill (not native Work subagents)",
     "background_running": false,
-    "next_wake": "Restore complete frontier and R005 node reports. Freeze missing protocol choices/manifests; distinct real review required before code. No global primary direction."
+    "next_wake": "A/B/C require native observable task and independent design review; no primary branch.",
+    "active": [
+      "QKV-A",
+      "QKV-B",
+      "QKV-C"
+    ],
+    "advanced": [
+      "QKV-A",
+      "QKV-B",
+      "QKV-C"
+    ],
+    "blocked_from_native_acceptance": [
+      "QKV-A",
+      "QKV-B",
+      "QKV-C"
+    ],
+    "unserved": [],
+    "actual_gpu_model_jobs": 0,
+    "requested_budget_options_minutes": [
+      60,
+      480
+    ],
+    "selected_budget_minutes": null,
+    "elapsed_minutes": null
   },
   "budget": {
     "worker_tasks_completed": 15,
@@ -585,30 +679,67 @@
         "tokens": null,
         "cost": null
       }
-    ]
+    ],
+    "latest_wake_note": "R006 Chat supervisor plus CPU numerical check, no Work workers; preserve prior worker_tasks_completed=15 and unreconciled r003_a."
   },
-  "previous_checkpoint_sha": "14cde3c66e96975c130f1f0b6c7b0a5bc6f9c809",
-  "latest_report": "R005.md",
+  "previous_checkpoint_sha": "e414235f28cb2f5910c868963836dcfb9577fb30",
+  "latest_report": "R006.md",
   "date_note": "Project identifiers retained; this round dated using Europe/London client context.",
   "frontier_receipt": {
-    "round": "R005",
+    "round": "R006",
+    "parent_git_sha": "e414235f28cb2f5910c868963836dcfb9577fb30",
     "eligible": [
       "QKV-A",
       "QKV-B",
       "QKV-C"
     ],
-    "dispatched": [
-      "QKV-A",
-      "QKV-B",
-      "QKV-C"
-    ],
-    "advanced": [
+    "dispatched_work_subagents": [],
+    "advanced_analytical": [
       "QKV-A",
       "QKV-B",
       "QKV-C"
     ],
     "unserved": [],
-    "previously_parked_retained": 5,
-    "newly_parked": 1
-  }
+    "all_parked_retained": [
+      "QKV-A-naive-claim",
+      "QKV-B-naive-claim",
+      "QKV-C-naive-claim",
+      "QKV-A-known-source-exact-duplicate",
+      "QKV-A-signed-correlation-cancellation",
+      "QKV-C-generic-cross-moment-repair"
+    ],
+    "independent_formal_review": false,
+    "execution": "Chat supervisory derivation plus private Python CPU arithmetic; NOT real model execution"
+  },
+  "previous_run_history": [
+    {
+      "status": "completed",
+      "wake_source": "human continue",
+      "background_running": false,
+      "next_wake": "Restore complete frontier and R005 node reports. Freeze missing protocol choices/manifests; distinct real review required before code. No global primary direction."
+    }
+  ],
+  "frontier_receipt_history": [
+    {
+      "round": "R005",
+      "eligible": [
+        "QKV-A",
+        "QKV-B",
+        "QKV-C"
+      ],
+      "dispatched": [
+        "QKV-A",
+        "QKV-B",
+        "QKV-C"
+      ],
+      "advanced": [
+        "QKV-A",
+        "QKV-B",
+        "QKV-C"
+      ],
+      "unserved": [],
+      "previously_parked_retained": 5,
+      "newly_parked": 1
+    }
+  ]
 }
