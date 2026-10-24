@@ -1,0 +1,17 @@
+# Independent scientific Work reviewer handoff — R013 (NOT a review acceptance)
+
+**Subject:** exact Git commit to be resolved after insertion of this R013 file. Require review of all `R013*.md`, `R013_math_probe.py`, `R013_metrics.json`, `CURRENT.json` plus history `R001–R012`, all parked negative results and the identified pinned primary sources. Return `accept`, `revise` or `reject` **per node** with exact review SHA, inspected source/code paths, independently derived arithmetic, caveats and needed next evidence. The designer's self-check is NOT a separate reviewer. Do not authorize GPU, API spending, model execution or accepted architecture from this file.
+
+**QKV-A:** Check cancellation example and precise fused-risk cross terms. Is it already a known form of robustness from WitCert (2026) rather than novel ML? Challenge independence assumption in illustrative 95% simultaneous-coverage calculation. Test whether any *true QKV task variable* shared across heads has been defined (it has not).
+
+**A child:** Verify observed effective sign `b=s(1-2F)`, nominal amplitude `a=1-2rho0`, true-rho risk `2g²[1+a²−2a(1−2rho)]`, harm threshold `rho>.5−a/4`; examine full domain prior and alternative metadata access. Classical robust Bayes/no-label/ridge are mandatory controls.
+
+**QKV-B:** Two queries use the same original two keys AND the same per-token radial factors, not fabricated per-head changes. Independently solve exact row temperatures and nonzero global fitted KL. Compare to QUEST and learned query-conditioned temperature as strongest simple baseline; original full-model output/next-token NLL remains missing.
+
+**B child:** Inspect pinned Qwen3RMSNorm and `v_proj`: normalized K casts before gamma, V is unnormalized. Verify BF16 K collision and distinct V under scaling; full `W_V` injectivity is expressly CONDITIONAL on trained rank, precision and access. Demand real weights, RoPE, learned gamma, KV metadata and downstream output for any native claim.
+
+**QKV-C:** Recalculate isotropic MGF `_0F_1(;64;32)`, head norm upper bound, half-attention N around49,792, and distinguish asymptotic LLN/mean mass from worst-case, task accuracy or actual Qwen learned background. Test full-cache retrieval failures before blaming compression.
+
+**C child:** Reproduce MomentKV v1 Algorithm1 for four-token preloaded cache with budget1, d2, old q=(1,0), new q=(0,1), two evicted V assignments. Confirm both stepwise eviction traces and exact agreement of final four stored statistics. Derive full outcomes and sign of the loss gradient for any positive correction step. Identify any omitted implementation extra signals (eviction order, offloaded originals, protection, precision, etc.). This is an operator-interface counterexample, not a full released-code reproduction. Compare prior Xie randomized-design identifiability and contemporary certified sparse attention full-key retrieval; enforce *total* retained bytes, scratch/CPU copies and latency.
+
+**Scientific admission decision:** If reviewer accepts the mathematical records, the next question is which measured *pretrained-Qwen* effect survives ordinary per-head/global/query temperature, V/W_O/residual, robust Bayes/ridge and exact-token/moment byte-matched controls. A paper-worthy architecture has not been selected. Retain all peers and pending unknown cost/job states.

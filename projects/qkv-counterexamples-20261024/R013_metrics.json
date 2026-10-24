@@ -1,0 +1,247 @@
+{
+  "execution": {
+    "seed": 20261024,
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "torch": "2.10.0+cpu",
+    "device": "CPU"
+  },
+  "A_parent": {
+    "before_head1_MSE": 0.992446649168759,
+    "after_head1_MSE": 0.0,
+    "before_head2_MSE": 0.992446649168759,
+    "after_head2_MSE": 0.992446649168759,
+    "before_fused_MSE": 0.0,
+    "after_fused_MSE": 0.992446649168759,
+    "independent_nominal_95pct_joint_16": 0.44012666865176536,
+    "independent_nominal_95pct_joint_448": 1.0475509846408036e-10
+  },
+  "A_child": {
+    "nominal_rho": 0.3,
+    "nominal_amplitude": 0.4,
+    "unlabeled_excess_MSE": 0.125,
+    "rho_grid": {
+      "0.2": {
+        "corrected_excess_MSE": 0.08500000000000002,
+        "worse_than_unlabeled": false
+      },
+      "0.3": {
+        "corrected_excess_MSE": 0.10500000000000001,
+        "worse_than_unlabeled": false
+      },
+      "0.4": {
+        "corrected_excess_MSE": 0.12500000000000003,
+        "worse_than_unlabeled": false
+      },
+      "0.45": {
+        "corrected_excess_MSE": 0.135,
+        "worse_than_unlabeled": true
+      },
+      "0.5": {
+        "corrected_excess_MSE": 0.14500000000000002,
+        "worse_than_unlabeled": true
+      },
+      "0.6": {
+        "corrected_excess_MSE": 0.165,
+        "worse_than_unlabeled": true
+      }
+    },
+    "harm_threshold_true_rho": 0.4,
+    "minimax_amplitude_for_rho_interval_.2_.6": 0.0
+  },
+  "B_parent": {
+    "queries": [
+      [
+        1.0,
+        -1.0
+      ],
+      [
+        2.0,
+        -0.2
+      ]
+    ],
+    "keys": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "shared_radii": [
+      2.0,
+      0.7
+    ],
+    "eta": 0.2,
+    "per_query_exact_temperatures": [
+      1.0399241350459363,
+      1.1289212240968352
+    ],
+    "best_global_temperature": 1.0830518493793642,
+    "best_global_two_query_KL_sum": 0.0007315772584184557,
+    "per_query_oracle_KL_sum": -4.2751363925533494e-17,
+    "finite_shared_key_factors": [
+      1.148698354997035,
+      0.9311499150948377
+    ]
+  },
+  "B_child": {
+    "bf16_norm_K_collides": true,
+    "bf16_linear_V_distinct": true,
+    "bf16_value_norm_1": 10.742968559265137,
+    "bf16_value_norm_2": 21.485937118530273,
+    "ratio_linear_V_after_dtype": 2.0,
+    "conditional_full_KV_injectivity": "if aggregated W_V has full column rank in real arithmetic"
+  },
+  "C_parent": {
+    "head_dim": 128,
+    "assumed_key_query_gain_upper": 1.0,
+    "score_ceiling": 11.313708498984761,
+    "isotropic_background_E_exp_score": 1.6455852234712056,
+    "half_attention_target_token_count": 49792.139992770484,
+    "N": {
+      "8192": {
+        "p_target_at_perfect_alignment": 0.8587199878963216,
+        "log_partition_threshold": 9.509009427178475
+      },
+      "32768": {
+        "p_target_at_perfect_alignment": 0.6031014481943783,
+        "log_partition_threshold": 10.895303788298365
+      },
+      "65536": {
+        "p_target_at_perfect_alignment": 0.43174319811185524,
+        "log_partition_threshold": 11.58845096885831
+      },
+      "131072": {
+        "p_target_at_perfect_alignment": 0.27530133941842083,
+        "log_partition_threshold": 12.281598149418256
+      },
+      "262144": {
+        "p_target_at_perfect_alignment": 0.15962286381412708,
+        "log_partition_threshold": 12.974745329978202
+      },
+      "1048576": {
+        "p_target_at_perfect_alignment": 0.04533283348249542,
+        "log_partition_threshold": 14.361039691098092
+      }
+    }
+  },
+  "C_child": {
+    "worlds": {
+      "1": {
+        "retained_indices": [
+          0
+        ],
+        "evicted_indices": [
+          1,
+          3,
+          2
+        ],
+        "eviction_trace": [
+          {
+            "evicted_token_index": 1,
+            "retained_candidates": [
+              0,
+              2,
+              3
+            ],
+            "selected_score": 0.0003177562300058224
+          },
+          {
+            "evicted_token_index": 3,
+            "retained_candidates": [
+              0,
+              2
+            ],
+            "selected_score": 9.079161565902183e-05
+          },
+          {
+            "evicted_token_index": 2,
+            "retained_candidates": [
+              0
+            ],
+            "selected_score": 0.0010895488488584255
+          }
+        ],
+        "moments": {
+          "n": 3,
+          "sum_keys": [
+            0.0,
+            0.0
+          ],
+          "sum_values": 0.0,
+          "sum_value_outer_keys": [
+            0.0,
+            2.8284271247461916
+          ]
+        },
+        "full_attention_output": 2.5637591600155534,
+        "plain_eviction_output": 2.0,
+        "moment_output": 1.0,
+        "plain_abs_error": 0.5637591600155534,
+        "moment_abs_error": 1.5637591600155534,
+        "derivative_of_squared_error_at_lambda_0": 1.1275183200311067
+      },
+      "-1": {
+        "retained_indices": [
+          0
+        ],
+        "evicted_indices": [
+          3,
+          1,
+          2
+        ],
+        "eviction_trace": [
+          {
+            "evicted_token_index": 3,
+            "retained_candidates": [
+              0,
+              1,
+              2
+            ],
+            "selected_score": 0.0003177562300058224
+          },
+          {
+            "evicted_token_index": 1,
+            "retained_candidates": [
+              0,
+              2
+            ],
+            "selected_score": 9.079161565902183e-05
+          },
+          {
+            "evicted_token_index": 2,
+            "retained_candidates": [
+              0
+            ],
+            "selected_score": 0.0010895488488584255
+          }
+        ],
+        "moments": {
+          "n": 3,
+          "sum_keys": [
+            0.0,
+            0.0
+          ],
+          "sum_values": 0.0,
+          "sum_value_outer_keys": [
+            0.0,
+            2.8284271247461916
+          ]
+        },
+        "full_attention_output": -0.8530771125296065,
+        "plain_eviction_output": 2.0,
+        "moment_output": 1.0,
+        "plain_abs_error": 2.8530771125296064,
+        "moment_abs_error": 1.8530771125296064,
+        "derivative_of_squared_error_at_lambda_0": -5.706154225059213
+      }
+    },
+    "common_plain_output": 2.0,
+    "common_moment_output": 1.0,
+    "result": "no strictly positive moment-direction update can be uniformly safe across these indistinguishable states",
+    "minimal_robust_nonnegative_lambda": 0.0
+  }
+}

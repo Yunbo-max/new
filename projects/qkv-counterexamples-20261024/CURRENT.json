@@ -1,6 +1,6 @@
 {
   "schema": "qkv-preliminary-checkpoint-v1",
-  "revision": 12,
+  "revision": 13,
   "project_id": "qkv-counterexamples-20261024",
   "date": "2026-10-24",
   "repo": "Yunbo-max/new",
@@ -38,12 +38,12 @@
       "question": "When does observable calibration preserve target signal rather than merely reduce variance?",
       "prediction": "Asymmetric labeled covariance CI permits beta=-(a-clip(a,[lo,hi]))/v with conditional non-worsening whenever true target covariance lies in the CI.",
       "falsifier": "The target definition or reliable calibration labels are unavailable, or ordinary ridge/GLS at same labels solves it.",
-      "next_action": "Determine task-visible correlated variable and finite-target-label budget; evaluate multi-context coverage with estimated a,v.",
+      "next_action": "See R013-A.md for falsifier and independent Work review requirements",
       "status": "active",
       "stage": "deep_mathematical_record",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 12,
+      "served_count": 13,
       "evidence": [
         "R001.md",
         "R002.md",
@@ -64,7 +64,10 @@
         "R011_metrics.json",
         "R012-A.md",
         "R012_cpu_checks.py",
-        "R012_metrics.json"
+        "R012_metrics.json",
+        "R013-A.md",
+        "R013_math_probe.py",
+        "R013_metrics.json"
       ],
       "blockers": [
         "novelty not accepted",
@@ -81,7 +84,7 @@
         "cost": null
       },
       "last_outcome": "advanced",
-      "latest_analytical_stage": "R012 verified six-node CPU math, source audit; native model and independent review pending"
+      "latest_analytical_stage": "R013 mathematical/CPU counterexample; native validation unperformed"
     },
     {
       "node_id": "QKV-B",
@@ -90,12 +93,12 @@
       "question": "Do key radial changes survive GQA-projected per-head temperature compensation?",
       "prediction": "Two ordinary positive query-head temperatures matched a shared-KV radial group's 2D output to 1.31e-12 although individual head KL stayed positive.",
       "falsifier": "Native W_O or fitted temperatures already eliminate task-level effect without novel QK operator.",
-      "next_action": "Measure post-V/W_O sensitivity and compare fixed/global/row-oracle temperatures at matching information.",
+      "next_action": "See R013-B.md for falsifier and independent Work review requirements",
       "status": "active",
       "stage": "deep_incomplete",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 12,
+      "served_count": 13,
       "evidence": [
         "R001.md",
         "R002.md",
@@ -116,7 +119,10 @@
         "R011_metrics.json",
         "R012-B.md",
         "R012_cpu_checks.py",
-        "R012_metrics.json"
+        "R012_metrics.json",
+        "R013-B.md",
+        "R013_math_probe.py",
+        "R013_metrics.json"
       ],
       "blockers": [
         "novelty not accepted",
@@ -133,7 +139,7 @@
         "cost": null
       },
       "last_outcome": "advanced",
-      "latest_analytical_stage": "R012 verified six-node CPU math, source audit; native model and independent review pending"
+      "latest_analytical_stage": "R013 mathematical/CPU counterexample; native validation unperformed"
     },
     {
       "node_id": "QKV-C",
@@ -142,12 +148,12 @@
       "question": "Do rare summarized entries attain log-N margins under native query switches at equal total bytes?",
       "prediction": "A planted target's attention mass undergoes a log-partition threshold logN+log EexpS; isotropic d128,N65536 predicts .431743 and CPU gives .431495.",
       "falsifier": "Learned key selection at equal bytes preserves the target, or its post-W_O utility is negligible.",
-      "next_action": "Measure pretrained query-conditioned logit distributions and real target retention at matched byte budget.",
+      "next_action": "See R013-C.md for falsifier and independent Work review requirements",
       "status": "active",
       "stage": "deep_incomplete",
       "priority": "peer",
       "next_actor": "supervisor",
-      "served_count": 12,
+      "served_count": 13,
       "evidence": [
         "R001.md",
         "R002.md",
@@ -168,7 +174,10 @@
         "R011_metrics.json",
         "R012-C.md",
         "R012_cpu_checks.py",
-        "R012_metrics.json"
+        "R012_metrics.json",
+        "R013-C.md",
+        "R013_math_probe.py",
+        "R013_metrics.json"
       ],
       "blockers": [
         "novelty not accepted",
@@ -185,7 +194,7 @@
         "cost": null
       },
       "last_outcome": "advanced",
-      "latest_analytical_stage": "R012 verified six-node CPU math, source audit; native model and independent review pending"
+      "latest_analytical_stage": "R013 mathematical/CPU counterexample; native validation unperformed"
     },
     {
       "node_id": "QKV-A-naive-claim",
@@ -328,11 +337,11 @@
       "question": "Can QKV-only paired calibration identify the desired signed correction when target and difference share signal?",
       "prediction": "A known domain-wide flip prior rho modifies sign posterior by (1-2rho); rho .3,g .25 gives asymptotic regret .105 versus .15 with misspecified Bayes.",
       "falsifier": "rho cannot be learned from accessible trusted anchor data, or standard likelihood calibration covers the gap.",
-      "next_action": "Check trusted anchors and domain mixture shift with ordinary robust Bayes/ridge under equal access.",
+      "next_action": "See R013-A.md for falsifier and independent Work review requirements",
       "status": "active",
       "stage": "analytic_counterexample_native_unverified",
       "priority": "peer",
-      "served_count": 5,
+      "served_count": 6,
       "evidence": [
         "R008.md",
         "R008-math-witness.py",
@@ -347,7 +356,10 @@
         "R011_metrics.json",
         "R012-A.md",
         "R012_cpu_checks.py",
-        "R012_metrics.json"
+        "R012_metrics.json",
+        "R013-A.md",
+        "R013_math_probe.py",
+        "R013_metrics.json"
       ],
       "next_actor": "supervisor",
       "blockers": [
@@ -364,7 +376,7 @@
         "tokens": null,
         "cost": null
       },
-      "latest_analytical_stage": "R012 verified six-node CPU math, source audit; native model and independent review pending"
+      "latest_analytical_stage": "R013 mathematical/CPU counterexample; native validation unperformed"
     },
     {
       "node_id": "QKV-B-precision-radial-collision",
@@ -373,11 +385,11 @@
       "question": "Do pretrained BF16 Qwen3 Q/K normalizations exhibit task-relevant radial collisions beyond vanilla temperature/readout controls?",
       "prediction": "BF16 K radial collision coexists with independent V-path information; example same post-K but attention output differs by 0.5 through V.",
       "falsifier": "Actual Qwen pre-norm regime and V/residual readout make key radial loss task-irrelevant.",
-      "next_action": "Freeze trained Qwen gain and dtype backend, actual radial u/eps, V and residual probes, NLL.",
+      "next_action": "See R013-B.md for falsifier and independent Work review requirements",
       "status": "active",
       "stage": "analytic_counterexample_native_unverified",
       "priority": "peer",
-      "served_count": 5,
+      "served_count": 6,
       "evidence": [
         "R008.md",
         "R008-math-witness.py",
@@ -392,7 +404,10 @@
         "R011_metrics.json",
         "R012-B.md",
         "R012_cpu_checks.py",
-        "R012_metrics.json"
+        "R012_metrics.json",
+        "R013-B.md",
+        "R013_math_probe.py",
+        "R013_metrics.json"
       ],
       "next_actor": "supervisor",
       "blockers": [
@@ -409,7 +424,7 @@
         "tokens": null,
         "cost": null
       },
-      "latest_analytical_stage": "R012 verified six-node CPU math, source audit; native model and independent review pending"
+      "latest_analytical_stage": "R013 mathematical/CPU counterexample; native validation unperformed"
     },
     {
       "node_id": "QKV-C-unsafe-moment-correction",
@@ -418,11 +433,11 @@
       "question": "When can post-eviction first-order moment correction worsen the reference attention error, and do safe same-byte repairs exist?",
       "prediction": "With retained valid B and displacement D, fractional lambda=max(0,1-B/D) gives a certified improvement whenever B<D; synthetic gate pass .2491 versus full gate .1853.",
       "falsifier": "Bound metadata cannot be retained at useful cost or standard certificates/shrinkage/exact KV dominate.",
-      "next_action": "Independently review B proof, metadata access timing, then measure native gate pass, bytes, NLL vs simple baselines.",
+      "next_action": "See R013-C.md for falsifier and independent Work review requirements",
       "status": "active",
       "stage": "analytic_counterexample_native_unverified",
       "priority": "peer",
-      "served_count": 5,
+      "served_count": 6,
       "evidence": [
         "R008.md",
         "R008-math-witness.py",
@@ -437,7 +452,10 @@
         "R011_metrics.json",
         "R012-C.md",
         "R012_cpu_checks.py",
-        "R012_metrics.json"
+        "R012_metrics.json",
+        "R013-C.md",
+        "R013_math_probe.py",
+        "R013_metrics.json"
       ],
       "next_actor": "supervisor",
       "blockers": [
@@ -454,7 +472,7 @@
         "tokens": null,
         "cost": null
       },
-      "latest_analytical_stage": "R012 verified six-node CPU math, source audit; native model and independent review pending"
+      "latest_analytical_stage": "R013 mathematical/CPU counterexample; native validation unperformed"
     }
   ],
   "decisions": [
@@ -1531,25 +1549,144 @@
         "independent Work reviewer absent",
         "novel method acceptance not granted"
       ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "id": "R013-QKV-A",
+      "parent_question_id": "QKV-A",
+      "action": "deepen",
+      "evidence": [
+        "R013-A.md",
+        "R013_math_probe.py",
+        "R013_metrics.json"
+      ],
+      "causal_reason": "Verified math and CPU witness distinguishing information assumptions and ordinary controls.",
+      "mathematical_prediction": "See R013-A.md for exact quantitative prediction.",
+      "falsifier": "Test whether ordinary equal-resource controls or native Qwen render the witness irrelevant.",
+      "next_question_id": "QKV-A",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model unverified",
+        "independent Work review outstanding"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "id": "R013-QKV-A-signal-noise-identifiability",
+      "parent_question_id": "QKV-A-signal-noise-identifiability",
+      "action": "deepen",
+      "evidence": [
+        "R013-A.md",
+        "R013_math_probe.py",
+        "R013_metrics.json"
+      ],
+      "causal_reason": "Verified math and CPU witness distinguishing information assumptions and ordinary controls.",
+      "mathematical_prediction": "See R013-A.md for exact quantitative prediction.",
+      "falsifier": "Test whether ordinary equal-resource controls or native Qwen render the witness irrelevant.",
+      "next_question_id": "QKV-A-signal-noise-identifiability",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model unverified",
+        "independent Work review outstanding"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "id": "R013-QKV-B",
+      "parent_question_id": "QKV-B",
+      "action": "deepen",
+      "evidence": [
+        "R013-B.md",
+        "R013_math_probe.py",
+        "R013_metrics.json"
+      ],
+      "causal_reason": "Verified math and CPU witness distinguishing information assumptions and ordinary controls.",
+      "mathematical_prediction": "See R013-B.md for exact quantitative prediction.",
+      "falsifier": "Test whether ordinary equal-resource controls or native Qwen render the witness irrelevant.",
+      "next_question_id": "QKV-B",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model unverified",
+        "independent Work review outstanding"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "id": "R013-QKV-B-precision-radial-collision",
+      "parent_question_id": "QKV-B-precision-radial-collision",
+      "action": "deepen",
+      "evidence": [
+        "R013-B.md",
+        "R013_math_probe.py",
+        "R013_metrics.json"
+      ],
+      "causal_reason": "Verified math and CPU witness distinguishing information assumptions and ordinary controls.",
+      "mathematical_prediction": "See R013-B.md for exact quantitative prediction.",
+      "falsifier": "Test whether ordinary equal-resource controls or native Qwen render the witness irrelevant.",
+      "next_question_id": "QKV-B-precision-radial-collision",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model unverified",
+        "independent Work review outstanding"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "id": "R013-QKV-C",
+      "parent_question_id": "QKV-C",
+      "action": "deepen",
+      "evidence": [
+        "R013-C.md",
+        "R013_math_probe.py",
+        "R013_metrics.json"
+      ],
+      "causal_reason": "Verified math and CPU witness distinguishing information assumptions and ordinary controls.",
+      "mathematical_prediction": "See R013-C.md for exact quantitative prediction.",
+      "falsifier": "Test whether ordinary equal-resource controls or native Qwen render the witness irrelevant.",
+      "next_question_id": "QKV-C",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model unverified",
+        "independent Work review outstanding"
+      ]
+    },
+    {
+      "schema": "continuous-decision-v1",
+      "id": "R013-QKV-C-unsafe-moment-correction",
+      "parent_question_id": "QKV-C-unsafe-moment-correction",
+      "action": "deepen",
+      "evidence": [
+        "R013-C.md",
+        "R013_math_probe.py",
+        "R013_metrics.json"
+      ],
+      "causal_reason": "Verified math and CPU witness distinguishing information assumptions and ordinary controls.",
+      "mathematical_prediction": "See R013-C.md for exact quantitative prediction.",
+      "falsifier": "Test whether ordinary equal-resource controls or native Qwen render the witness irrelevant.",
+      "next_question_id": "QKV-C-unsafe-moment-correction",
+      "next_actor": "supervisor",
+      "blockers": [
+        "native model unverified",
+        "independent Work review outstanding"
+      ]
     }
   ],
   "review": {
     "formal_independent_review": "not performed",
     "designer_subagents_are_not_formal_reviewers": true,
-    "latest_packet": "REVIEW-R012.md"
+    "latest_packet": "REVIEW-R013.md"
   },
   "run": {
     "status": "completed",
-    "wake_source": "human continue, finite Chat Manual Wake",
-    "host_mode": "Chat supervisor with connected GitHub/web and CPU mathematics; no Work subagents",
+    "wake_source": "human continue, Chat manual wake",
     "background_running": false,
-    "next_wake": "Restore six active and seven parked nodes from pinned R012 SHA; independent Work reviewer gates any native code/inference, preserve unfinished experiments.",
     "eligible": 6,
-    "actually_advanced_analytical": 6,
+    "analytically_advanced": 6,
     "unserved": [],
+    "next_wake": "Restore all six nodes and seven parked; obtain independent Work review on R013 before native Qwen execution.",
+    "actual_gpu_model_jobs": 0,
     "selected_budget_minutes": null,
-    "elapsed_minutes": null,
-    "actual_gpu_model_jobs": 0
+    "elapsed_minutes": null
   },
   "budget": {
     "worker_tasks_completed": 18,
@@ -1565,14 +1702,14 @@
         "cost": null
       }
     ],
-    "latest_wake_note": "R012 source/metrics byte-verified and CPU rerun; no Work subagents or GPU/model jobs, prior 18 designer tasks and r003_a unknown stay retained."
+    "latest_wake_note": "R013: actual CPU math only, no Work workers/GPU/native model; prior 18 workers, interrupted r003_a, unknown costs retained."
   },
-  "previous_checkpoint_sha": "4683d005f0b01b542961ce0dbef88502c02948ed",
-  "latest_report": "R012.md",
+  "previous_checkpoint_sha": "69c37bb56cf45d4374e4acb40b81b9c3704ead07",
+  "latest_report": "R013.md",
   "date_note": "Project identifiers retained; this round dated using Europe/London client context.",
   "frontier_receipt": {
-    "round": "R012",
-    "parent_git_sha": "4683d005f0b01b542961ce0dbef88502c02948ed",
+    "round": "R013",
+    "parent_git_sha": "69c37bb56cf45d4374e4acb40b81b9c3704ead07",
     "eligible": [
       "QKV-A",
       "QKV-A-signal-noise-identifiability",
@@ -1599,22 +1736,9 @@
       "QKV-C-generic-cross-moment-repair",
       "QKV-A-unlabeled-variance-minimization"
     ],
-    "new_worker_tasks": [],
+    "actual_work_subagents": [],
     "native_model_jobs": [],
-    "formal_review": "not performed",
-    "evidence_files": [
-      "R012.md",
-      "R012-A.md",
-      "R012-B.md",
-      "R012-C.md",
-      "R012_cpu_checks.py",
-      "R012_metrics.json"
-    ],
-    "byte_exact_source_check": {
-      "R012_cpu_checks_git_blob": "0201ada159831db5384f2f92e63616fdbc6715ed",
-      "R012_metrics_git_blob": "f8fa832bc12983f07c9623b342b3e1505fcb11b0"
-    },
-    "cpu_reproduction": "Source reexecuted twice identically; synthetic tensors only."
+    "formal_review": "not performed"
   },
   "previous_run_history": [
     {
@@ -1945,6 +2069,52 @@
       "native_model_runs": [],
       "formal_review": "not performed",
       "sync_note": "Local 2026-10-24 six-node research with validated SHA256SUMS and rerun script; synchronized after R010."
+    },
+    {
+      "round": "R012",
+      "parent_git_sha": "4683d005f0b01b542961ce0dbef88502c02948ed",
+      "eligible": [
+        "QKV-A",
+        "QKV-A-signal-noise-identifiability",
+        "QKV-B",
+        "QKV-B-precision-radial-collision",
+        "QKV-C",
+        "QKV-C-unsafe-moment-correction"
+      ],
+      "analytically_advanced": [
+        "QKV-A",
+        "QKV-A-signal-noise-identifiability",
+        "QKV-B",
+        "QKV-B-precision-radial-collision",
+        "QKV-C",
+        "QKV-C-unsafe-moment-correction"
+      ],
+      "unserved": [],
+      "parked_retained": [
+        "QKV-A-naive-claim",
+        "QKV-B-naive-claim",
+        "QKV-C-naive-claim",
+        "QKV-A-known-source-exact-duplicate",
+        "QKV-A-signed-correlation-cancellation",
+        "QKV-C-generic-cross-moment-repair",
+        "QKV-A-unlabeled-variance-minimization"
+      ],
+      "new_worker_tasks": [],
+      "native_model_jobs": [],
+      "formal_review": "not performed",
+      "evidence_files": [
+        "R012.md",
+        "R012-A.md",
+        "R012-B.md",
+        "R012-C.md",
+        "R012_cpu_checks.py",
+        "R012_metrics.json"
+      ],
+      "byte_exact_source_check": {
+        "R012_cpu_checks_git_blob": "0201ada159831db5384f2f92e63616fdbc6715ed",
+        "R012_metrics_git_blob": "f8fa832bc12983f07c9623b342b3e1505fcb11b0"
+      },
+      "cpu_reproduction": "Source reexecuted twice identically; synthetic tensors only."
     }
   ]
 }
