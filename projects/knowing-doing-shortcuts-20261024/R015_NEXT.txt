@@ -1,0 +1,5 @@
+R015 full-frontier checkpoint. Native tree remains revision 3; B1-B4 active, budgets unverified.
+Evidence: ROUND-015.md, R015_OFFICIAL_RESULTS_REANALYSIS.json, r015_compare.py.
+17 local CPU tests passed; original per-question gzip files unavailable; no Qwen inference or reviewer.
+B1 check voluntary decisions; B2 matched per-question causal action value; B3 outer-score selection control; B4 random hard compute budgets.
+Next human wake must restore all B1-B4; maintain same GitHub project.
